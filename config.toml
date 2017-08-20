@@ -1,0 +1,40 @@
+baseURL = "https://128bit.io"
+disablePathToLower = false
+languageCode = "en-us"
+title = "128bit.io"
+copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/amscotti\" target=\"_blank\">Twitter</a> | <a href=\"https://github.com/mgjohansen/hucore.git\" target=\"_blank\">Hucore theme</a> & <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
+theme = "hucore"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[params]
+description = "2^7 bits of goodness!"
+keywords = ["Development", "Java", "Ruby", "Python", "NoSQL"]
+author = "Anthony Scotti"
+sharingicons = true
+
+[params.highlight]
+style = "github"
+languages = ["go", "dockerfile"]
+
+[[params.social]]
+url = "https://github.com/amscotti"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "https://twitter.com/amscotti"
+fa_icon = "fa-twitter"
+
+[[params.social]]
+url = "https://linkedin.com/in/amscotti"
+fa_icon = "fa-linkedin-square"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
+
+[[params.socialshare]]
+url = "https://linkedin.com/in/amscotti"
+fa_icon = "fa-linkedin-square"
