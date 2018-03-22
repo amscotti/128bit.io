@@ -4,3 +4,10 @@
 
 [context.production.environment]
   HUGO_VERSION = "0.26"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
