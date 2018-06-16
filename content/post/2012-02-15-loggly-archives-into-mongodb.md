@@ -12,7 +12,7 @@ title: Loggly Archives into MongoDB
 url: /2012/02/15/loggly-archives-into-mongodb/
 ---
 
-![Loggly Logo](http://www.128bitstudios.com/wp-content/uploads/2012/02/loggly-logo.jpg)
+![Loggly Logo](/images/logo/loggly_logo.png)
 
 [Loggly](http://loggly.com) is a great cloud service for managing log files from servers or many servers. It's also an add-on for your Heroku hosted app. Loggly comes in different tiers from a free to monthly service based on how much data you store on Loggly servers. Being cheap, I have picked the free tier for [amscotti.com](http://amscotti.com/) as it's not a mission critical app and I don't have tons of logs. One of the coolest things I like about Loggly is they do 'Log Archiving' on Amazon's S3 for you. All you need to do is setup a bucket on S3 and update some settings into the Loggly UI.
 

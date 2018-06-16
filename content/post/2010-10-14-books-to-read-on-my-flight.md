@@ -16,7 +16,7 @@ So looking over the times for my flight it seems that it takes about 22 hours to
 So thanks to the great site, [http://www.thriftebook.com](http://www.thriftebook.com/) I been loading up on ebooks to read on the trip. The 2 books I'm really looking forward to reading are [Groovy in Action](http://www.manning.com/koenig) and [Grails in Action](http://www.manning.com/gsmith/) both from [Manning Publications Co.](http://www.manning.com/) I'm hoping I can get through both of them before getting back as I would like to be able to show some people at work the power and ease of using Grails for web application development.
 
 
-[![Groovy in Action](http://www.manning.com/koenig/koenig_cover150.jpg)](http://www.manning.com/koenig/)
-[![Grails in Action](http://www.manning.com/gsmith/gsmith_cover150.jpg)](http://www.manning.com/gsmith/)
+[![Groovy in Action](https://www.manning.com/koenig/koenig_cover150.jpg)](http://www.manning.com/koenig/)
+[![Grails in Action](https://www.manning.com/gsmith/gsmith_cover150.jpg)](http://www.manning.com/gsmith/)
 
 If anyone knows of other great Groovy, Grails or web application development books, please comment and let me know!
