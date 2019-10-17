@@ -2,7 +2,7 @@ baseURL = "https://128bit.io"
 disablePathToLower = false
 languageCode = "en-us"
 title = "128bit.io"
-copyright = "&copy; 2018 | Follow on <a href=\"https://twitter.com/amscotti\" target=\"_blank\">Twitter</a> | <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
+copyright = "&copy; 2019 | Follow on <a href=\"https://twitter.com/amscotti\" target=\"_blank\">Twitter</a> | <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
 theme = "hucore"
 
 [taxonomies]
