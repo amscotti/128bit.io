@@ -12,7 +12,7 @@ In my last post, I said I was in Italy on vacation and you may be thinking to yo
 
 Another really great advantage of a paper book is if you happen to lose a book when traveling its much less money to replace than a fancy gizmo. Also, I’m guessing that most people will not be interested in stealing a book on the next hot programming language, but you never know.
 
-{{< instagram B3-ZWAvnD1U hidecaption >}}
+![Clojure For the Brave and True](/images/for-the-brave-and-true/clojure-for-the-brave-and-true.jpg)
 
 So, all this is a long about way to talk about the book I’m reading right now which is "[Clojure For the Brave and True](https://www.braveclojure.com/clojure-for-the-brave-and-true/)" by [Daniel Higginbotham](https://twitter.com/nonrecursive). Why Clojure? Being a functional programming language, I always had it in the back of my mind as something to learn but sadly never on the top of the list. After hearing a good number of people talking about Clojure I figured I would boost it up the list and give it a look and I'm happy I did! They're tons of good reasons to learn Clojure, I'll talk about some interesting points I have found so far.
 
