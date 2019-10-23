@@ -11,7 +11,7 @@ title: Mastering Grails 101 by Berglund and McCullough
 url: /2012/05/21/mastering-grails-101-by-berglund-and-mccullough/
 ---
 
-![Cat!](http://akamaicovers.oreilly.com/images/0636920024798/cat.gif)
+![Cat!](https://akamaicovers.oreilly.com/images/0636920024798/cat.gif)
 
 I just got done watching "[Mastering Grails 101](http://shop.oreilly.com/product/0636920024798.do)" from O'Reilly last night. I enjoyed the presenters, having gone to many [No Fluff Just Stuff](http://www.nofluffjuststuff.com/home/main) talks of theirs. I know they are knowledgeable in many of the technologies in the Java ecosystem. Also they both have been in another video from O'Reilly, "[Master Git](http://www.128bitstudios.com/2011/02/27/git-github-and-mastering-git-videos/)" which I talked about before.
 

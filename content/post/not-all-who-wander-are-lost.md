@@ -5,6 +5,7 @@ tags:
 - Work
 - Life
 - Development
+- Italy
 ---
 
 As I sit here in Venice on my vacation, I figure this would be a great time to dust off my blog. I haven't put much time into it lately, I find myself wanting to write when I have a good balance with work and life with some learning on the side. Sadly, this balance has been missing for a bit, which leads us into a bit of a back story, the details are not important but the overall experiences that I gained are.
