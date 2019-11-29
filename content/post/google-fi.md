@@ -1,0 +1,26 @@
+---
+title: "Google Fi"
+date: 2019-11-29T11:43:59-05:00
+tags:
+- Phone
+- Google
+- Network
+- Technology 
+- Italy
+---
+
+In my last posting, I talked about bringing a book on my trip to Italy and nothing about the technology that I brought. This was a clever (not really) way to be able to talk about [Clojure](https://clojure.org/) and ["Clojure for the Brave and True"](https://www.braveclojure.com/clojure-for-the-brave-and-true/) but being who I am, I did bring some technology with me on my trip. I would like to talk about one of them that I feel is a real timesaver and a huge advantage when I travel, and that is [Google Fi](https://fi.google.com/about/).
+
+{{< youtube faacIELjUeI >}}
+
+Google Fi is an interesting technology that I have been enjoying for a bit, not just on trips out of the country but when I’m home. Google Fi is a telecommunication service from Google that provides mobile networking, it is interesting how it’s built out because Google is not providing the actual service themselves, but it’s built upon other well-known service providers such as T-Mobile, Sprint and a couple of others. The real advantage of being built upon other networks is the ability to switch to the network that has the best reception at a given time, this means you receive the best network connectivity no matter where you are. Also, Google Fi provides International service, which means when you’re out of the country you still have excellent network coverage.
+
+The [international service](https://fi.google.com/about/international-rates/) is a huge deal for me when I travel. On trips, before having Google Fi I would take time out of my trip to look for a place that would sell me a SIM card for a local mobile provider. Not only did this take time but I also found out that in some countries is not an easy thing to do due to laws and regulations. With Google Fi, I have the convenience of just turning on my phone after getting off the airplane and being connected right away, at full speed. This means that I’m able to load maps or able to hail Uber ride without any issues. Not only is this a great convenience it’s also a huge timesaver which allows me to start my trip without worrying about connectivity.
+
+I’ve been part of Google Fi for years now, back when it was called Project Fi. I first used it on a trip to Iceland, France, and England which was a good test of the service. In all countries, I had excellent connectivity, even when driving to what seemed to be in the middle of nowhere in Iceland, I had extremely fast LTE network coming in around 30 MB up and down, kind of mind-blowing in some ways. Besides this first trip, I have also used Google Fi in Scotland and on my current Italy trip without any issues. In all cases, I simply turned on my phone and it connected to a local service. During the time of my travels, not every country offered an LTE network, but for the networks that I did connect to, they were all fast enough for my needs.
+
+As this is a service from Google, managing your Google Fi account is as simple as using your Google account to login to the Google Fi web site or application, from there you can see data usage and your bills, order new phones, and add people to your account. Everything you would expect from a network service managed by Google. After setting up my account I don’t find myself opening up the application that much, but it does make it convenient when you do need to deal with your account or if you are curious about your data usage.
+
+Let’s talk about the caveats of Google Fi for a bit, like most things in technology there are always trade-offs and as much of an advantage as Google Fi provides there are some trade-offs that you should know before jumping onto the service. If your phone isn't "designed for Google Fi" you lose out on some cool perks, the big one is that your phone will not switch automatically to a more reliable network. The phone will just be on T-Mobile’s network, which isn’t bad (T-Mobile would be my second pick for service). Currently looking on the [Google Fi website](https://fi.google.com/about/phones/), only about 4 phones are being sold. So, you are limited on your selection of phones, but even if you do not have a phone that is designed for Google Fi you can still is the service. You can even use an [iPhone on Google Fi](https://support.google.com/fi/answer/9165858?p=compatible_phone&visit_id=637106430570908110-2611480681&rd=1), if that is something you really want to do. I would say typically you would just use a Pixel phone from Google, which you would know that it would work without any issues.
+
+It is not a quick decision that goes into switching mobile networks, especially if you have multiple people on your plan. For myself, Google Fi has been an awesome service both home and away and it’s something that I do recommend to people. I have had some of my friends switch to Google Fi and they all have seemed to have a very positive response to the switch. My own switch for my wife and I from Verizon to Google Fi was painless and quite simple, we both got Pixel 3s and been happy with the service and the phone. If you in a good spot to look at other mobile network providers, I would recommend taking a look at Google Fi.
