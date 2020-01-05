@@ -1,0 +1,39 @@
+---
+title: "Learn Functional Programming"
+date: 2020-01-05T13:32:45-05:00
+draft: false
+tags:
+- Clojure
+- FSharp
+- Elixir
+- Elm
+- Development
+---
+This time of year, I always find it interesting the number of articles telling you the top languages you should learn. Yes, there’s a steady stream of these types of articles throughout the year but right at the end when a new year is about to start is when I’ve seen them the most. Titles typically include something along the lines of “Top Five languages to learn in 2020”, “Languages to improve your developer life”, “Programming Languages that you need to know in 2020”. I do always take a look at these articles because I’m interested to see what people are suggesting and along with keeping up to date with current trends in the industry, but I do have some issues with a good number of these articles, not all of them but a lot of them.
+ 
+Most of the articles always seem to justify learning a new language being linked to the popularity of that language and your success as a developer, usually with something like pay being associated with it. To me those are not necessarily the best motivators for learning a new language, honestly, if you’re currently working at a company that’s using a certain language it may be more beneficial to expand your mastery of that language versus learning a new one. Let’s just think about learning something new, if you’re trying to learn something that you’re not interested in you are going to have a very hard time staying motivated and interested in it. You’re going to find that you have an easier time trying to learn something that you’re interested in rather than forcing yourself to learn something that you feel may have some benefit down the road.
+ 
+I’m sure if you glance at any of these articles, you’ll see the same languages pop up from time to time, currently, the top languages are [Python](https://octoverse.github.com/), [Java](https://www.tiobe.com/tiobe-index/), and [JavaScript](https://insights.stackoverflow.com/survey/2019#most-popular-technologies). All valid languages to learn, with interesting aspects of developing applications but having learned many different languages in my career, I feel that it’s better to learn new concepts than just a new syntax. Many of the top languages only have slightly different syntax but do have a lot of the same concepts that are overlapping with each other. This is great because it does make learning easier through association but may not have as much benefit as learning new concepts that are foreign to you. With the idea that if you’re going to invest time into learning something new, you’d want to have the most bang for the buck. The recommendation that I give is, I believe that everyone should learn functional programming, there are many languages that can help with this but many of the concepts can be used in other languages, like the one you use every day. This is why I feel that functional programming has a greater value than just learning the next trending language.
+
+{{< youtube QyJZzq0v7Z4 >}}
+[Why Isn't Functional Programming the Norm?](https://www.youtube.com/watch?v=QyJZzq0v7Z4) – [Richard Feldman](https://twitter.com/rtfeldman)
+
+There’s a wide range of functional programming languages all with their own concepts and things that they can teach you. I feel confident no matter what functional programming language you choose you will learn something that increases your development skills and allow you to think about solving problems in different ways no matter what the language. The following is a list of languages that intrigue me, but this is by no means is a complete list of functional languages, I would consider this just a taste of languages that are out there. Try to find a language that intrigues you to make it more exciting to learn!
+
+![Clojure Logo](/images/logo/clojure_logo.png)
+
+[Clojure](https://clojure.org/) - This is the new language I’m obsessed with right now, is based on Lisp, which was created in the 60s, so as you can imagine it has a rich history to it. Clojure itself runs on top of the JVM or JavaScript environment, allowing you to create a full stack of applications. I found that Clojure is a very productive language allowing you to get work done without too much formality or roadblocks coming up. I’ll be writing more about my interactions with Clojure, [but here are more details from another posting I wrote]({{< relref "for-the-brave-and-true.md" >}}).
+
+![F Sharp Logo](/images/logo/fsharp_logo.png)
+
+[F#](https://fsharp.org/) - Not a language I’ve mentioned before but one that has caught my eye and something that I do want to spend some time learning, F# embraces a lot of the concepts found another functional programming languages like Haskell but it is built on top of the Dot Net platform which gives you a great platform for testing, building, and shipping your software. It is open-sourced and used by [several companies including jet.com](https://channel9.msdn.com/Events/FSharp-Events/fsharpConf-2016/INTERVIEW-Using-F-at-Jetcom) and many others. There’s also the ability to use it for development on top of JavaScript and Web Assembly. 
+ 
+![Elixir Logo](/images/logo/elixir_logo.png)
+
+[Elixir](https://elixir-lang.org/) - This is an interesting language that has its roots in Erlang but also possesses very similar syntax to Ruby. This is because the creator [José Valim](https://twitter.com/josevalim) was heavily involved in the Ruby ecosystem but found a love for Erlang and everything it had to offer for solving problems that impact applications today. Erlang possesses an interesting philosophy on how to build applications that can scale using the actor model, Elixir has inherited all this along with expanding upon it using a friendlier syntax. This is a nice language if you have a Ruby background and want to learn some functional concepts that Erlang/Elixir has to offer.
+
+![Elm Logo](/images/logo/elm_logo.png)
+
+[Elm](https://elm-lang.org/) - This is a language that focuses on front end development, a lot of the ideas for frameworks such as React and Redux are coming from concepts found in Elm. Elm itself has been influenced by F# and Haskell, you can see this in the syntax and some of the concepts. It is a strictly typed language similar to Haskell, but the compiler is perceived more like a coding partner and then something that you need to fight with. The error messages are quite friendly and helpful in giving hints on how you can fix the errors. If you are focus is front-end development and you’re interested in learning functional programming this is a great language to start with. I think playing around with the compiler along with seeing how Elm deals with dependency management is well worth taking a look at.
+
+If you glance over my other postings you can quickly realize that I’m a fan of functional programming, this is something I truly feel that every developer should take some time to experience. The concepts that you find in functional programming languages can easily be used in other traditional languages. I think overall there is a great benefit when thinking about how to solve problems in a different way using concepts found in functional programming. I will conclude by saying that I’m a huge fan of learning and encourage people to learn whatever they want to. If you are truly motivated by learning a popular language to increase your pay then go for it. Learning anything new isn’t going to hurt, and there is always a benefit to yourself, but I would say maybe look at a functional programming language even if they are not on any of the top 5 most popular programming languages list.
