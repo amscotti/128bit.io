@@ -1,36 +1,30 @@
 baseURL = "https://128bit.io"
-disablePathToLower = false
 languageCode = "en-us"
 title = "128bit.io"
-copyright = "&copy; 2020 | Follow on <a href=\"https://twitter.com/amscotti\" target=\"_blank\">Twitter</a> | <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
-theme = "hucore"
+copyright = "&copy; <a href=\"https://github.com/amscotti\">Anthony Scotti</a> 2020"
+theme = "kiss"
+Paginate = 7 # Number of posts per page
+enableRobotsTXT = true
+
+[params.info]
+enableSocial = true # Adds OpenGraph and Twitter cards
+homeTitle = "128bit.io" # Title for home page
+poweredby = true # Adds powered by hugo and kiss below Copyright
+related = false # Includes related articles at the bottom of the article
+codeCopy = false # Add copy button above code blocks
+
+[params.social]
+twitter = "amscotti"
+github = "amscotti"
+email = "anthony@128bit.io"
+linkedin = "amscotti"
+instagram = "anthony_scotti"
+
+[params.social.config]
+platforms = ["github","twitter","instagram","email","linkedin"]
 
 [taxonomies]
 tag = "tags"
-category = "categories"
 
-[params]
-description = "2^7 bits of goodness!"
-keywords = ["Development", "Java", "Clojure", "Functional Programming"]
-author = "Anthony Scotti"
-sharingicons = true
-
-[[params.social]]
-url = "https://github.com/amscotti"
-fa_icon = "fa-github"
-
-[[params.social]]
-url = "https://twitter.com/amscotti"
-fa_icon = "fa-twitter"
-
-[[params.social]]
-url = "https://linkedin.com/in/amscotti"
-fa_icon = "fa-linkedin-square"
-
-[[params.social]]
-url = "/index.xml"
-fa_icon = "fa-rss"
-
-[[params.socialshare]]
-url = "https://linkedin.com/in/amscotti"
-fa_icon = "fa-linkedin-square"
+[blackfriday]
+hrefTargetBlank = true
