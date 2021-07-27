@@ -1,9 +1,9 @@
 baseURL = "https://128bit.io"
 languageCode = "en-us"
 title = "128bit.io"
-copyright = "&copy; <a href=\"https://github.com/amscotti\">Anthony Scotti</a> 2020"
+copyright = "&copy; <a href=\"https://github.com/amscotti\">Anthony Scotti</a> 2021"
 theme = "kiss"
-Paginate = 7 # Number of posts per page
+Paginate = 10 # Number of posts per page
 enableRobotsTXT = true
 
 [params.info]
