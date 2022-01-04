@@ -20,19 +20,19 @@ I’m sure if you glance at any of these articles, you’ll see the same languag
 
 There’s a wide range of functional programming languages all with their own concepts and things that they can teach you. I feel confident no matter what functional programming language you choose you will learn something that increases your development skills and allow you to think about solving problems in different ways no matter what the language. The following is a list of languages that intrigue me, but this is by no means is a complete list of functional languages, I would consider this just a taste of languages that are out there. Try to find a language that intrigues you to make it more exciting to learn!
 
-![Clojure Logo](/images/logo/clojure_logo.png)
+{{< image src="/images/logo/clojure_logo.png" alt="Clojure Logo" position="center" style="border-radius: 8px;" >}}
 
 [Clojure](https://clojure.org/) - This is the new language I’m obsessed with right now, is based on Lisp, which was created in the 60s, so as you can imagine it has a rich history to it. Clojure itself runs on top of the JVM or JavaScript environment, allowing you to create a full stack of applications. I found that Clojure is a very productive language allowing you to get work done without too much formality or roadblocks coming up. I’ll be writing more about my interactions with Clojure, [but here are more details from another posting I wrote]({{< relref "for-the-brave-and-true.md" >}}).
 
-![F Sharp Logo](/images/logo/fsharp_logo.png)
+{{< image src="/images/logo/fsharp_logo.png" alt="F Sharp Logo" position="center" style="border-radius: 8px;" >}}
 
 [F#](https://fsharp.org/) - Not a language I’ve mentioned before but one that has caught my eye and something that I do want to spend some time learning, F# embraces a lot of the concepts found another functional programming languages like Haskell but it is built on top of the Dot Net platform which gives you a great platform for testing, building, and shipping your software. It is open-sourced and used by [several companies including jet.com](https://channel9.msdn.com/Events/FSharp-Events/fsharpConf-2016/INTERVIEW-Using-F-at-Jetcom) and many others. There’s also the ability to use it for development on top of JavaScript and Web Assembly. 
  
-![Elixir Logo](/images/logo/elixir_logo.png)
+{{< image src="/images/logo/elixir_logo.png" alt="Elixir Logo" position="center" style="border-radius: 8px; background-color: white; padding: 1em;" >}}
 
 [Elixir](https://elixir-lang.org/) - This is an interesting language that has its roots in Erlang but also possesses very similar syntax to Ruby. This is because the creator [José Valim](https://twitter.com/josevalim) was heavily involved in the Ruby ecosystem but found a love for Erlang and everything it had to offer for solving problems that impact applications today. Erlang possesses an interesting philosophy on how to build applications that can scale using the actor model, Elixir has inherited all this along with expanding upon it using a friendlier syntax. This is a nice language if you have a Ruby background and want to learn some functional concepts that Erlang/Elixir has to offer.
 
-![Elm Logo](/images/logo/elm_logo.png)
+{{< image src="/images/logo/elm_logo.png" alt="Elm Logo" position="center" >}}
 
 [Elm](https://elm-lang.org/) - This is a language that focuses on front end development, a lot of the ideas for frameworks such as React and Redux are coming from concepts found in Elm. Elm itself has been influenced by F# and Haskell, you can see this in the syntax and some of the concepts. It is a strictly typed language similar to Haskell, but the compiler is perceived more like a coding partner and then something that you need to fight with. The error messages are quite friendly and helpful in giving hints on how you can fix the errors. If you are focus is front-end development and you’re interested in learning functional programming this is a great language to start with. I think playing around with the compiler along with seeing how Elm deals with dependency management is well worth taking a look at.
 

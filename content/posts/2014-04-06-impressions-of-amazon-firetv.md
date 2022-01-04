@@ -12,7 +12,7 @@ url: /2014/04/06/impressions-of-amazon-firetv/
 
 So I decided to order the [Amazon Fire TV](http://www.amazon.com/dp/B00CX5P8FC/), and it arrived yesterday. (Got to love Amazon Prime for shipping!). So this is my first impressions along with why I decided to get the Fire TV.
 
-![Amazon Fire TV](/images/2014-04-06-impressions-of-amazon-firetv/firetv.jpg#c)
+{{< image src="/images/2014-04-06-impressions-of-amazon-firetv/firetv.jpg" alt="Amazon Fire TV" position="center" style="border-radius: 8px;" >}}
 
 Currently I have an Apple TV second generation, which only supports up to 720p resolution and is kind of dated at this point as far as hardware. I enjoy the Apple TV and find that it's a great product at a nice price range. Works very well if you're part of the Apple ecosystem, but I do have some issues with it that I think Amazon has an opportunity to fix.
 

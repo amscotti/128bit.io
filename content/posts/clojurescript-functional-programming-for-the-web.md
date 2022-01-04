@@ -9,7 +9,7 @@ tags:
 
 As I sit next to a gas store in Vermont, I once again have a hard copy book with me to read on vacation. This time it's "[Learning ClojureScript](https://www.learn-clojurescript.com/)" by [Andrew Meredith](https://twitter.com/a4w_m6h), and just like [Clojure For the Brave and True](/post/for-the-brave-and-true/) it's another free book that can easily be downloaded and read from any fancy gizmos. Unlike my trip to Italy, I have no fear of misplacing or having a piece of technology stolen because we are staying in one place for this trip. So I'll simply say I enjoy the feel of a hard copy book that I find better to read than a PDF or something on an e-reader. Being able to quickly flip back a page to re-read something or look ahead to see what is coming is something I don't think an e-reader will replace in the same way.
 
-![Learning ClojureScript by a gas store in Vermont](/images/clojurescript-functional-programming-for-the-web/gas-store.png#c)
+{{< image src="/images/clojurescript-functional-programming-for-the-web/gas-store.png" alt="Learning ClojureScript by a gas store in Vermont" position="center" style="border-radius: 8px;" >}}
 
 At this point on my vacation, I'm a little over halfway through the book, and I feel this has given an excellent introduction to Clojure(Script) and what actual development feels like. I have enjoyed using Clojure to create small command-line applications, do code katas, and create servers. But I haven't looked into what development looks like using ClojureScript, even though a lot of my desire to learn functional programming languages often comes from wanting to use them on the frontend.
 
