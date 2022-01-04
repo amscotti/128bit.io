@@ -11,7 +11,7 @@ Clojure seems to be coming up a lot in postings, books, and social media. Some m
 
 I think with all the links I have mentioned you should have a good sense of why you would want to learn Clojure and many of its great benefits. I don't think I would be able to give a better introduction and go into "Why Clojure" as they have already done a great job on that. So, I'm hoping to jump right into showing some of the lovely but shocking syntax. One of the comments that always come up from people starting to look into a Lisp dialect is the difference in syntax compared to a language that evolved from C. For myself, it did take me a bit to look past all the parentheses, but over time it does become a very elegant language to read.
 
-![Lisp Cycles](https://imgs.xkcd.com/comics/lisp_cycles.png#c)
+{{< image src="https://imgs.xkcd.com/comics/lisp_cycles.png" alt="Lisp Cycles" position="center" style="border-radius: 8px;" >}}
 
 [xkcd: Lisp Cycles](https://xkcd.com/297/)
 
@@ -20,7 +20,7 @@ For a language to compare Clojure to I'm going to pick JavaScript as it's easy f
 ## TL;DR
 So, as I was starting to write this posting, Uncle Bob made a pretty good summary of the Lisp syntax compared to Java on [Twitter](https://twitter.com/unclebobmartin/status/1215642524817080322),
 
-{{< tweet 1215642524817080322 >}}
+{{< tweet user="unclebobmartin" id="1215642524817080322" >}}
 
 I think this makes a good TL;DR section, as this is a good guiding point when thinking about Clojure.
 
@@ -37,7 +37,7 @@ Easy, right? Ok, let's take a look at this in Clojure
 ```
 I think this needs to be broken up a bit to fully understand it
 
-![Clojure Function](/images/taste-of-clojure/clojure_breaking_apart.png#c)
+{{< image src="/images/taste-of-clojure/clojure_breaking_apart.png" alt="Clojure Function" position="center" style="border-radius: 8px;" >}}
 
 I think the strange thing is the parentheses and the way it hugs the function that is being called and its arguments. The interesting thing is that code is represented in the list data structure, this is referred to as [Homoiconicity](https://en.wikipedia.org/wiki/Homoiconicity) and where the idea for "code as data" comes from as the code is constructed from regular Clojure data structures. This is an idea that comes from Lisp and not just something that is found in Clojure, which speaks to the rich history of Lisp.
 
@@ -151,10 +151,10 @@ Overall not too much difference, but let's just point out something, this is usi
 ## Conclusion
 This posting could go on much longer providing a lot more details around the interesting syntax found in Clojure, but I just want to provide a taste to get people interested in the language and the concepts. I do hope to continue to write more about Clojure as I learn it myself but I want to end this post with another tweet from Uncle Bob that fits very well with my current thinking,
 
-{{< tweet 1214906676840669184 >}}
+{{< tweet user="unclebobmartin" id="1214906676840669184" >}}
 [Twitter Link](https://twitter.com/unclebobmartin/status/1214906676840669184)
 
-## References
+## References
 * [Understanding Homoiconicity, the Power Behind Clojure Macros](https://spin.atomicobject.com/2013/07/23/homoiconicity-clojure-macros/)
 * [What I learned after writing Clojure for 424 days, straight](https://medium.com/@shivekkhurana/what-i-learned-after-writing-clojure-for-424-days-straight-8884ec471f8e)
 * [Uncle Bob Martin presents Clojure (Chicago Java Users Group 2013-10-16 Meetup)](https://www.youtube.com/watch?v=SYeDxWKftfA)

@@ -7,7 +7,7 @@ tags:
 - Development
 ---
 
-![Clojure Logo](/images/logo/clojure_logo.png#c)
+{{< image src="/images/logo/clojure_logo.png" alt="Clojure Logo" position="center" style="border-radius: 8px;" >}}
 
 As I continue my journey with learning functional programming, I have started to explore deeper into the languages that I enjoy and do some experimenting with interesting parts of those languages. This has led me to `defmulti` and `defmethod`, enabling you to create methods that deal with different implementations that are selected by a dispatch function. This is certainly easier to see in code, but it allows you to create a function based on the return of the dispatch function that will send the parameters to another function.
 
