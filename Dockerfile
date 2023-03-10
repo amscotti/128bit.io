@@ -1,6 +1,6 @@
-FROM alpine:3.7 AS builder
+FROM alpine:3.17 AS builder
 
-ENV HUGO_VERSION 0.91.2
+ENV HUGO_VERSION 0.111.2
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
 
 # Install pygments (for syntax highlighting) and git
@@ -22,5 +22,5 @@ RUN git submodule update --init --recursive
 RUN hugo --gc --minify -b "/"
 
 # Copy site into httpd image
-FROM httpd:2.4-alpine
+FROM docker.io/library/httpd:alpine3.17
 COPY --from=0 /site/public /usr/local/apache2/htdocs/ 
