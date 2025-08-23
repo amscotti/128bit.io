@@ -1,0 +1,16 @@
+{# Pagination navigation - requires articles_page, articles_previous_page, articles_next_page #}
+{% if articles_page and (articles_page.has_previous() or articles_page.has_next()) %}
+<nav class="terminal-nav">
+  <div class="nav-separator">---</div>
+  {% if articles_page.has_previous() %}
+  <div class="nav-item">
+    <span class="nav-syntax">&lt;= </span><a href="{{ SITEURL }}/{{ articles_previous_page.url }}">previous</a>
+  </div>
+  {% endif %}
+  {% if articles_page.has_next() %}
+  <div class="nav-item">
+    <span class="nav-syntax">=&gt; </span><a href="{{ SITEURL }}/{{ articles_next_page.url }}">next</a>
+  </div>
+  {% endif %}
+</nav>
+{% endif %}

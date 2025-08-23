@@ -1,16 +1,10 @@
----
-author: Anthony Scotti
-date: 2010-10-29T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Honeymoon
-- New Zealand
-- Personal
-- Photo
-- Queenstown
-title: Queenstown
-url: /2010/10/29/queenstown/
----
+Title: Queenstown
+Date: 2010-10-29 00:00
+Slug: 2010/10/29/queenstown
+Save_as: 2010/10/29/queenstown/index.html
+URL: 2010/10/29/queenstown/
+Tags: Honeymoon, New Zealand, Personal, Photo, Queenstown
+Summary: Exploring Queenstown with its stunning mountain views, restaurants, and variety of activities from extreme sports to scenic gondola rides. Took a day tour to Milford Sound with stops through Fjordlands and a boat ride that included getting drenched at a waterfall, plus an evening on the historic TSS Earnslaw steamship for a farm dinner with sheep shearing demonstration.
 
 As I said in my last posting, Queenstown is filled with astonishing views. There is mountains in every direction and at the time we came they still had snow on top of the peaks giving them a nice white top. The hotel we stayed out was right in the heart of the town with about a 5 min walk to the shore line. There are tons of bars and restaurants around. Most of the places we ate at were very good with quality food. There are tons of things to do in the town, most of them are extreme like bung jumping or paragliding but there are some less extreme activities like the gondola ride up a mountain. For our stay, I would have been happy just hanging around Queenstown and enjoying the view but we did do a day tour to Milford sound.
 

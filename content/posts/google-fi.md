@@ -1,17 +1,12 @@
----
-title: "Google Fi"
-date: 2019-11-29T11:43:59-05:00
-tags:
-- Phone
-- Google
-- Network
-- Technology 
-- Italy
----
+Title: Google Fi
+Date: 2019-11-29 11:43
+Slug: google-fi
+Tags: Phone, Google, Network, Technology, Italy
+Summary: A review of Google Fi telecommunication service built on partner networks like T-Mobile and Sprint. Highlights advantages of switching to best available network through automatic network selection, international service for travel without SIM card hassles, and seamless connectivity when traveling abroad, noting how it transforms mobile experience during trips.
 
 In my last posting, I talked about bringing a book on my trip to Italy and nothing about the technology that I brought. This was a clever (not really) way to be able to talk about [Clojure](https://clojure.org/) and ["Clojure for the Brave and True"](https://www.braveclojure.com/clojure-for-the-brave-and-true/) but being who I am, I did bring some technology with me on my trip. I would like to talk about one of them that I feel is a real timesaver and a huge advantage when I travel, and that is [Google Fi](https://fi.google.com/about/).
 
-{{< youtube faacIELjUeI >}}
+{% youtube faacIELjUeI %}
 
 Google Fi is an interesting technology that I have been enjoying for a bit, not just on trips out of the country but when I’m home. Google Fi is a telecommunication service from Google that provides mobile networking, it is interesting how it’s built out because Google is not providing the actual service themselves, but it’s built upon other well-known service providers such as T-Mobile, Sprint and a couple of others. The real advantage of being built upon other networks is the ability to switch to the network that has the best reception at a given time, this means you receive the best network connectivity no matter where you are. Also, Google Fi provides International service, which means when you’re out of the country you still have excellent network coverage.
 

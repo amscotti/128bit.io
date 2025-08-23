@@ -1,12 +1,10 @@
----
-author: Anthony Scotti
-date: 2012-08-26T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Mac
-title: Homebrew for OS X
-url: /2012/08/26/homebrew-for-os-x/
----
+Title: Homebrew for OS X
+Date: 2012-08-26 00:00
+Slug: 2012/08/26/homebrew-for-os-x
+Save_as: 2012/08/26/homebrew-for-os-x/index.html
+URL: 2012/08/26/homebrew-for-os-x/
+Tags: Mac
+Summary: A recommendation for Homebrew as package manager for Mac OS X, offering easier installation of software than manual downloads. Explains how Homebrew manages dependencies and library locations under /usr/local, making it simple to install, update, and remove packages with single commands like brew install and brew uninstall.
 
 In past postings I have shown you how to install things like Groovy, Grails and Scala on OS X. The postings are still a good resource to use to install what you want, but if you need to install tons of things on to your system there is a better way. This is where Homebrew comes in to play.
 

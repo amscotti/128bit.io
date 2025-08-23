@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}404 :: {{ SITENAME }}{% endblock %}
+
+{% block description %}Page not found{% endblock %}
+
+{% block prefetch %}
+<link rel="prefetch" href="{{ SITEURL }}/">
+{% endblock %}
+
+{% block header %}
+{% set header_path = "~" %}
+{% set header_command = "cat requested_page.md" %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="error-page">
+  <div class="terminal-output">
+    <pre class="error-output">cat: requested_page.md: No such file or directory
+
+<span class="ascii-art">    ██╗  ██╗ ██████╗ ██╗  ██╗
+    ██║  ██║██╔═████╗██║  ██║
+    ███████║██║██╔██║███████║
+    ╚════██║████╔╝██║╚════██║
+         ██║╚██████╔╝     ██║
+         ╚═╝ ╚═════╝      ╚═╝</span>
+
+    <span class="error-message">File not found in the void...</span>
+</pre>
+  </div>
+  <div class="terminal-command">
+    <span class="prompt">[amscotti@128bit.io ~]# </span><a href="{{ SITEURL }}/" class="command-link">cd ~</a><span class="cursor">_</span>
+  </div>
+</div>
+{% endblock %}

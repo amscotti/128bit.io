@@ -1,15 +1,10 @@
----
-author: Anthony Scotti
-date: 2013-08-11T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- CoffeeScript
-- TypeScript
-- Dart
-- JavaScript
-title: A quick look at CoffeeScript, TypeScript, and Dart
-url: /2013/08/11/a-quick-look-at-coffeescript-typescript-and-dart/
----
+Title: A quick look at CoffeeScript, TypeScript, and Dart
+Date: 2013-08-11 00:00
+Slug: 2013/08/11/a-quick-look-at-coffeescript-typescript-and-dart
+Save_as: 2013/08/11/a-quick-look-at-coffeescript-typescript-and-dart/index.html
+URL: 2013/08/11/a-quick-look-at-coffeescript-typescript-and-dart/index.html
+Tags: CoffeeScript, TypeScript, Dart, JavaScript
+Summary: Comparison of CoffeeScript, TypeScript, and Dart as JavaScript alternatives. CoffeeScript offers Ruby/Python syntax with code reduction; TypeScript is strict superset with optional typing and IDE support; Dart includes VM for server apps and optional typing with Java-like syntax. All three improve function syntax.
 
 As more developers focus on working on the front end, more tools are created to assist the developers. We now have some great tools and IDEs to help us with our development of JavaScript. The language itself can be hard to grasp and leads to many errors and bugs in your code. New languages for the web have been emerging to help tackle the issues that people are having with building scalable JavaScript applications.
 
@@ -34,15 +29,77 @@ One of the primary things that all JavaScript code has is functions. All three l
 
 ### CoffeeScript
 
-{{< gist amscotti 6076549 "functions.coffee" >}}
+```coffeescript
+divisible = 3
+
+divisibleReporter = (lastFound, nextDivisible) ->
+  "Found: #{lastFound}, Next: #{nextDivisible}"
+
+divisibleKeeper = ((divisible) ->
+  lastFound = 0
+  nextDivisible = divisible
+  (number) ->
+    if (number >= nextDivisible)
+      nextDivisible = (Math.floor(number/divisible) + 1) * divisible
+      lastFound = Math.floor(number/divisible) * divisible
+      console.log divisibleReporter(lastFound, nextDivisible)
+  )(divisible);
+
+for n in [1..100]
+  divisibleKeeper(n)
+```
 
 ### TypeScript
 
-{{< gist amscotti 6076549 "functions.ts" >}}
+```typescript
+var divisible = 3;
+
+var divisibleReporter = function(lastFound:number, nextDivisible:number){
+  return "Found: " + lastFound + ", Next: " + nextDivisible;
+};
+
+var divisibleKeeper = (function(divisible:number) {
+  var lastFound = 0;
+  var nextDivisible = divisible;
+  return function(number:number) {
+    if (number >= nextDivisible) {
+      nextDivisible = (Math.floor(number / divisible) + 1) * divisible;
+      lastFound = Math.floor(number / divisible) * divisible;
+      console.log(divisibleReporter(lastFound, nextDivisible));
+    }
+  };
+})(divisible);
+
+for (var i = 1; i <= 100; ++i) {
+  divisibleKeeper(i);
+}
+```
 
 ### Dart
 
-{{< gist amscotti 6076549 "functions.dart" >}}
+```dart
+int divisible = 3;
+
+String divisibleReporter(int lastFound, int nextDivisible) => "Found: ${lastFound}, Next: ${nextDivisible}";
+
+var divisibleKeeper = ((int divisible) {
+  int lastFound = 0;
+  int nextDivisible = divisible;
+  return (int number){
+    if (number >= nextDivisible) {
+      nextDivisible = ((number/divisible).floor() + 1) * divisible;
+      lastFound = (number/divisible).floor() * divisible;
+      print(divisibleReporter(lastFound, nextDivisible));
+    }
+  };
+})(divisible);
+
+void main() {
+  for (var i = 0; i < 100; i++) {
+    divisibleKeeper(i);
+  }
+}
+```
 
 Nothing too dramatic from TypeScript, but you get a lot of help from using types. If you were to come back and look at this code after a bit, you would know what types your functions need and your IDE would inform you if you made a mistake.
 
@@ -55,15 +112,149 @@ With JavaScript being a [Prototypical language](http://en.wikipedia.org/wiki/Pro
 
 ### CoffeeScript
 
-{{< gist amscotti 5961171 "DocWho.coffee" >}}
+```coffeescript
+class Actor
+  constructor: (@firstName, @lastName, @start, @end) ->
+
+  info: ->
+    fullname = "#{@firstName} #{@lastName}"
+    "#{fullname} was from #{@start} to #{@end}"
+
+class TimeLord
+  constructor: (@name, @companions = []) ->
+
+  addCompanion: (companion) ->
+    @companions.push companion
+
+doctorWho = [
+  ["Christopher Eccleston", 2005, 2005]
+  ["David Tennant", 2005, 2010]
+  ["Matt Smith", 2010, 2013]
+]
+
+doctors = (new Actor(doc[0].split(' ')[0], doc[0].split(' ')[1], doc[1], doc[2]) for doc in doctorWho)
+for doc in doctors
+  console.log doc.info()
+
+theDoctor = new TimeLord 'The Doctor'
+theDoctor.addCompanion 'Rose Tyler'
+theDoctor.addCompanion 'Martha Jones'
+theDoctor.addCompanion 'Donna Noble'
+console.log theDoctor
+```
 
 ### TypeScript
 
-{{< gist amscotti 5961171 "DocWho.ts" >}}
+```typescript
+class Actor {
+  firstName: string;
+  lastName: string;
+  start: number;
+  end: number;
+
+  constructor(firstName: string, lastName: string, start: number, end: number) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.start = start;
+    this.end = end;
+  }
+
+  info() {
+    var fullname = this.firstName + " " + this.lastName;
+    return fullname + " was from " + this.start + " to " + this.end;
+  }
+}
+
+class TimeLord {
+  name: string;
+  companions: string[];
+
+  constructor(name: string, companions: string[] = []) {
+    this.name = name;
+    this.companions = companions;
+  }
+
+  addCompanion(companion: string) {
+    this.companions.push(companion);
+  }
+}
+
+var doctorWho = [
+  ["Christopher Eccleston", 2005, 2005],
+  ["David Tennant", 2005, 2010],
+  ["Matt Smith", 2010, 2013]
+];
+
+var doctors: Actor[] = [];
+for (var i = 0; i < doctorWho.length; i++){
+  var names = (<string>doctorWho[i][0]).split(" ");
+  doctors.push(new Actor(names[0], names[1], <number>doctorWho[i][1], <number>doctorWho[i][2]));
+}
+
+for (var j = 0; j < doctors.length; j++) {
+  console.log(doctors[j].info());
+}
+
+var theDoctor: TimeLord = new TimeLord("The Doctor");
+theDoctor.addCompanion("Rose Tyler");
+theDoctor.addCompanion("Martha Jones");
+theDoctor.addCompanion("Donna Noble");
+console.log(theDoctor);
+```
 
 ### Dart
 
-{{< gist amscotti 5961171 "DocWho.dart" >}}
+```dart
+class Actor {
+  String firstName, lastName;
+  int start, end;
+
+  Actor(this.firstName, this.lastName, this.start, this.end);
+
+  String info() {
+    var fullname = "${firstName} ${lastName}";
+    return "${fullname} was from ${start} to ${end}";
+  }
+}
+
+class TimeLord {
+  String name;
+  List<String> companions;
+
+  TimeLord(this.name, [this.companions]) {
+    if (companions == null) {
+      companions = [];
+    }
+  }
+
+  void addCompanion(String companion) {
+    companions.add(companion);
+  }
+}
+
+void main() {
+  var doctorWho = [
+    ["Christopher Eccleston", 2005, 2005],
+    ["David Tennant", 2005, 2010],
+    ["Matt Smith", 2010, 2013]
+  ];
+
+  var doctors = doctorWho.map((doc){
+    var names = doc[0].split(" ");
+    return new Actor(names[0], names[1], doc[1], doc[2]);
+  });
+
+  for (var doc in doctors) {
+    print(doc.info());
+  }
+
+  var theDoctor = new TimeLord("The Doctor");
+  theDoctor.addCompanion("Rose Tyler");
+  theDoctor.addCompanion("Martha Jones");
+  theDoctor.addCompanion("Donna Noble");
+  print(theDoctor.companions);
+}
+```
 
 Overall the structure is very similar between all three examples. You do see the advantages of using CoffeeScript to do more in less lines but Dart isn't too far behind. On the technical side of things I would say Dart has a bit of an advantage as it is naturally an object-oriented language and not imitating to be one like JavaScript.
 

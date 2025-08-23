@@ -1,0 +1,8 @@
+{# Social links component - requires SOCIAL variable #}
+{% if SOCIAL %}
+<div class="whoami-social">
+  {% for name, link in SOCIAL %}
+  <a href="{{ link }}" class="social-bracket">[{{ name|lower }}]</a>
+  {% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Tags :: {{ SITENAME }}{% endblock %}
+
+{% block header %}
+{% set header_path = "~/posts" %}
+{% set header_command = "ls -la tags/" %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="terminal-posts">
+  <div class="terminal-output">
+    <div class="file-listing">
+      {% for tag, articles in tags|sort(attribute='0.name') %}
+        <div class="file-line">
+          <span class="date">{{ articles|count }} post{% if articles|count != 1 %}s{% endif %}</span>
+          <a href="{{ SITEURL }}/tags/{{ tag.slug }}/" class="filename">{{ tag }}</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

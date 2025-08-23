@@ -1,14 +1,10 @@
----
-author: Anthony Scotti
-date: 2013-05-19T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Dart
-- Popcorn.js
-title: Dart with a side of Popcorn.js
-url: /2013/05/19/dart-with-a-side-of-popcorn/
----
-
+Title: Dart with a side of Popcorn.js
+Date: 2013-05-19 00:00
+Slug: 2013/05/19/dart-with-a-side-of-popcorn
+Save_as: 2013/05/19/dart-with-a-side-of-popcorn/index.html
+URL: 2013/05/19/dart-with-a-side-of-popcorn/
+Tags: Dart, Popcorn.js
+Summary: Demonstrates using Popcorn.js media library from Dart, solving JavaScript callback context issues. Shows working with Web UI package for HTML elements, notes Popcorn.js is no longer maintained, and explores Dart VM's positioning with web apps, questioning browser vendor support strategies.
 
 **Update:** Popcorn.js is no longer maintained I have removed by Mozilla
 

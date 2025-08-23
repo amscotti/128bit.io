@@ -1,24 +1,18 @@
----
-author: Anthony Scotti
-date: 2012-06-28T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- AWS
-- DynamoDB
-- noSQL
-- Opinion
-- Review
-title: DynamoDB, Amazon's scalable NoSQL database
-url: /2012/06/28/dynamodb-amazons-scalable-nosql-database/
----
+Title: DynamoDB, Amazon's scalable NoSQL database
+Date: 2012-06-28 00:00
+Slug: 2012/06/28/dynamodb-amazons-scalable-nosql-database
+Save_as: 2012/06/28/dynamodb-amazons-scalable-nosql-database/index.html
+URL: 2012/06/28/dynamodb-amazons-scalable-nosql-database/
+Tags: AWS, DynamoDB, noSQL, Opinion, Review
+Summary: A review of Amazon DynamoDB key-value database service. Compares to SimpleDB, explains Dynamo's white paper origins and influences on Cassandra and Riak, highlights predictability of performance with configurable throughput, discusses trade-offs like 64KB item limit and lack of easy table cloning, and praises ease of setup over self-administered NoSQL databases.
 
-One of the things that really gets me excited about my new job is being able to use new technology. Sure, sometimes new technology is risky but I see groups befitting more then failing due to using newer technology. As always when talking about new technology, NoSQL seems to come up because there are a good number of people switching parts (or all) of their application to use NoSQL databases to get by limits or to help with scalability issues. And here comes Amazon to the rescue with another database service.
+One of the things that really gets me excited about my new job is being able to use new technology. Sure, sometimes new technology is risky but I see groups befitting more then failing due to using newer technology. As always when talking about new technology, NoSQL seems to come up because there are a good number of people switching parts (or all) of their application to use NoSQL databases to get by limits or to help with scalability issues. And here comes Amazon to the rescue with another database service.
 
 At this point in time there are 3 types of database services you can get from Amazon. Relational Database Service (RDS) is your traditional database like MySQL, Oracle and SQL Server. Nothing really out of the ordinary here, we have all been using these for years. The only difference is they are in the "Cloud" managed by Amazon.
 
-The last two database services are [SimpleDB](http://aws.amazon.com/simpledb/) and [DynamoDB](http://aws.amazon.com/dynamodb/). Amazon SimpleDB is a NoSQL database, but compared to DynamoDB this has many limitations as far as performance and scaling. Even though there are limitations it is nice that SimpleDB will make indexes of all attributes for each item stored. This is something that you are unable to do in DynamoDB. I feel that SimpleDB showed Amazon that people would use a NoSQL database service in the cloud. I truthfully have never used SimpleDB, so I can't speak much more about it. I also have a feeling that DynamoDB will replace SimpleDB over time.
+The last two database services are [SimpleDB](http://aws.amazon.com/simpledb/) and [DynamoDB](http://aws.amazon.com/dynamodb/). Amazon SimpleDB is a NoSQL database, but compared to DynamoDB this has many limitations as far as performance and scaling. Even though there are limitations it is nice that SimpleDB will make indexes of all attributes for each item stored. This is something that you are unable to do in DynamoDB. I feel that SimpleDB showed Amazon that people would use a NoSQL database service in the cloud. I truthfully have never used SimpleDB, so I can't speak much more about it. I also have a feeling that DynamoDB will replace SimpleDB over time.
 
-Amazon's solution to some of the limitations with SimpleDB is DynamoDB. DynamoDB is a key-value store that is highly available. The idea of Dynamo comes from a [white paper written by Amazon](http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf) talking about the system they had used inhouse for Amazon.com. No code was released just the idea, similar to what [Google did for Big table](http://research.google.com/archive/bigtable.html). From Amazon's paper, people did make their own Dynamo inspired databases systems, [Cassandra](http://en.wikipedia.org/wiki/Apache_Cassandra) and [Riak](http://en.wikipedia.org/wiki/Riak) are the two that I know of. Now Amazon is offering their own Dynamo based database which is highly available, along with predictable performance.
+Amazon's solution to some of the limitations with SimpleDB is DynamoDB. DynamoDB is a key-value store that is highly available. The idea of Dynamo comes from a [white paper written by Amazon](http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf) talking about the system they had used inhouse for Amazon.com. No code was released just the idea, similar to what [Google did for Big table](http://research.google.com/archive/bigtable.html). From Amazon's paper, people did make their own Dynamo inspired databases systems, [Cassandra](http://en.wikipedia.org/wiki/Apache_Cassandra) and [Riak](http://en.wikipedia.org/wiki/Riak) are the two that I know of. Now Amazon is offering their own Dynamo based database which is highly available, along with predictable performance.
 
 With all 3 database services we have the idea of removing operational needs (sorry Admins... we don't need you anymore) along with having a distributed system at your fingertips. A lot more details can be found on [Werner Vogels blog](http://www.allthingsdistributed.com/2012/01/amazon-dynamodb.html) of the history of NoSQL at Amazon.
 
@@ -33,6 +27,6 @@ For my projects that I have been using DynamoDB on, it's been a good fit and giv
 I'm hoping to have some code examples in another posting about using DynamoDB along with what it takes to layout tables to be able to pull data.
 
 ## Here are some resources links:
-* [Webinar: Amazon Dynamo DB](http://www.youtube.com/watch?v=meBjA68DeIU&amp;feature=relmfu)
-* [Amazon DynamoDB - What's It All About?](http://www.youtube.com/watch?v=nMhWJJACZSA&amp;feature=relmfu)
+* [Webinar: Amazon Dynamo DB](http://www.youtube.com/watch?v=meBjA68DeIU&feature=relmfu)
+* [Amazon DynamoDB - What's It All About?](http://www.youtube.com/watch?v=nMhWJJACZSA&feature=relmfu)
 * [Amazon DynamoDB Developer Guide](http://www.amazon.com/Amazon-DynamoDB-Developer-Guide-ebook/dp/B007Q4JGBM)

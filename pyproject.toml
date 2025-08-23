@@ -1,0 +1,11 @@
+[project]
+name = "128bit-io"
+version = "1.0.0"
+description = "128bit.io blog built with Pelican"
+requires-python = ">=3.13"
+dependencies = [
+    "pelican-liquid-tags>=1.0.4",
+    "pelican[markdown]>=4.11.0",
+    "pygments>=2.17.0",
+    "pyyaml>=6.0",
+]

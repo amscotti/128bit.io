@@ -1,12 +1,10 @@
----
-author: Anthony Scotti
-date: 2015-01-02T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Bitcasa
-title: Bitcasa No More
-url: /2015/01/02/bitcasa-no-more/
----
+Title: Bitcasa No More
+Date: 2015-01-02 00:00
+Slug: 2015/01/02/bitcasa-no-more
+Save_as: 2015/01/02/bitcasa-no-more/index.html
+URL: 2015/01/02/bitcasa-no-more/
+Tags: Bitcasa
+Summary: A warning about Bitcasa cloud storage service after they dropped unlimited plans, changed pricing, and deleted data when users didn't transfer to new plans. Lost 700GB of data despite working with customer support. Recommends Space Monkey as alternative with hardware-based storage eliminating data center costs, enabling faster transfers on local networks.
 
 A bit ago I wrote a posting about how I left Dropbox and Google drive for a new service called Bitcasa, sadly all good things come to an end. I can no longer recommend Bitcasa because of the change in their service and plans. When I signed up and got the service they still had an unlimited plan that would let you store as much as you wanted. One of the features that I really liked was the need to not have everything sync to your computer, your files would stream over the internet when you wanted them. As I pointed out, this was great for me because I had a Macbook Air with a smaller hard drive. I felt this was better then both Google and Dropbox because they required you to have your files synced to your computer.
 

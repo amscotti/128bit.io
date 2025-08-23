@@ -1,18 +1,15 @@
----
-author: Anthony Scotti
-date: 2014-04-06T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Amazon
-- FireTV
-- Netflix
-title: Impressions of Amazon Fire TV
-url: /2014/04/06/impressions-of-amazon-firetv/
----
+Title: Impressions of Amazon Fire TV
+Date: 2014-04-06 00:00
+Slug: 2014/04/06/impressions-of-amazon-firetv
+Save_as: 2014/04/06/impressions-of-amazon-firetv/index.html
+URL: 2014/04/06/impressions-of-amazon-firetv/
+Tags: Amazon, FireTV, Netflix
+Summary: Initial impressions of Amazon Fire TV after ordering with Prime shipping. Discusses Amazon's open platform approach allowing any content provider versus Apple's walled garden, noting Fire TV supports 1080p resolution while existing Apple TV is limited to 720p, making Amazon Fire TV attractive upgrade despite existing Apple ecosystem satisfaction.
+Summary: Initial impressions of Amazon Fire TV after ordering with Prime shipping. Discusses Amazon's open platform approach allowing any content provider versus Apple's walled garden, noting Fire TV supports 1080p resolution while existing Apple TV is limited to 720p, making Amazon Fire TV attractive upgrade despite existing Apple ecosystem satisfaction.
 
 So I decided to order the [Amazon Fire TV](http://www.amazon.com/dp/B00CX5P8FC/), and it arrived yesterday. (Got to love Amazon Prime for shipping!). So this is my first impressions along with why I decided to get the Fire TV.
 
-{{< image src="/images/2014-04-06-impressions-of-amazon-firetv/firetv.jpg" alt="Amazon Fire TV" position="center" style="border-radius: 8px;" >}}
+![Amazon Fire TV]({static}/images/2014-04-06-impressions-of-amazon-firetv/firetv.jpg)
 
 Currently I have an Apple TV second generation, which only supports up to 720p resolution and is kind of dated at this point as far as hardware. I enjoy the Apple TV and find that it's a great product at a nice price range. Works very well if you're part of the Apple ecosystem, but I do have some issues with it that I think Amazon has an opportunity to fix.
 

@@ -1,13 +1,10 @@
----
-author: Anthony Scotti
-date: 2013-08-13T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- RethinkDB
-- noSQL
-title: RethinkDB, An Open-source Distributed Database
-url: /2013/08/13/rethinkdb-an-open-source-distributed-database/
----
+Title: RethinkDB, An Open-source Distributed Database
+Date: 2013-08-13 00:00
+Slug: 2013/08/13/rethinkdb-an-open-source-distributed-database
+Save_as: 2013/08/13/rethinkdb-an-open-source-distributed-database/index.html
+URL: 2013/08/13/rethinkdb-an-open-source-distributed-database/index.html
+Tags: RethinkDB, noSQL
+Summary: Review of RethinkDB as developer and operations oriented NoSQL database. Highlights JSON document storage, intuitive ReQL query language with joins, built-in MapReduce for distributed queries across cluster, easy web UI for administration and replication, strong official and community driver support, and potential for Spring Data integration.
 
 As a developer I keep an eye on the noSQL space. I feel that noSQL truly empowers the developer to do more than using a relational database. They are typically easier to set up and to scale along with an ability to have a looser data structure which is able to evolve overtime. Don't get me wrong, relational databases have their place and will continue to be used many years from now, but just like using a new language or framework, developers can get a boost from using noSQL databases without having the restraints that come along with using a relational database.
 
@@ -15,7 +12,7 @@ As a developer I keep an eye on the noSQL space. I feel that noSQL truly empower
 
 A couple weeks ago I stumbled upon RethinkDB, a noSQL database that is built to store JSON documents (like so many others) but also has an intuitive query language and simple administration along with a very nice web UI.
 
-{{< youtube qKPKsBNw604 >}}
+{% youtube qKPKsBNw604 %}
 
 RethinkDB aims itself to be both Developer-oriented along with Operations-oriented. This means that Developers get a rich document structure along with flexible querying capabilities but the database is easy to deploy and scale. After setting up your systems, you can easily cluster them and use the web UI to start replicating and sharding your data over the systems with just a couple of clicks.
 

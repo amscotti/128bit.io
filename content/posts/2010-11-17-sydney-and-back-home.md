@@ -1,16 +1,10 @@
----
-author: Anthony Scotti
-date: 2010-11-17T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Australia
-- Honeymoon
-- Personal
-- Photo
-- Sydney
-title: Sydney and Back Home
-url: /2010/11/17/sydney-and-back-home/
----
+Title: Sydney and Back Home
+Date: 2010-11-17 00:00
+Slug: 2010/11/17/sydney-and-back-home
+Save_as: 2010/11/17/sydney-and-back-home/index.html
+URL: 2010/11/17/sydney-and-back-home/
+Tags: Australia, Honeymoon, Personal, Photo, Sydney
+Summary: The final leg of the honeymoon in Sydney, visiting Opera House, Royal Botanical Gardens, and Sydney Zoo across the harbor by water taxi. Ate at fancy restaurants Quay and Yukis with views of the Opera House, but found Sydney similar to other big cities and less impressive than Queenstown's natural beauty.
 
 Well, I've been back to the states for a bit now just hadn't had time to sit down and write a posting. For the last part of the trip we stayed in Sydney for 3 days, mostly with the idea of we were kind of in the area so why not stop by. The flight from New Zealand to Sydney wasn't bad at all, very smooth and fast. Air New Zealand is a great airline and would easily fly them again.
 
@@ -26,7 +20,7 @@ Besides walking around the city, we ate at some fancy places, one of them being 
 
 [![Sydney Zoo](/images/photos/New_Zealand/DSC00085-300x225_001.jpg)](/images/photos/New_Zealand/DSC00085_001.jpg)
 
-Across the harbor from where we were staying is the Sydney Zoo.  The Zoo is huge and one of the best I've seen.  The variety of animals is large and the area of the park is huge.  To get across the harbor we took a water taxi, which gave us a nice quick ride from the Opera house to the Zoo.
+Across the harbor from where we were staying is the Sydney Zoo. The Zoo is huge and one of the best I've seen. The variety of animals is large and the area of the park is huge. To get across the harbor we took a water taxi, which gave us a nice quick ride from the Opera house to the Zoo.
 
 Sydney is nice, good to see but I don't think I would go back to that part of Australia. I would want to check out some less busy parts of the continent.
 

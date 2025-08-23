@@ -1,24 +1,26 @@
----
-author: Anthony Scotti
-date: 2010-06-15T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Forums
-- Groovy
-- Howto
-- Spam
-- XML
-title: Getting Groovy with Stop Forum Spam
-url: /2010/06/15/getting-groovy-with-stop-forum-spam/
----
+Title: Getting Groovy with Stop Forum Spam
+Date: 2010-06-15 00:00
+Slug: 2010/06/15/getting-groovy-with-stop-forum-spam
+Save_as: 2010/06/15/getting-groovy-with-stop-forum-spam/index.html
+URL: 2010/06/15/getting-groovy-with-stop-forum-spam/
+Tags: Forums, Groovy, Howto, Spam, XML
+Summary: A Groovy script demonstrating how to use the StopForumSpam API to check email addresses against a database of known spammers. The script reads emails from a text file, queries the API, and reports how many times each email has been reported, showcasing Groovy's concise syntax for API integration.
 
-Spam sucks and administrating a forum that is phpbb3 based you find there are a lot of bots that sign up and try to post spam. It's a pain to go through by hand and remove them all due to some of them being really clever and looking like real people. This is where a great site like [stopforumspam.com](http://www.stopforumspam.com) comes in to play.  You are able to search users based on email, username and IP to check to see if they have been reported as a spammer before.
+Spam sucks and administrating a forum that is phpbb3 based you find there are a lot of bots that sign up and try to post spam. It's a pain to go through by hand and remove them all due to some of them being really clever and looking like real people. This is where a great site like [stopforumspam.com](http://www.stopforumspam.com) comes in to play. You are able to search users based on email, username and IP to check to see if they have been reported as a spammer before.
 
 Stopforumspam also has a nice API that you are able to quickly access by passing email, username or IP and it will return XML letting you know if they have been reported before. I wanted to take some of thing I learn from my last groovy posting and write something new and using the stopforumspam's API seems like a great place to start. Sadly the the forums at [controlledchaos-guild.com](http://www.controlledchaos-guild.com/forums/) are hosted on Godaddy and they seem to block connects to the mySQL database... (I really need to move them off of Godaddy and onto the same server as this blog, but that's a other story) so I take all the user's email and dump them to a text file.
 
 Here was the code that I came up with:
 
-{{< gist amscotti e5aaacef6d738078c65201a94fe7cfb4 >}}
+```groovy
+listofemails = new File("email_list.txt").text
+listofemails.eachLine { it ->
+    def respons = new XmlSlurper().parseText(new URL("http://www.stopforumspam.com/api?email=${it}").text)
+    if (respons.appears.text() == "yes") {
+        println "${it} has been reported ${respons.frequency.text()} times on stopforumspam.com"
+    }
+ }
+```
 
 The output looks like this,
 

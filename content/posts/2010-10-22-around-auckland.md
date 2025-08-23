@@ -1,16 +1,11 @@
----
-author: Anthony Scotti
-date: 2010-10-22T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Auckland
-- Honeymoon
-- New Zealand
-- Personal
-- Photo
-title: Around Auckland
-url: /2010/10/22/around-auckland/
----
+Title: Around Auckland
+Date: 2010-10-22 00:00
+Slug: 2010/10/22/around-auckland
+Save_as: 2010/10/22/around-auckland/index.html
+URL: 2010/10/22/around-auckland/
+Tags: Auckland, Honeymoon, New Zealand, Personal, Photo
+Summary: A day exploring Auckland's city center, starting with eggs Benedict room service, a haircut with conversation about American car imports, a spa visit, and visiting Sky Tower with its glass floors and bungee jumping observation, ending with Thai dinner.
+Summary: A day exploring Auckland's city center, starting with eggs Benedict room service, a haircut with conversation about American car imports, a spa visit, and visiting Sky Tower with its glass floors and bungee jumping observation, ending with Thai dinner.
 
 So after settling in, Sarah and I had a nice relaxing day around the city. We ordered rooms service for breakfast, (because we can!) and both have a very delicious eggs Benedict. (Eating them so fast that I didn't get a photo). After eating I went to get my hair cut from a place right down the street. It was nice talking to an native New Zealander about New Zealand though at one point he started talking about his hobby with American cars. I guess he takes trips over to the states to get Ford Mustangs and ships them over to NZ. There are types of car shows that he enters his cars in, I'm sure my director/boss would love it over here! After getting most of my hair cut off Sarah and I went to the spa for a bit and headed back out to the city.
 

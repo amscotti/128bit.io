@@ -1,13 +1,7 @@
----
-title: "Ahead-Of-Time Compilation With .Net Core"
-date: 2020-10-25T20:56:42-04:00
-draft: false
-tags:
-- FSharp
-- CSharp
-- Dotnet
-- Development
----
+Title: Ahead-Of-Time Compilation With .Net Core
+Date: 2020-10-25 20:56
+Slug: ahead-of-time-compilation-with-net-core
+Tags: FSharp, CSharp, Dotnet, Development
 
 I'm still on my journey with exploring F# but I want to look at something with the .Net Core platform itself, so this will apply to both C# and F#. Ahead-Of-Time (AOT) compilation isn't a new concept. Languages like C and C++ need to be compiled before (or ahead of) execution time. The JVM and CLR took a different approach, creating "virtual machines" or runtimes that could run your code, giving us the promise of "[write once, run anywhere](https://en.wikipedia.org/wiki/Write_once,_run_anywhere)" or anywhere that has a virtual machine at least. This idea was good as the runtime could help manage memory and provide optimizations as the code runs. Other languages took this same approach, like JavaScript, Python, Ruby, and Erlang. 
 
@@ -17,7 +11,7 @@ Looking into the Java world, Oracle has developed a new runtime called [GraalVM]
 
 GraalVM's native image is something people are interested in; you can see this from developers maintaining compatibility with two new frameworks for writing Microservices [Quarkus](https://t.co/8EJ7UFEXK4?amp=1) and [Micronaut](https://micronaut.io/). Using native image will reduce the start-up time and use less memory. Still, there is a trade-off. In some cases, your application will run slower or restrict what libraries you can use. Yet, these may be acceptable trade-offs in the world of Microservices, especially when thinking about lambda type services that benefit significantly from a faster start time.
 
-{{< youtube J9oJTKwASjA >}}
+{% youtube J9oJTKwASjA %}
 [.NET Conf - Focus on Microservices](https://www.youtube.com/watch?v=J9oJTKwASjA)
 
 Talking about Microservices, I watched the .Net Core Conference on Microservices a while ago and the topic of AOT compilation came [up about 50 mins into the event's video](https://youtu.be/J9oJTKwASjA?t=3012). I never realized that AOT compilation is something that is currently built into .NET Core. The video shows how you can create single executables that are smaller in size. It's quite simple; using the `dotnet publish` command, you can create a single executable for a target platform. Here is the command for creating a Windows 64-bit application, 

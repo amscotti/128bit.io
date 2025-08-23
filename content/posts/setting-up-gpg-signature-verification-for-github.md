@@ -1,12 +1,8 @@
----
-title: "Setting Up GPG Signature Verification for Github"
-date: 2017-12-01T18:30:08-05:00
-tags:
-- Git
-- Github
-- GPG
-- Development
----
+Title: Setting Up GPG Signature Verification for Github
+Date: 2017-12-01 18:30
+Slug: setting-up-gpg-signature-verification-for-github
+Tags: Git, Github, GPG, Development
+Summary: Guide to adding GPG signature verification to Git commits. Discusses preventing impersonation since Github can't validate authorship, using Homebrew to install GPG, generating 4096-bit keys, creating verified signature example, and configuring Git to show verified commits with green checkmarks while protecting private keys.
 
 [GPG stands for GNU Privacy Guard](https://en.wikipedia.org/wiki/GNU_Privacy_Guard), it’s a public-key cryptography that can be used to digitally sign items like commits in Git. GPG provides a lot more functionality, but let's go into why you would want to digitally sign your Git commits. Git does not have any way to validate the author of a commit. When setting up a Git client on your system you are able to use any email address you desire. Even Github has no way of knowing who made a commit, usernames are only used for permissions to the repositories and functionality on the web interface. If you are able to access a repository, you can change your local Git settings to make a commit as someone else. You can see this with a [commit](https://github.com/amoffat/masquerade/commit/9b0562595cc479ac8696110cb0a2d33f8f2b7d29) linked on [Hacker News](https://news.ycombinator.com/item?id=10005577) where it looks like [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds) made a commit into someone’s repository.
 

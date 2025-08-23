@@ -1,14 +1,10 @@
----
-author: Anthony Scotti
-date: 2013-05-08T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Riak
-- Cluster
-- noSQL
-title: Setting up a Riak Cluster
-url: /2013/05/08/setting-up-a-riak-cluster/
----
+Title: Setting up a Riak Cluster
+Date: 2013-05-08 00:00
+Slug: 2013/05/08/setting-up-a-riak-cluster
+Save_as: 2013/05/08/setting-up-a-riak-cluster/index.html
+URL: 2013/05/08/setting-up-a-riak-cluster/
+Tags: Riak, Cluster, noSQL
+Summary: Comprehensive guide to setting up Riak distributed database cluster on Amazon EC2 with Ubuntu. Covers installation with Homebrew, security group configuration for Erlang ports, system setup steps, firewall configuration for cluster communication ports, node configuration, and clustering best practices.
 
 ![Riak Logo](/images/logo/Riak_logo.png)
 

@@ -1,12 +1,10 @@
----
-author: Anthony Scotti
-date: 2013-04-28T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Dart
-title: Why Dart Will Not Make It...
-url: /2013/04/28/why-dart-will-not-make-it/
----
+Title: Why Dart Will Not Make It...
+Date: 2013-04-28 00:00
+Slug: 2013/04/28/why-dart-will-not-make-it
+Save_as: 2013/04/28/why-dart-will-not-make-it/index.html
+URL: 2013/04/28/why-dart-will-not-make-it/
+Tags: Dart
+Summary: A critical analysis of Google's Dart language strategy. Questions focus on web applications when most developers need backend work, wonders why Dart VM competes with V8 instead of improving it, and notes JavaScript's dominance despite Dart's quality. Suggests Dart team should better support backend development or explain performance positioning.
 
 Yes, the title is a bit of a troll. I like Dart, I think it's a great new language made for the web! But, I do have some issues with the focus they have.
 

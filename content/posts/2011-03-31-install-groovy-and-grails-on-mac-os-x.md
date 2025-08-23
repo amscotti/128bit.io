@@ -1,16 +1,10 @@
----
-author: Anthony Scotti
-date: 2011-03-31T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Grails
-- Groovy
-- Howto
-- Install
-- Mac
-title: Install Groovy and Grails on Mac OS X
-url: /2011/03/31/install-groovy-and-grails-on-mac-os-x/
----
+Title: Install Groovy and Grails on Mac OS X
+Date: 2011-03-31 00:00
+Slug: 2011/03/31/install-groovy-and-grails-on-mac-os-x
+Save_as: 2011/03/31/install-groovy-and-grails-on-mac-os-x/index.html
+URL: 2011/03/31/install-groovy-and-grails-on-mac-os-x/
+Tags: Grails, Groovy, Howto, Install, Mac
+Summary: Step-by-step guide for installing Groovy and Grails on Mac OS X with symbolic links for easy upgrades. Covers downloading binary releases, moving to /usr/share, creating symbolic links to simplify version changes, updating .profile with GROOVY_HOME and GRAILS_HOME environment variables and PATH settings, and verifying installation.
 
 Just some steps to get people up and running with Groovy/Grails on Mac OS. Hopefully with this steps you will be able to easily upgrade to any new version that comes out. Keep in mind you will need to replace the version number that is part of the file names as they upgrade.
 
@@ -21,7 +15,7 @@ Download the newest releases of Groovy and Grails,
 
 After both are downloaded open up your Terminal, this can be found under in the Utilities folder within the Applications folder.
 
-Terminal should start you in your home folder (which is /Users/&lt;username&gt;), we are going to move to the download folder and unzip the 2 files we just downloaded.
+Terminal should start you in your home folder (which is /Users/&lt;username&gt;), we are going to move to the download folder and unzip the 2 files we just downloaded.
 
 ```
 $ cd Downloads/

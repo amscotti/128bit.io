@@ -1,12 +1,8 @@
----
-title: "For the Brave and True"
-date: 2019-10-23T22:43:11+02:00
-tags:
-- Books
-- Clojure
-- Development
-- Italy
----
+Title: For the Brave and True
+Date: 2019-10-23 22:43
+Slug: for-the-brave-and-true
+Tags: Books, Clojure, Development, Italy
+Summary: A glowing review of "Clojure For the Brave and True" book. Discusses Clojure's Lisp-inspired syntax being easier than expected, immutable data structures for safer applications, lazy evaluation for performance, pragmatic approach over pureness, compares to Haskell, and praises the book's mix of humor with solid step-by-step learning through functional programming concepts.
 
 In my last post, I said I was in Italy on vacation and you may be thinking to yourself (most likely not, but just go with it) "what high tech gizmos did he bring with him on his travels?" and I would happily reply "A book!", yes a paper book. Being a software developer, I have access to tons of technology, more so when it comes to paper book replacements but there is just something about a real book that makes reading and learning for me better than using a computer, tablet, or doohickey. 
 

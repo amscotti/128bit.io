@@ -1,3 +1,20 @@
-public
+# Pelican output
+output/
+
+# Python / UV
+__pycache__/
+*.pyc
+.venv/
+
+# OS files
 .DS_Store
-.hugo_build.lock
+
+# Editor
+*.swp
+*.swo
+
+# Migration backup
+posts_backup/
+
+# Playwright
+.playwright-mcp/

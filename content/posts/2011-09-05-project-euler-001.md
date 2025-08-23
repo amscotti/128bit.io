@@ -1,23 +1,14 @@
----
-author: Anthony Scotti
-date: 2011-09-05T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Functional
-- Groovy
-- Howto
-- Javascript
-- Personal
-- Python
-- Ruby
-- Clojure
-title: Project Euler 001
-url: /2011/09/05/project-euler-001/
----
+Title: Project Euler 001
+Date: 2011-09-05 00:00
+Slug: 2011/09/05/project-euler-001
+Save_as: 2011/09/05/project-euler-001/index.html
+URL: 2011/09/05/project-euler-001/
+Tags: Functional, Groovy, Howto, Javascript, Personal, Python, Ruby, Clojure
+Summary: Solving Project Euler problem 001 in multiple programming languages to maintain skills. The problem asks for sum of all multiples of 3 or 5 below 1000. Includes solutions in JavaScript (both original and ES6), Ruby, Groovy, and Python, with plans to add Clojure solutions for cross-language functional programming practice.
 
-Made this posting sometime ago but I've been forgetting to actually post it. When I was looking up some information on Scala I found a great video tutorial on youtube made by [MadocDoyu](http://www.youtube.com/user/MadocDoyu), [which can be found here](http://www.youtube.com/watch?v=wvD6JauveLA). In part of the video he introduces the Project Euler, this project seems really interesting. I plan on solving problems time to time using many of the languages I have looked at. I'm hoping this will keep my skills in these languages up to date.
+Made this posting sometime ago but I've been forgetting to actually post it. When I was looking up some information on Scala I found a great video tutorial on youtube made by [MadocDoyu](http://www.youtube.com/user/MadocDoyu), [which can be found here](http://www.youtube.com/watch?v=wvD6JauveLA). In part of the video he introduces the Project Euler, this project seems really interesting. I plan on solving problems time to time using many of the languages I have looked at. I'm hoping this will keep my skills in these languages up to date.
 
-Here is the first problem,
+Here is the first problem,
 
 > If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 >
@@ -75,9 +66,9 @@ print(sum(x for x in range(1, 1000) if (x % 3 == 0 or x % 5 == 0)))
 ```
 
 
-Nothing too hard, I really enjoy the one liners from Groovy and Ruby and seeing them together kind of shows how similar they are. I'm not fully happy with the javascript code... I looked for a better way but I was unable to find anything using the base language. If anyone has an idea on how to make any of the code better let me know.
+Nothing too hard, I really enjoy the one liners from Groovy and Ruby and seeing them together kind of shows how similar they are. I'm not fully happy with the javascript code... I looked for a better way but I was unable to find anything using the base language. If anyone has an idea on how to make any of the code better let me know.
 
-If you want to see how to solve this with Scala check out [MadocDoyu's videos](http://www.youtube.com/user/MadocDoyu). They are really great to watch!
+If you want to see how to solve this with Scala check out [MadocDoyu's videos](http://www.youtube.com/user/MadocDoyu). They are really great to watch!
 
 **Edit**:
 

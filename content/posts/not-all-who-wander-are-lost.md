@@ -1,12 +1,8 @@
----
-title: "Not All Who Wander Are Lost"
-date: 2019-10-17T23:47:58+02:00
-tags:
-- Work
-- Life
-- Development
-- Italy
----
+Title: Not All Who Wander Are Lost
+Date: 2019-10-17 23:47
+Slug: not-all-who-wander-are-lost
+Tags: Work, Life, Development, Italy
+Summary: Reflects on leaving a startup job that didn't meet expectations and subsequent decision to find better role. Discusses importance of enjoyment in work and maintaining life balance over career advancement, noting that job changes are normal experiences that don't define professional worth.
 
 As I sit here in Venice on my vacation, I figure this would be a great time to dust off my blog. I haven't put much time into it lately, I find myself wanting to write when I have a good balance with work and life with some learning on the side. Sadly, this balance has been missing for a bit, which leads us into a bit of a back story, the details are not important but the overall experiences that I gained are.
 

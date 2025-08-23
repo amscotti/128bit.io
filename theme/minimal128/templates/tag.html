@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ tag }} :: {{ SITENAME }}{% endblock %}
+
+{% block header %}
+{% set header_path = "~/posts" %}
+{% set header_command = 'grep -l "' ~ tag|lower ~ '" *.md | xargs -n1 head' %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="terminal-posts">
+  <div class="terminal-output">
+    {% for article in articles %}
+      {% include "includes/article-preview.html" %}
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
