@@ -9,7 +9,7 @@
   PYTHON_VERSION = "3.13"
 
 [context.deploy-preview]
-  command = "pip install uv && uv run --locked pelican content -s pelicanconf.py"
+  command = "pip install uv && uv run --locked pelican content -s publishconf.py"
 
 [[headers]]
   for = "/*"

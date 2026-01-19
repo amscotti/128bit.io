@@ -3,7 +3,6 @@ Date: 2025-03-16 17:32
 Slug: in-the-age-of-learning
 Tags: Learning Efficiency, AI, LLM, AI Tools, AI Research
 Summary: A reflection on how AI and large language models have transformed learning by enabling rapid knowledge absorption through summarization, personalized AI tutors, and tailored learning plans. Discusses tools like ChatGPT, Claude, Gemini, and NotebookLM, addresses challenges like job displacement, resource concerns, and the importance of continuous learning while noting that AI's greatest benefit is saving time.
-Summary: AI and large language models have ushered in a new age of learning where we can absorb knowledge faster than ever. Tools like ChatGPT, Claude, Gemini, and NotebookLM save time through summarization, act as personal researchers, and create customized learning plans tailored to individual needs.
 
 ## TL;DR
 
