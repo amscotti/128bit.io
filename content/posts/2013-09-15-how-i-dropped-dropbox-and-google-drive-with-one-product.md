@@ -1,7 +1,8 @@
 Title: How I dropped Dropbox and Google Drive with Bitcasa
 Date: 2013-09-15 00:00
-Slug: 2013/09/15/how-i-dropped-dropbox-and-google-drive-with-one-product/index.html
-URL: 2013/09/15/how-i-dropped-dropbox-and-google-drive-with-one-product/index.html
+Slug: 2013/09/15/how-i-dropped-dropbox-and-google-drive-with-one-product
+Save_as: 2013/09/15/how-i-dropped-dropbox-and-google-drive-with-one-product/index.html
+URL: 2013/09/15/how-i-dropped-dropbox-and-google-drive-with-one-product/
 Tags: Bitcasa, Storage, Cloud
 Summary: Personal story of migrating from Dropbox and Google Drive to Bitcasa cloud storage. Discusses space limitations on competing services, MacBook Air storage impact, Bitcasa's unlimited storage and non-downloading architecture solving both issues, browser plugin for faster downloads, and mobile app availability.
 

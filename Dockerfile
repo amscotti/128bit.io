@@ -1,4 +1,4 @@
-FROM python:3.13-alpine AS builder
+FROM python:3.13-alpine3.23 AS builder
 
 # Install UV for dependency management
 RUN pip install uv
@@ -11,7 +11,7 @@ COPY . /site/
 RUN uv sync && uv run pelican content -s publishconf.py
 
 # Copy site into httpd image
-FROM docker.io/library/httpd:alpine3.20
+FROM docker.io/library/httpd:alpine3.23
 
 # Enable required modules and copy config
 RUN sed -i \

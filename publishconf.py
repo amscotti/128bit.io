@@ -9,7 +9,6 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 # Production URL
-import os
 
 # Netlify Context: 'production', 'deploy-preview', 'branch-deploy', or None (local)
 NETLIFY_CONTEXT = os.environ.get('CONTEXT')
