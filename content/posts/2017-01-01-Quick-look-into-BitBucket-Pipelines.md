@@ -1,17 +1,10 @@
----
-author: Anthony Scotti
-date: 2017-01-01T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- GitHub
-- BitBucket
-- Howto
-- Codeship
-- Ruby
-- Java
-title: Quick look into BitBucket Pipelines
-url: /2017/01/01/Quick-look-into-BitBucket-Pipelines/
----
+Title: Quick look into BitBucket Pipelines
+Date: 2017-01-01 00:00
+Slug: 2017/01/01/Quick-look-into-BitBucket-Pipelines
+Save_as: 2017/01/01/Quick-look-into-BitBucket-Pipelines/index.html
+URL: 2017/01/01/Quick-look-into-BitBucket-Pipelines/
+Tags: GitHub, BitBucket, Howto, Codeship, Ruby, Java
+Summary: An evaluation of BitBucket Pipelines, a continuous integration service reminiscent of Codeship. Discusses trying to replace Codeship with BitBucket Pipelines for publishing this blog, showing how to configure pipeline tasks and examining feature similarities, noting potential time savings from removing Docker image downloads in build process.
 
 Atlassian just took their [Bitbucket Pipelines out of Beta](http://blogs.atlassian.com/2016/10/scaling-in-bitbucket-cloud-new-features-and-reliability-numbers/) a bit ago, so I wanted to take look and get something up and running on it.
 
@@ -41,7 +34,32 @@ Next issue, no Java. Codeship systems come pre-installed with Java so this step 
 
 So, let's look at my `bitbucket-pipelines.yml`
 
-{{< gist amscotti 07105c924a79927229ff7b0efab685ad "bitbucket-pipelines.yml" >}}
+```yaml
+# This is a sample build configuration for Ruby.
+# Check our guides at https://confluence.atlassian.com/x/VYk8Lw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: ruby:2.1.7
+
+pipelines:
+  default:
+    - step:
+        script:
+          - bundler --version
+          - bundle install
+          - bundle exec jekyll build
+  branches:
+    master:
+      - step:
+          script:
+            - bundler --version
+            - bundle install
+            - bundle exec jekyll build
+            - apt-get update
+            - apt-get install --assume-yes openjdk-7-jre-headless
+            - bundle exec s3_website push
+```
 
 [https://gist.github.com/amscotti/07105c924a79927229ff7b0efab685ad](https://gist.github.com/amscotti/07105c924a79927229ff7b0efab685ad)
 

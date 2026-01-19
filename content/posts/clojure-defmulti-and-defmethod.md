@@ -1,13 +1,10 @@
----
-title: "Clojure Defmulti and Defmethod"
-date: 2021-07-26T20:53:44-04:00
-draft: false
-tags:
-- Clojure
-- Development
----
+Title: Clojure Defmulti and Defmethod
+Date: 2021-07-26 20:53
+Slug: clojure-defmulti-and-defmethod
+Tags: Clojure, Development
+Summary: Demonstrates Clojure's polymorphism tools for handling different implementations. Shows defmulti creating dispatch functions based on dispatch value, and defmethod for creating class-specific implementations that override default behavior, with example using character game stats displaying different attacks based on character type.
 
-{{< image src="/images/logo/clojure_logo.png" alt="Clojure Logo" position="center" style="border-radius: 8px;" >}}
+![Clojure Logo]({static}/images/logo/clojure_logo.png)
 
 As I continue my journey with learning functional programming, I have started to explore deeper into the languages that I enjoy and do some experimenting with interesting parts of those languages. This has led me to `defmulti` and `defmethod`, enabling you to create methods that deal with different implementations that are selected by a dispatch function. This is certainly easier to see in code, but it allows you to create a function based on the return of the dispatch function that will send the parameters to another function.
 
@@ -37,7 +34,7 @@ If you wanted to create something to work with multiple elements of the `player`
   (fn [character]
     (vals (select-keys character [:class :spec]))))
 ```
-This would create an identifier that looks like `[:druid :balance]`, which can be used in the `defmethod`, but let's keep it simple and keep using just `:class` going forward.  
+This would create an identifier that looks like `[:druid :balance]`, which can be used in the `defmethod`, but let's keep it simple and keep using just `:class` going forward.
 
 ### Anonymous Function Syntax
 
@@ -63,7 +60,7 @@ We can see that we have the same name from the `defmulti`, which is "attack" and
 
 ### Destructuring
 
-Let's look at another Clojure topic that helps keep code short and readable, [destructuring](https://clojure.org/guides/destructuring). Not a unique feature to Clojure but one that is awesome nonetheless, destructuring lets you pull data out of List, Vectors, and Maps when creating functions with `defn` or using `let`.  As we just need the `:name` we can easily destructure that out of the `character` Map like this,
+Let's look at another Clojure topic that helps keep code short and readable, [destructuring](https://clojure.org/guides/destructuring). Not a unique feature to Clojure but one that is awesome nonetheless, destructuring lets you pull data out of List, Vectors, and Maps when creating functions with `defn` or using `let`. As we just need the `:name` we can easily destructure that out of the `character` Map like this,
 
 ```clojure
 (defmethod attack :druid [{name :name}]
@@ -73,7 +70,7 @@ There are different formats to pull out data from Lists and Vectors, but this is
 
 ## Default for defmethod
 
-Similar to a switch statement in other languages, there is a way to provide a default `defmethod` used when nothing matches the identifier.  You can use this with the Keyword `:default`
+Similar to a switch statement in other languages, there is a way to provide a default `defmethod` used when nothing matches the identifier. You can use this with the Keyword `:default`
 
 ```clojure
 (defmethod attack :default [{name :name}]

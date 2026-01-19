@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Posts :: {{ SITENAME }}{% endblock %}
+
+{% block header %}
+{% set header_path = "~/posts" %}
+{% set header_command = "head *.md" %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="terminal-posts">
+  <div class="terminal-output">
+    {% for article in articles_page.object_list %}
+      {% include "includes/article-preview.html" %}
+    {% endfor %}
+  </div>
+
+  {% include "includes/pagination.html" %}
+</div>
+{% endblock %}

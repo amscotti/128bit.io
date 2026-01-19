@@ -1,0 +1,13 @@
+{# Terminal header component #}
+{# Variables: header_path (default: ~), header_command (the command to show) #}
+<header class="header">
+  <div class="terminal-prompt">
+    <a href="{{ SITEURL }}/" class="prompt-link">
+      <span class="prompt-text">[amscotti@128bit.io {{ header_path|default('~') }}]#</span>
+    </a>
+    {% if header_command %}
+    <span class="command-text"> {{ header_command }}</span>
+    {% endif %}
+    <span class="cursor">_</span>
+  </div>
+</header>

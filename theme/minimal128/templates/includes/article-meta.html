@@ -1,0 +1,8 @@
+{# Article metadata display - requires 'article' variable #}
+<div class="markdown-header">
+  <div class="md-title"><span class="syntax">#</span> {{ article.title }}</div>
+  <div class="md-date"><span class="syntax">-</span> {{ article.date.strftime('%B %d, %Y') }} <span class="md-reading-time">| {{ (article.content|striptags|wordcount / 200)|int }} min read</span></div>
+  {% if article.tags %}
+    <div class="md-tags"><span class="syntax">-</span> {% for tag in article.tags %}{% if not loop.first %}, {% endif %}<a href="{{ SITEURL }}/tags/{{ tag.slug }}/">[{{ tag }}]</a>{% endfor %}</div>
+  {% endif %}
+</div>

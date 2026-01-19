@@ -1,12 +1,8 @@
----
-title: "Optional Types and Pipes in F#"
-date: 2020-09-10T17:24:47-04:00
-draft: false
-tags:
-- FSharp
-- Dotnet
-- Development
----
+Title: Optional Types and Pipes in F#
+Date: 2020-09-10 17:24
+Slug: optional-types-and-pipes-in-fsharp
+Tags: FSharp, Dotnet, Development
+Summary: Code challenge demonstrating F# features including pipe-forward operator and discriminated unions. Shows returning None or Some option when finding first unique character, and using DiscriminatedUnions to implement class-specific behavior with overrides, highlighting optional types as better pattern for handling values that may or may not be present.
 
 For this first topic of showing off parts of F# I want to use a code challenge I have used for interviewing candidates at a couple different companies. This challenge is simple to solve but is left open ended to allow the candidate to discuss and debate the decisions they have made. The main point of the challenge isn’t the coding, but it does provide us with an example to show off optional types and pipe operator in F#.
 
@@ -51,7 +47,7 @@ The two main parts of the match expression are `Some c` and `None`, you can thin
 This is a simple example, the same thing could be achieved in other languages using null but F# enforces this behavior with the compiler but also provides tools to extend this functionality. Using Optional Types and the ideas found in F#, you can avoid null pointer exception and create stable code that is able to handle both positive and negative cases.
 
 ## Pipe operator
-The Pipe operator `|>` (or more precisely called Pipe Forward) in F# is a very popular piece of syntax, it has been copied into other languages like Elm and Elixir and is even a proposal to be added to [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator). I’ve actually talked about the pipe operator previously in my [Elixir posting back in 2013]({{< ref "posts/2013-09-29-a-sip-of-elixir" >}}). The Pipe operator is just [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) making the code easier to read and understand due to letting you change the order of the code but still maintain the same operations. 
+The Pipe operator `|>` (or more precisely called Pipe Forward) in F# is a very popular piece of syntax, it has been copied into other languages like Elm and Elixir and is even a proposal to be added to [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator). I’ve actually talked about the pipe operator previously in my [Elixir posting back in 2013](/2013/09/29/a-sip-of-elixir/). The Pipe operator is just [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) making the code easier to read and understand due to letting you change the order of the code but still maintain the same operations. 
 
 Let’s take the same problem from [Project Euler](https://projecteuler.net/) used in the Elixir posting, 
 

@@ -1,17 +1,14 @@
----
-title: "Taste of Clojure"
-date: 2020-02-06T20:39:52-05:00
-draft: false
-tags:
-- Clojure
-- Development
----
+Title: Taste of Clojure
+Date: 2020-02-06 20:39
+Slug: taste-of-clojure
+Tags: Clojure, Development
+Summary: A love letter to Clojure programming language. Discusses Clojure's Lisp-inspired syntax and ease of learning compared to expectations. Highlights immutable data structures for safer applications, lazy evaluation for performance, pragmatic approach over academic purity, and defmulti/defmethod polymorphism for flexibility. Compares to Haskell and mentions ClojureScript for frontend development.
 
 Clojure seems to be coming up a lot in postings, books, and social media. Some most notable mentions are by [Gene Kim](https://twitter.com/RealGeneKim) in a couple of different instances, [Love Letter To Clojure](https://itrevolution.com/love-letter-to-clojure-part-1/) being the biggest but also in his book  [The Unicorn Project](https://itrevolution.com/the-unicorn-project/) where Clojure is a beloved language by Maxine the main ~~protagonist~~ hero of the story. Another well-known name that has talked about Clojure on his blog is [Robert Martin](https://twitter.com/unclebobmartin) (aka Uncle Bob) with his posting [Why Clojure?](https://blog.cleancoder.com/uncle-bob/2019/08/22/WhyClojure.html) and [Robin Schroer](https://sulami.github.io/) response to Uncle Bob's posting with [Why I like Clojure](https://sulami.github.io/posts/why-i-like-clojure/). One more link I want to share because I think this is one of the most beautiful introductions to Clojure I have seen [a smol comic about clojure](https://daiyi.co/blog/2017/07/19/a-smol-comic-about-clojure/) by [Daiyi](https://twitter.com/daiyitastic).
 
 I think with all the links I have mentioned you should have a good sense of why you would want to learn Clojure and many of its great benefits. I don't think I would be able to give a better introduction and go into "Why Clojure" as they have already done a great job on that. So, I'm hoping to jump right into showing some of the lovely but shocking syntax. One of the comments that always come up from people starting to look into a Lisp dialect is the difference in syntax compared to a language that evolved from C. For myself, it did take me a bit to look past all the parentheses, but over time it does become a very elegant language to read.
 
-{{< image src="https://imgs.xkcd.com/comics/lisp_cycles.png" alt="Lisp Cycles" position="center" style="border-radius: 8px;" >}}
+![Lisp Cycles](https://imgs.xkcd.com/comics/lisp_cycles.png)
 
 [xkcd: Lisp Cycles](https://xkcd.com/297/)
 
@@ -20,7 +17,10 @@ For a language to compare Clojure to I'm going to pick JavaScript as it's easy f
 ## TL;DR
 So, as I was starting to write this posting, Uncle Bob made a pretty good summary of the Lisp syntax compared to Java on [Twitter](https://twitter.com/unclebobmartin/status/1215642524817080322),
 
-{{< tweet user="unclebobmartin" id="1215642524817080322" >}}
+<blockquote class="twitter-tweet">
+<a href="https://twitter.com/unclebobmartin/status/1215642524817080322">Tweet by @unclebobmartin</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I think this makes a good TL;DR section, as this is a good guiding point when thinking about Clojure.
 
@@ -37,7 +37,7 @@ Easy, right? Ok, let's take a look at this in Clojure
 ```
 I think this needs to be broken up a bit to fully understand it
 
-{{< image src="/images/taste-of-clojure/clojure_breaking_apart.png" alt="Clojure Function" position="center" style="border-radius: 8px;" >}}
+![Clojure Function]({static}/images/taste-of-clojure/clojure_breaking_apart.png)
 
 I think the strange thing is the parentheses and the way it hugs the function that is being called and its arguments. The interesting thing is that code is represented in the list data structure, this is referred to as [Homoiconicity](https://en.wikipedia.org/wiki/Homoiconicity) and where the idea for "code as data" comes from as the code is constructed from regular Clojure data structures. This is an idea that comes from Lisp and not just something that is found in Clojure, which speaks to the rich history of Lisp.
 
@@ -151,7 +151,10 @@ Overall not too much difference, but let's just point out something, this is usi
 ## Conclusion
 This posting could go on much longer providing a lot more details around the interesting syntax found in Clojure, but I just want to provide a taste to get people interested in the language and the concepts. I do hope to continue to write more about Clojure as I learn it myself but I want to end this post with another tweet from Uncle Bob that fits very well with my current thinking,
 
-{{< tweet user="unclebobmartin" id="1214906676840669184" >}}
+<blockquote class="twitter-tweet">
+<a href="https://twitter.com/unclebobmartin/status/1214906676840669184">Tweet by @unclebobmartin</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 [Twitter Link](https://twitter.com/unclebobmartin/status/1214906676840669184)
 
 ## References

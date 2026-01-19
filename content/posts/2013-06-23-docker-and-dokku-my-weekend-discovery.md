@@ -1,17 +1,10 @@
----
-author: Anthony Scotti
-date: 2013-06-23T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Docker
-- Dokku
-- Linux
-- Virtualization
-- Heroku
-- PaaS
-title: Docker and Dokku, My Weekend Discovery
-url: /2013/06/23/docker-and-dokku-my-weekend-discovery/
----
+Title: Docker and Dokku, My Weekend Discovery
+Date: 2013-06-23 00:00
+Slug: 2013/06/23/docker-and-dokku-my-weekend-discovery
+Save_as: 2013/06/23/docker-and-dokku-my-weekend-discovery/index.html
+URL: 2013/06/23/docker-and-dokku-my-weekend-discovery/
+Tags: Docker, Dokku, Linux, Virtualization, Heroku, PaaS
+Summary: An introduction to Docker for operating system-level virtualization with minimal overhead compared to hypervisors. Covers creating containers for application components like databases and web servers, security benefits of isolation, and discovering Dokku for PaaS-like deployment similar to Heroku.
 
 I'm primarily a Software Developer but I still have a great passion for System Administration. I work with Linux based systems now but if you look at some of my older postings you will find that I have done some work on [FreeBSD](http://www.freebsd.org) and [OpenSolaris](https://en.wikipedia.org/wiki/OpenSolaris). One of the things that really drove me to FreeBSD and OpenSolaris was their idea of [Operating system-level virtualization](http://en.wikipedia.org/wiki/Operating_system-level_virtualization), [FreeBSD with Jails](http://en.wikipedia.org/wiki/FreeBSD_jail) and [OpenSolaris with Zones](http://en.wikipedia.org/wiki/Solaris_Containers). By using these ideas of containers to isolate components of an application you could develop some really interesting ideas for laying out an application securely and effectively.
 
@@ -39,7 +32,9 @@ Dokku is really where it started for me this weekend, it was shared with me as a
 
 I really can't say anything that isn't in the video by Jeff Lindsay beside saying, yes… it's that easy to set up.
 
-{{< vimeo 68631325 >}}
+<div class="video-embed">
+<iframe src="https://player.vimeo.com/video/68631325" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [Dokku: Your own mini-Heroku in under 5 minutes](http://vimeo.com/68631325) from [Jeff Lindsay](http://vimeo.com/progrium) on [Vimeo](http://vimeo.com).
 

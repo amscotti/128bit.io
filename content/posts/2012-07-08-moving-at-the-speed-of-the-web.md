@@ -1,21 +1,14 @@
----
-author: Anthony Scotti
-date: 2012-07-08T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Google
-- Microsoft
-- Mozilla
-- Opera
-- Opinion
-- Web Technology
-title: Moving at the Speed of the Web
-url: /2012/07/08/moving-at-the-speed-of-the-web/
----
+Title: Moving at Speed of Web
+Date: 2012-07-08 00:00
+Slug: 2012/07/08/moving-at-the-speed-of-the-web
+Save_as: 2012/07/08/moving-at-the-speed-of-the-web/index.html
+URL: 2012/07/08/moving-at-the-speed-of-the-web/
+Tags: Google, Microsoft, Mozilla, Opera, Opinion, Web Technology
+Summary: An opinion piece on the rapid evolution of web technologies driven by competition between major browser vendors. Discusses how Google, Microsoft, Mozilla, and Opera compete to implement HTML5, CSS3, and JavaScript optimizations faster, pushing web development forward and benefiting users with richer web experiences.
 
-Some time ago I did a small review of the changes in the Firefox 4 beta. If you go to download Firefox right now you will be downloading Firefox 13. I'm sure you have noted that the releases of Firefox and other browsers have been increasing. You can go a step farther and download pre-released versions of most browsers. For Firefox you have [Firefox Beta](http://www.mozilla.org/en-US/firefox/beta/), [Aurora](http://www.mozilla.org/en-US/firefox/aurora/), and [Nightly](http://nightly.mozilla.org/), which at the time of this posting is version 16.0a1. Mozilla isn't the only ones doing this though. Google has their <a href="https://www.google.com/landing/chrome/beta/">Beta channel</a> and <a href="https://tools.google.com/dlpage/chromesxs/">Canary</a> which is to show off new web technologies. Even Opera is given people a look ahead of what is coming out with <a href="http://www.opera.com/browser/next/">Opera Next</a> (Which sadly is currently at the same version of the released Opera). Even Microsoft who has been criticized for having a terrible browser is starting to put serious amounts of effort into improving <a href="http://ie.microsoft.com/testDrive/">Internet Explorer</a>.
+Some time ago I did a small review of the changes in the Firefox 4 beta. If you go to download Firefox right now you will be downloading Firefox 13. I'm sure you have noted that the releases of Firefox and other browsers have been increasing. You can go a step farther and download pre-released versions of most browsers. For Firefox you have [Firefox Beta](http://www.mozilla.org/en-US/firefox/beta/), [Aurora](http://www.mozilla.org/en-US/firefox/aurora/), and [Nightly](http://nightly.mozilla.org/), which at the time of this posting is version 16.0a1. Mozilla isn't the only ones doing this though. Google has their [Beta channel](https://www.google.com/landing/chrome/beta/) and [Canary](https://tools.google.com/dlpage/chromesxs/) which is to show off new web technologies. Even Opera is given people a look ahead of what is coming out with [Opera Next](http://www.opera.com/browser/next/) (Which sadly is currently at the same version of the released Opera). Even Microsoft who has been criticized for having a terrible browser is starting to put serious amounts of effort into improving [Internet Explorer](http://ie.microsoft.com/testDrive/).
 
-So why has there been a change to frequencies of releases of browser? I think this is a clear sign of the continuous evolution of the web with people's desires for better web technologies. As a developer, I feel we are at an interesting time, applications are moving online as web applications. Currently thanks to great companies we are able to <a href="http://www.google.com/google-d-s/documents/index.html">write documents</a>, <a href="http://www.google.com/google-d-s/documents/index.html">make presentations</a>, <a href="http://www.google.com/+/learnmore/hangouts/">globally communicate</a>, share thoughts and ideas, and even <a href="http://c9.io/">create software</a>, all from a browser. We are able to do so much from a browser that Google has designed an operating system based on their Chrome browser, called <a href="http://www.chromium.org/chromium-os/">Chrome OS</a>. Even Mozilla is working on a phone OS built completely upon web technologies called <a href="http://www.mozilla.org/en-US/b2g/">Boot2Gecko/Firefox OS</a>.
+So why has there been a change to frequencies of releases of browser? I think this is a clear sign of the continuous evolution of the web with people's desires for better web technologies. As a developer, I feel we are at an interesting time, applications are moving online as web applications. Currently thanks to great companies we are able to [write documents](http://www.google.com/google-d-s/documents/index.html), [make presentations](http://www.google.com/google-d-s/documents/index.html), [globally communicate](http://www.google.com/+/learnmore/hangouts/), share thoughts and ideas, and even [create software](http://c9.io/), all from a browser. We are able to do so much from a browser that Google has designed an operating system based on their Chrome browser, called [Chrome OS](http://www.chromium.org/chromium-os/). Even Mozilla is working on a phone OS built completely upon web technologies called [Boot2Gecko/Firefox OS](http://www.mozilla.org/en-US/b2g/).
 
 As we become more sophisticated with what we are able to do on the web, our browsers must also evolve in order to keep up with our needs. At first this was feature driven, remember what it was like to browse before tabs, this was a way for the browsers to set themselves apart from others along with making the user experience better. Sadly during this time browsers implemented technologies in different ways, which is why web developers and designers hate Internet Explorer. Nowadays we have fixed a lot of these issues and now it is a race for speed. A large focus for development is now towards improving speed of page renderings along with the JavaScript engines. The other part is working on slowly bringing in elements of HTML5/CSS3. This is going to ensure the more sophisticated applications you want to run will work smoothly.
 

@@ -1,14 +1,10 @@
----
-author: Anthony Scotti
-date: 2013-05-28T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- JavaScript
-- Grunt
-- Yeoman
-title: My Friend Yeoman
-url: /2013/05/28/my-friend-yeoman/
----
+Title: My Friend Yeoman
+Date: 2013-05-28 00:00
+Slug: 2013/05/28/my-friend-yeoman
+Save_as: 2013/05/28/my-friend-yeoman/index.html
+URL: 2013/05/28/my-friend-yeoman/
+Tags: JavaScript, Grunt, Yeoman
+Summary: A comprehensive endorsement of Yeoman as web application scaffolding tool. Explains how Yo generates project scaffolds, Bower manages packages, and Grunt handles builds. Covers live preview, compilation of CoffeeScript/SASS, minification, and deployment optimization.
 
 ![Yeoman](/images/logo/yeoman.png)
 

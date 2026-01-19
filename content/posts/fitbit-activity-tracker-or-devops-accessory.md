@@ -1,11 +1,8 @@
----
-title: "Fitbit - Activity Tracker or DevOps Accessory?"
-date: 2017-09-27T19:57:34-04:00
-tags:
-- Fitbit
-- DevOps
-- Infrastructure
----
+Title: Fitbit - Activity Tracker or DevOps Accessory?
+Date: 2017-09-27 19:57
+Slug: fitbit-activity-tracker-or-devops-accessory
+Tags: Fitbit, DevOps, Infrastructure
+Summary: Comprehensive review of Fitbit Charge 2 features for DevOps and personal health use. Covers faster alert notifications with Text Alert, silent alarm for waking without disturbing others, hourly timer for staying active, and motivational encouragement for movement breaks with Breathing sessions, noting Charge 2's advantages over smartwatches.
 
 Obviously, Fitbit is an activity tracker, there isn’t any doubt about that but there are some nice features with Fitbit’s line (along with others) of activity trackers that have been extremely useful in the DevOps and Infrastructure area of my current job. I have the [Fitbit Charge 2](https://www.fitbit.com/charge2) and for an activity tracker it does everything I would want and it is perfect for what I need, even though I’m not as active as I want to be. Tracking activities set aside, let’s look at some features that could also be useful to you.
 

@@ -1,16 +1,10 @@
----
-author: Anthony Scotti
-date: 2010-10-23T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Auckland
-- Honeymoon
-- New Zealand
-- Personal
-- Photo
-title: Beyond Auckland
-url: /2010/10/23/beyond-auckland/
----
+Title: Beyond Auckland
+Date: 2010-10-23 00:00
+Slug: 2010/10/23/beyond-auckland
+Save_as: 2010/10/23/beyond-auckland/index.html
+URL: 2010/10/23/beyond-auckland/
+Tags: Auckland, Honeymoon, New Zealand, Personal, Photo
+Summary: A guided tour from Auckland visiting Waitomo glow worm caves for a magical boat ride under starlight-like worms, and Rotorua hot springs to see impressive geysers and experience geothermal activity, plus learning about Maori culture and welcoming ceremonies.
 
 The other day Sarah and I had a guided tour to places outside of Auckland, like the Waitomo caves (also known as the glow worm caves) and Rotorua hot springs along with some stops along the way. After leaving the city for a 3 hour drive you really get the feeling that there is TON of open land in NZ. Along the way we seen tons of sheep and cows so many that I now have a life time worth. A thing that I found odd is they raise deer here as if it is the same as sheep, so along the way we came across some deer farms.
 

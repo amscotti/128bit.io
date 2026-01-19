@@ -1,16 +1,10 @@
----
-author: Anthony Scotti
-date: 2017-01-10T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- BitBucket
-- Docker
-- Alpine
-- Ruby
-- Java
-title: Building a Docker Image for BitBucket Pipelines
-url: /2017/01/10/Building-a-Docker-Image-for-BitBucket-Pipelines/
----
+Title: Building a Docker Image for BitBucket Pipelines
+Date: 2017-01-10 00:00
+Slug: 2017/01/10/Building-a-Docker-Image-for-BitBucket-Pipelines
+Save_as: 2017/01/10/Building-a-Docker-Image-for-BitBucket-Pipelines/index.html
+URL: 2017/01/10/Building-a-Docker-Image-for-BitBucket-Pipelines/
+Tags: BitBucket, Docker, Alpine, Ruby, Java
+Summary: Technical guide to optimizing Docker build time for BitBucket Pipelines by switching from Ruby base image to Alpine Linux. Covers Alpine's small size with package management, installing Ruby and NodeJS, Java installation challenges on Alpine, pre-installing Ruby gems with bundle install, and creating Dockerfile and pushing to Docker Hub.
 
 I said in my last posting that I could do better with cutting down the build time. To get everything working I needed to add a lot of tasks to the BitBucket pipeline. Besides the execution time, BitBucket also needed to download the Docker Image every time, so the Docker Image size is also a factor in the overall build time. Let’s look at some things we can do to make a better Docker image to cut down the build time for the blog.
 
@@ -22,13 +16,61 @@ After creating the `Dockerfile`, I saved it into the same repository as my blog 
 
 Here is the full `Dockerfile`,
 
-{{< gist amscotti bcece7b64231c6d1e9ef1995a5848e03 >}}
+```dockerfile
+FROM alpine:3.3
+
+RUN apk upgrade --update \
+    && apk --update --no-cache add curl ruby ruby-io-console ruby-bundler nodejs python py-pip \
+    && rm -rf /var/cache/apk/*
+
+# Install AWS CLI using pip
+RUN pip install awscli
+
+# Glibc for Java
+RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates && \
+    wget "https://github.com/andyshinn/alpine-pkg-glibc/releases/download/2.23-r1/glibc-2.23-r1.apk" \
+         "https://github.com/andyshinn/alpine-pkg-glibc/releases/download/2.23-r1/glibc-bin-2.23-r1.apk" && \
+    apk add --allow-untrusted glibc-2.23-r1.apk glibc-bin-2.23-r1.apk && \
+    /usr/glibc-compat/sbin/ldconfig /lib /usr/glibc/usr/lib && \
+    echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
+    apk del build-dependencies && \
+    rm glibc-2.23-r1.apk glibc-bin-2.23-r1.apk
+
+# Install Java
+ENV JAVA_VERSION_MAJOR=8 \
+    JAVA_VERSION_MINOR=102 \
+    JAVA_VERSION_BUILD=14 \
+    JAVA_PACKAGE=jre
+
+RUN mkdir /opt && curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" \
+  http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-b${JAVA_VERSION_BUILD}/${JAVA_PACKAGE}-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.tar.gz \
+    | tar -xzf - -C /opt &&\
+    ln -s /opt/jre1.${JAVA_VERSION_MAJOR}.0_${JAVA_VERSION_MINOR} /opt/jre
+
+# ENV
+ENV JAVA_HOME /opt/jre
+ENV PATH ${PATH}:${JAVA_HOME}/bin
+
+# Pre-installing Ruby Gems
+COPY ./Gemfile /usr/src/
+COPY ./Gemfile.lock /usr/src/
+RUN cd /usr/src && bundle install
+```
 
 [https://gist.github.com/amscotti/bcece7b64231c6d1e9ef1995a5848e03](https://gist.github.com/amscotti/bcece7b64231c6d1e9ef1995a5848e03)
 
 I updated the `bitbucket-pipelines.yml` to start using the newly created Docker Image. With this Docker Image, the `bitbucket-pipelines.yml` becomes a lot simpler now because we no longer need to install anything, it’s now just a task of building and pushing the files to S3.
 
-{{< gist amscotti 9b133eaa192c39f83dcb4c96752a3d15 >}}
+```yaml
+image: amscotti/128bitstudios-build
+
+pipelines:
+  default:
+    - step:
+        script:
+          - bundle exec rake build
+          - cd ./public/ && aws s3 sync . s3://www.128bitstudios.com --delete
+```
 
 [https://gist.github.com/amscotti/9b133eaa192c39f83dcb4c96752a3d15](https://gist.github.com/amscotti/9b133eaa192c39f83dcb4c96752a3d15)
 

@@ -1,10 +1,8 @@
----
-title: "Setting Up a Local Python Development Environment"
-date: 2017-09-18T18:06:58-04:00
-tags:
-- Python
-- Development
----
+Title: Setting Up a Local Python Development Environment
+Date: 2017-09-18 18:06
+Slug: setting-up-a-local-python-development-environment
+Tags: Python, Development
+Summary: Comprehensive guide for setting up Python environment on macOS Sierra. Covers installing pyenv for version management, creating .python-version file for project-specific versions, configuring shell environment variables, and using Homebrew for easy installation and updates of development tools.
 
 Over the past couple months, I've been working on fine tuning my Python skills, part of this has been taking tutorials online along with building some applications. One of the things I’ve been wanting to document, mostly for myself, is setting up a new environment for developing with Python.
 
@@ -53,7 +51,7 @@ So, we can now control the version of Python we are using and switch around as n
 
 ## Virtual Environments
 
-Python installs packages globally so you can get into a situation where a project is using an older package when you have a new one installed or vice versa. Virtual environments help avoid conflicts from project to project by installing packages into its own isolated environment. If you are using Python 3.3 or newer, you can easily create a new virtual environment by running `python3 -m venv path` and then when you are ready to work on your project, activate the environment by running `source <path>/bin/activate`.  This will now make it so that Python and Pip are based on the virtual  environment. When you are done working on your project for the day, deactivate the environment by running `deactivate`.
+Python installs packages globally so you can get into a situation where a project is using an older package when you have a new one installed or vice versa. Virtual environments help avoid conflicts from project to project by installing packages into its own isolated environment. If you are using Python 3.3 or newer, you can easily create a new virtual environment by running `python3 -m venv path` and then when you are ready to work on your project, activate the environment by running `source <path>/bin/activate`. This will now make it so that Python and Pip are based on the virtual  environment. When you are done working on your project for the day, deactivate the environment by running `deactivate`.
 
 Keep in mind, the environment itself should be something that is easily removed and recreated if needed. You should be saving a list of packages needed for your project to `requirements.txt` and using `pip install -r requirements.txt` to reinstall when setting up a new environment.
 
@@ -61,7 +59,7 @@ Keep in mind, the environment itself should be something that is easily removed 
 
 Here is a great video talking about virtual environments from my local Python User Group in Boston,
 
-{{< youtube _6xgJSVKMhY >}}
+{% youtube _6xgJSVKMhY %}
 
 [Exploring Virtual Environments in Python](https://youtu.be/_6xgJSVKMhY)
 

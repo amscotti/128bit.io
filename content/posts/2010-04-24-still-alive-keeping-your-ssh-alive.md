@@ -1,15 +1,10 @@
----
-author: Anthony Scotti
-date: 2010-04-24T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Linux
-- SSH
-- Tip
-- UNIX
-title: 'Still Alive: Keeping your SSH alive'
-url: /2010/04/24/still-alive-keeping-your-ssh-alive/
----
+Title: Still Alive: Keeping your SSH alive
+Date: 2010-04-24 00:00
+Slug: 2010/04/24/still-alive-keeping-your-ssh-alive
+Save_as: 2010/04/24/still-alive-keeping-your-ssh-alive/index.html
+URL: 2010/04/24/still-alive-keeping-your-ssh-alive/
+Tags: Linux, SSH, Tip, UNIX
+Summary: A quick tip for preventing SSH connections from dropping due to inactivity by editing the ssh_config file to send keep-alive packets every 30 seconds, ensuring stable connections on networks with aggressive timeout settings.
 
 "This was a triumph."
 

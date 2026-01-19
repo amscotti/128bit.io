@@ -1,20 +1,14 @@
----
-author: Anthony Scotti
-date: 2012-02-15T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Heroku
-- Howto
-- Loggly
-- MongoDB
-- noSQL
-title: Loggly Archives into MongoDB
-url: /2012/02/15/loggly-archives-into-mongodb/
----
+Title: Loggly Archives into MongoDB
+Date: 2012-02-15 00:00
+Slug: 2012/02/15/loggly-archives-into-mongodb
+Save_as: 2012/02/15/loggly-archives-into-mongodb/index.html
+URL: 2012/02/15/loggly-archives-into-mongodb/
+Tags: Heroku, Howto, Loggly, MongoDB, noSQL
+Summary: A Ruby script for archiving Loggly logs into MongoDB using Heroku worker. Fetches archived log files from Loggly API using HTTParty, processes and stores them as documents in MongoDB with metadata about source and timestamp, demonstrating NoSQL storage for log data.
 
 ![Loggly Logo](/images/logo/loggly_logo.png)
 
-[Loggly](http://loggly.com) is a great cloud service for managing log files from servers or many servers. It's also an add-on for your Heroku hosted app. Loggly comes in different tiers from a free to monthly service based on how much data you store on Loggly servers. Being cheap, I have picked the free tier for [amscotti.com](http://amscotti.com/) as it's not a mission critical app and I don't have tons of logs. One of the coolest things I like about Loggly is they do 'Log Archiving' on Amazon's S3 for you. All you need to do is setup a bucket on S3 and update some settings into the Loggly UI.
+[Loggly](http://loggly.com) is a great cloud service for managing log files from servers or many servers. It's also an add-on for your Heroku hosted app. Loggly comes in different tiers from a free to monthly service based on how much data you store on Loggly servers. Being cheap, I have picked the free tier for [amscotti.com](http://amscotti.com/) as it's not a mission critical app and I don't have tons of logs. One of the coolest things I like about Loggly is they do 'Log Archiving' on Amazon's S3 for you. All you need to do is setup a bucket on S3 and update some settings into the Loggly UI.
 
 The files they push out to S3 are JSON files that have been gzip'ed and are in folders based on year/month/day. There is a easy way to push their files in to MongoDB just using some nice Unix tools and MongoDB's importer.
 

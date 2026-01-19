@@ -1,10 +1,9 @@
----
-author: Anthony Scotti
-date: 2012-10-05T00:00:00Z
-email: anthony.m.scotti@gmail.com
-title: No Fluff Just Stuff - Boston Fall 2012
-url: /2012/10/05/no-fluff-just-stuff-boston-fall-2012/
----
+Title: No Fluff Just Stuff - Boston Fall 2012
+Date: 2012-10-05 00:00
+Slug: 2012/10/05/no-fluff-just-stuff-boston-fall-2012
+Save_as: 2012/10/05/no-fluff-just-stuff-boston-fall-2012/index.html
+URL: 2012/10/05/no-fluff-just-stuff-boston-fall-2012/
+Summary: Report from fifth No Fluff Just Stuff Boston conference attendance in Framingham. Conference covers Java-based technologies but includes JVM languages like Scala and Groovy, NoSQL databases, and project lifecycle management topics. Consistently finds interesting talks across different technology stacks at this Java-focused conference.
 
 A couple of weeks ago, I went to [No Fluff Just Stuff](http://www.nofluffjuststuff.com/conference/boston/2012/09/home) Boston (in Framingham, MA). This was my 4th time going and as always I find this a great conference to go to. It’s focus is around Java based technologies but also gives you a look into newer technologies. You will find talks on noSQL, languages on the JVM like Scala and Groovy along with talks about lifecycle management for your projects. I can guarantee that you will find a talk that you will be interested in listening to.
 

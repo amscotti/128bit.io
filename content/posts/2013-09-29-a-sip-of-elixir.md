@@ -1,14 +1,10 @@
----
-author: Anthony Scotti
-date: 2013-09-29T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Elixir
-- Erlang
-- Functional
-title: A Sip of Elixir
-url: /2013/09/29/a-sip-of-elixir/
----
+Title: A Sip of Elixir
+Date: 2013-09-29 00:00
+Slug: 2013/09/29/a-sip-of-elixir
+Save_as: 2013/09/29/a-sip-of-elixir/index.html
+URL: 2013/09/29/a-sip-of-elixir/
+Tags: Elixir, Erlang, Functional
+Summary: An exploration of Elixir, a functional programming language running on the Erlang VM. Discusses functional programming benefits for multi-core processing without thread safety issues, Erlang's role in enabling concurrent systems, actor model, pattern matching, and how Elixir builds on these foundations with modern syntax.
 
 ![Elixir Logo](/images/logo/elixir_logo.png)
 
@@ -37,7 +33,20 @@ Elixir has all the common things that you would expect from any language, so I w
 
 In Elixir, the = doesn't refer to assignment as in other languages but it's used for pattern matching. Pattern matching is used all over the place for various things. One use case is for functions, based on the input, you can match what you want to happen. Think switch statements on steroids!
 
-{{< gist amscotti 6748683 >}}
+```elixir
+defmodule Fizzbuzz do
+  def match(0, 0, _), do: "Fizzbuzz"
+  def match(0, _, _), do: "Fizz"
+  def match(_, 0, _), do: "Buzz"
+  def match(_, _, n), do: n
+
+  def fizzbuzz(n) do
+    match(rem(n, 3), rem(n, 5), n)
+  end
+end
+
+Enum.each(1..100, fn(i) -> IO.puts Fizzbuzz.fizzbuzz(i) end)
+```
 
 ### Anonymous Functions
 
@@ -45,7 +54,39 @@ Being a functional programming language, Elixir treats functions as first-class 
 
 To my joy, I find working with functions in Elixir very similar to what you find in JavaScript. This even includes having self executing functions.
 
-{{< gist amscotti 6748991 >}}
+```elixir
+# Creating an anonymous function using the fn...end syntax
+div = fn(number, divisor) -> rem(number, divisor) end
+
+IO.puts div.(15, 3)
+
+# Shorthand with &(...) syntax
+div2 = &(rem(&1, &2))
+
+IO.puts div2.(15, 3)
+
+# Passing function as a parameter
+add = fn(a, b) -> a + b end
+
+Enum.reduce([1, 2, 3, 4, 5], 0, add)
+
+# Same as before but no need to assign to a variable
+Enum.reduce([1, 2, 3, 4, 5], 0, fn(a, b) -> a + b end)
+
+# Shorthand with &(...) syntax
+Enum.reduce([1, 2, 3, 4, 5], 0, &(&1 + &2))
+
+# Self Executing anonymous function
+(fn(name) -> IO.puts "Hello #{name}" end).("World")
+
+# Self Executing with using Pattern Matching
+result = case (fn(a, b) -> a + b end).(1, 2) do
+  3 -> "Three!"
+  _ -> "IDK"
+end
+
+IO.puts result
+```
 
 ### Pipe Operator \|>
 
@@ -53,11 +94,15 @@ If you have worked with the Unix terminal you most likely have used | (Pipe) bef
 
 This is what you would see in most languages,
 
-{{< gist amscotti 6748748 "non_pipe_operator.exs" >}}
+```elixir
+Enum.join(Enum.filter(Enum.map(1..20, &(&1 * 2)), fn(x) -> rem(x, 3) == 0 end), ", ")
+```
 
 To understand this you have to unravel from the inner to the outer. But in Elixir, this same code can be rewritten using the pipe operator like so,
 
-{{< gist amscotti 6748748 "pipe_operator.exs" >}}
+```elixir
+1..20 |> Enum.map(&(&1 * 2)) |> Enum.filter(fn(x) -> rem(x, 3) == 0 end) |> Enum.join(", ")
+```
 
 This lets you think about your application as data transformation steps.
 

@@ -1,21 +1,16 @@
----
-author: Anthony Scotti
-date: 2011-07-13T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Howto
-- Install
-- Mac
-- Scala
-title: Installing Scala on Mac OS X
-url: /2011/07/13/installing-scala-on-mac-os-x/
----
+Title: Installing Scala on Mac OS X
+Date: 2011-07-13 00:00
+Slug: 2011/07/13/installing-scala-on-mac-os-x
+Save_as: 2011/07/13/installing-scala-on-mac-os-x/index.html
+URL: 2011/07/13/installing-scala-on-mac-os-x/
+Tags: Howto, Install, Mac, Scala
+Summary: Step-by-step installation guide for Scala, an object-oriented and functional programming language on the JVM. Covers downloading via curl or browser, verifying MD5 checksum, extracting with tar, moving to /usr/share, creating symbolic link for version management, updating .profile with SCALA_HOME and PATH, and verifying installation.
 
 One of the other things I'm trying to learn on my free time is Scala, like Groovy it's a language that runs on top of the JVM and is both a object-oriented and functional programming language. One of the biggest places I know where its being used is [Foursquare](https://foursquare.com/)
 
-Same idea as the other postings I did for installing [Groovy, Grails]({{< relref "2011-03-31-install-groovy-and-grails-on-mac-os-x.md" >}}) and [jRuby]({{< relref "2011-04-07-install-jruby-on-mac-os-x.md" >}}).
+Same idea as the other postings I did for installing [Groovy, Grails](/2011/03/31/install-groovy-and-grails-on-mac-os-x/) and [jRuby](/2011/04/07/install-jruby-on-mac-os-x/).
 
-Head to the Scala home page at [http://www.scala-lang.org](http://www.scala-lang.org) and click on the '[Download Scala](http://www.scala-lang.org/downloads)' which is on the right side of the page. Download the [scala-2.9.0.1.tgz](http://www.scala-lang.org/downloads/distrib/files/scala-2.9.0.1.tgz) (which is the latest as of writing this posting).
+Head to the Scala home page at [http://www.scala-lang.org](http://www.scala-lang.org) and click on the '[Download Scala](http://www.scala-lang.org/downloads)' which is on the right side of the page. Download the [scala-2.9.0.1.tgz](http://www.scala-lang.org/downloads/distrib/files/scala-2.9.0.1.tgz) (which is the latest as of writing this posting).
 
 If you just want to download it from the command line,
 
@@ -27,7 +22,7 @@ If you want to ensure the file is downloaded correctly checkout the MD5 file.
 ```
 $ curl http://www.scala-lang.org/downloads/distrib/files/scala-2.9.0.1.tgz.md5
 10d01410fd75019fa21a88964462a077
-$ md5 scala-2.9.0.1.tgz MD5 (scala-2.9.0.1.tgz) = 10d01410fd75019fa21a88964462a077
+$ md5 scala-2.9.0.1.tgz MD5 (scala-2.9.0.1.tgz) = 10d01410fd75019fa21a88964462a077
 ```
 
 Now that we have the file we need to untar it, move it /usr/share and make the link to Scala for it.

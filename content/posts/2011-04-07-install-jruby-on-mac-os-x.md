@@ -1,18 +1,12 @@
----
-author: Anthony Scotti
-date: 2011-04-07T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Howto
-- Install
-- JRuby
-- Mac
-- Ruby
-title: Install JRuby on Mac OS X
-url: /2011/04/07/install-jruby-on-mac-os-x/
----
+Title: Install JRuby on Mac OS X
+Date: 2011-04-07 00:00
+Slug: 2011/04/07/install-jruby-on-mac-os-x
+Save_as: 2011/04/07/install-jruby-on-mac-os-x/index.html
+URL: 2011/04/07/install-jruby-on-mac-os-x/
+Tags: Howto, Install, JRuby, Mac, Ruby
+Summary: Similar installation process to Groovy/Grails, guiding through setting up JRuby on Mac OS X. Covers downloading tar.gz release, moving to /usr/share, creating symbolic link for easy version management, updating .profile with JRUBY_HOME environment variable and PATH, and noting that JRuby's gem command overrides standard Ruby's gem requiring full paths.
 
-Same idea as the [Groovy and Grails posting]({{< relref "2011-03-31-install-groovy-and-grails-on-mac-os-x.md" >}}), most of the steps are the same but here they are.
+Same idea as the [Groovy and Grails posting](/2011/03/31/install-groovy-and-grails-on-mac-os-x/), most of the steps are the same but here they are.
 
 Download JRuby from http://www.jruby.org/, as of writing this the latest release is 1.6.0. I'm downloading the tar file, I believe it the same as the zip file just different format used to compress the files.
 
@@ -36,7 +30,7 @@ JRUBY_HOME=/usr/share/jruby; export JRUBY_HOME
 PATH=$JRUBY_HOME/bin:$PATH; export PATH
 ```
 
-Close all Terminals and reopen one.  To test to see if everything is setup right, run this,
+Close all Terminals and reopen one. To test to see if everything is setup right, run this,
 
 ```
 $ jruby -v

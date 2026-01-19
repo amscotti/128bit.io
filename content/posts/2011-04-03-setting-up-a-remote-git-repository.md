@@ -1,21 +1,16 @@
----
-author: Anthony Scotti
-date: 2011-04-03T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Git
-- Howto
-- Repository
-- SSH
-title: Setting up a remote Git repository
-url: /2011/04/03/setting-up-a-remote-git-repository/
----
+Title: Setting up a remote Git repository
+Date: 2011-04-03 00:00
+Slug: 2011/04/03/setting-up-a-remote-git-repository
+Save_as: 2011/04/03/setting-up-a-remote-git-repository/index.html
+URL: 2011/04/03/setting-up-a-remote-git-repository/
+Tags: Git, Howto, Repository, SSH
+Summary: A guide to setting up remote Git repositories on Linux servers via SSH or on USB flash drives. Covers creating a bare repository with git init --bare, using --shared flag for team projects, pushing to remote repositories, adding remote servers for easier access, and leveraging SSH keys for authentication.
 
-I been trying to use Git more and more to help me learn it.  My first step was using it for the pre on this blog but I have also been using it on some small projects I been work on for myself. Git works just fine locally and still is able to use all the features it has but to really take advantage of Git you need to setup a remote repository and here is how to do it.
+I been trying to use Git more and more to help me learn it. My first step was using it for the pre on this blog but I have also been using it on some small projects I been work on for myself. Git works just fine locally and still is able to use all the features it has but to really take advantage of Git you need to setup a remote repository and here is how to do it.
 
-Git doesn't really have a preference if the repository is hosted on some server or it it is just a USB flash drive that you carry around with you. They are both the same and will let you share your pre.
+Git doesn't really have a preference if the repository is hosted on some server or it it is just a USB flash drive that you carry around with you. They are both the same and will let you share your pre.
 
-Let's make a new local repository to give us something to play around with,
+Let's make a new local repository to give us something to play around with,
 
 ```
 $ mkdir test_repository
@@ -54,6 +49,6 @@ $ git push dodo
 Everything up-to-date
 ```
 
-If you are using SSH for your remote repository, keep in mind that you can setup SSH keys to make pushing and pulling even easier. Here is a post about [how to make and use SSH keys]({{< relref "2010-04-10-making-and-using-ssh-keys.md" >}}).
+If you are using SSH for your remote repository, keep in mind that you can setup SSH keys to make pushing and pulling even easier. Here is a post about [how to make and use SSH keys](/2010/04/10/making-and-using-ssh-keys/).
 
 You are now all set to clone the remote repository and start working on any other system you may be on. I hope anyone looking into using Git finds this helpful I'm still learning myself so if anyone know of a better way please let me know.

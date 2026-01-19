@@ -1,14 +1,10 @@
----
-author: Anthony Scotti
-date: 2014-03-23T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- LevelDB
-- noSQL
-- Google
-title: Playing around with LevelDB
-url: /2014/03/23/playing-around-with-leveldb/
----
+Title: Playing around with LevelDB
+Date: 2014-03-23 00:00
+Slug: 2014/03/23/playing-around-with-leveldb
+Save_as: 2014/03/23/playing-around-with-leveldb/index.html
+URL: 2014/03/23/playing-around-with-leveldb/
+Tags: LevelDB, noSQL, Google
+Summary: An introduction to Google's LevelDB, an on-disk key-value store based on BigTable concepts without sharing code. Covers using LevelDB embedded or as backend storage like Riak, its multi-level architecture for performance through tiered data storage, typical use cases, and being found in Chrome's IndexedDB implementation.
 
 ![LevelDB Logo](/images/logo/leveldb.png)
 

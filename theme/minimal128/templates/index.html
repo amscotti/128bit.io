@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% endblock %}
+
+{% block prefetch %}
+{% if articles %}
+<link rel="prefetch" href="{{ SITEURL }}/{{ articles[0].url }}">
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="home">
+  {% if BIO %}
+  <section class="whoami">
+    <div class="terminal-command">
+      <span class="prompt">[amscotti@128bit.io ~]# </span><span class="command">whoami</span>
+    </div>
+    <div class="whoami-output">
+      <div class="whoami-avatar-wrapper">
+        <div class="whoami-avatar-border">
+          {% if AVATAR %}
+          <img src="{{ SITEURL }}{{ AVATAR }}" alt="{{ AUTHOR }}" class="whoami-avatar">
+          {% endif %}
+        </div>
+      </div>
+      <div class="whoami-info">
+        <div class="whoami-name">{{ AUTHOR }}</div>
+        <div class="whoami-separator">-------------------------</div>
+        <div class="whoami-bio">{{ BIO }}</div>
+        {% include "includes/social-links.html" %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="posts">
+    <div class="terminal-command">
+      <span class="prompt">[amscotti@128bit.io ~]# </span><span class="command">ls -la posts/</span>
+    </div>
+    <div class="terminal-output">
+      <div class="file-listing">
+        {% for article in articles[:20] %}
+          <div class="file-line">
+            <span class="date">{{ article.date.strftime('%b %d %Y') }}</span>
+            <a href="{{ SITEURL }}/{{ article.url }}" class="filename">{{ article.slug.split('/')[-1] }}.md</a>
+          </div>
+        {% endfor %}
+      </div>
+      {% if articles|length > 20 %}
+      <div class="more-files">
+        <a href="{{ SITEURL }}/posts/" class="more-files-link">... ({{ articles|length - 20 }} more files)</a>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+</div>
+{% endblock %}

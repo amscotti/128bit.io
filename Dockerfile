@@ -1,26 +1,26 @@
-FROM alpine:3.17 AS builder
+FROM python:3.13-alpine3.23 AS builder
 
-ENV HUGO_VERSION 0.111.2
-ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
-
-# Install pygments (for syntax highlighting) and git
-RUN apk update && apk add --no-cache py-pygments git
-
-# Download and Install hugo
-RUN mkdir /usr/local/hugo
-ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tar.gz /usr/local/hugo/
-RUN tar xzf /usr/local/hugo/${HUGO_BINARY}.tar.gz -C /usr/local/hugo/ \
-	&& ln -s /usr/local/hugo/hugo /usr/local/bin/hugo \
-	&& rm /usr/local/hugo/${HUGO_BINARY}.tar.gz
+# Install UV for dependency management
+RUN pip install uv
 
 # Copy site into builder image
 WORKDIR /site/
 COPY . /site/
 
-# Build site
-RUN git submodule update --init --recursive
-RUN hugo --gc --minify -b "/"
+# Install dependencies and build site
+RUN uv sync && uv run pelican content -s publishconf.py
 
 # Copy site into httpd image
-FROM docker.io/library/httpd:alpine3.17
-COPY --from=0 /site/public /usr/local/apache2/htdocs/ 
+FROM docker.io/library/httpd:alpine3.23
+
+# Enable required modules and copy config
+RUN sed -i \
+    -e 's/^#LoadModule headers_module/LoadModule headers_module/' \
+    -e 's/^#LoadModule deflate_module/LoadModule deflate_module/' \
+    -e 's/^#LoadModule expires_module/LoadModule expires_module/' \
+    /usr/local/apache2/conf/httpd.conf
+
+COPY httpd-custom.conf /usr/local/apache2/conf/extra/
+RUN echo "Include conf/extra/httpd-custom.conf" >> /usr/local/apache2/conf/httpd.conf
+
+COPY --from=builder /site/output /usr/local/apache2/htdocs/

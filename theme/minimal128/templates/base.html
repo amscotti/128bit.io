@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+  {% include "includes/head.html" %}
+
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ BIO|striptags|truncate(160) if BIO else SITENAME }}{% endblock %}">
+
+  {% block meta %}
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% block og_title %}{{ SITENAME }}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}{{ BIO|striptags|truncate(200) if BIO else SITENAME }}{% endblock %}">
+  <meta property="og:url" content="{{ SITEURL }}/{{ output_file }}">
+  <meta property="og:site_name" content="{{ SITENAME }}">
+  <meta property="og:locale" content="{{ DEFAULT_LANG }}">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{ X_HANDLE }}">
+  <meta name="twitter:creator" content="{{ X_HANDLE }}">
+  <meta name="twitter:title" content="{{ SITENAME }}">
+
+  <!-- Additional SEO -->
+  <meta name="author" content="{{ AUTHOR }}">
+  {% endblock %}
+
+  <link rel="canonical" href="{{ SITEURL }}{% block canonical %}{% endblock %}">
+  {% block prefetch %}{% endblock %}
+  {% block styles %}{% endblock %}
+</head>
+<body>
+  <div class="container">
+    {% block header %}
+    {% include "includes/header.html" %}
+    {% endblock %}
+
+    <main class="main">
+      {% block content %}{% endblock %}
+    </main>
+
+    {% include "includes/footer.html" %}
+  </div>
+</body>
+</html>

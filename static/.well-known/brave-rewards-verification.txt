@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: 128bit.io
-Token: 74e6865bdf2eb1bde0b643e84997f9eeee9ee56f7ef9195f0c1a7774d4dfc6c7 

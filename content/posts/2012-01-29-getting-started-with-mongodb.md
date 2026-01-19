@@ -1,14 +1,10 @@
----
-author: Anthony Scotti
-date: 2012-01-29T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Howto
-- MongoDB
-- noSQL
-title: Getting started with MongoDB
-url: /2012/01/29/getting-started-with-mongodb/
----
+Title: Getting started with MongoDB
+Date: 2012-01-29 00:00
+Slug: 2012/01/29/getting-started-with-mongodb
+Save_as: 2012/01/29/getting-started-with-mongodb/index.html
+URL: 2012/01/29/getting-started-with-mongodb/
+Tags: Howto, MongoDB, noSQL
+Summary: An introduction to MongoDB installation and basic usage on MacOS. Covers downloading and extracting MongoDB binaries, creating symbolic links for version management, setting up /data/db directory, configuring environment variables, and testing with mongod server and mongo shell client.
 
 I'm a big fan of CouchDB. I enjoy how they go about doing things and how you are able to use it without the need of drivers as its all RESTful based. As long as your language of choice has the ability to make RESTful calls and read JSON data then you're all set. But before I really started to use CouchDB I did start looking at MongoDB, another Document data store. MongoDB is now being compared to mySQL as far as its use by projects. It has a great group of developers along with getting some great press from big companies moving over to MongoDB from some type of SQL based system.
 
@@ -46,10 +42,10 @@ MongoDB shell version: 2.0.2
 connecting to: test
 >
 ```
-At this point you are all set to start playing around with the database. There are also [downloads](http://www.mongodb.org/downloads) for Linux, Windows and Solaris along with packages for [Ubuntu](http://www.mongodb.org/display/DOCS/Ubuntu+and+Debian+packages) and [Fedora](http://www.mongodb.org/display/DOCS/CentOS+and+Fedora+Packages).
+At this point you are all set to start playing around with the database. There are also [downloads](http://www.mongodb.org/downloads) for Linux, Windows and Solaris along with packages for [Ubuntu](http://www.mongodb.org/display/DOCS/Ubuntu+and+Debian+packages) and [Fedora](http://www.mongodb.org/display/DOCS/CentOS+and+Fedora+Packages).
 
 ## Some playing around
-Now that we have everything all set, lets play around in the client. This is a Javascript base client and documents are JSON data, so if you have worked with JSON before you should be familiar. Sadly there is no web interface like the one that comes with CouchDB, but you can get a 3rd party one.
+Now that we have everything all set, lets play around in the client. This is a Javascript base client and documents are JSON data, so if you have worked with JSON before you should be familiar. Sadly there is no web interface like the one that comes with CouchDB, but you can get a 3rd party one.
 ```
 MongoDB shell version: 2.0.2
 connecting to: test
@@ -84,10 +80,10 @@ So what's happening here?
 
 The first line, 'connecting to: test' tells you that you have connected to the test database. The `use playingaround` is switching/making a new database for you. As far as the 'mytest', this is a collection, think of a collection like a table, it's what is going to hold the documents for you.
 
-The next lines are making a document and saving it into a doc variable to be used later. As you can see it's JSON format, to save this in to the collection all you need to do is run `db.mytest.save(doc)`, where you would replace 'mytest' with your collection name.
+The next lines are making a document and saving it into a doc variable to be used later. As you can see it's JSON format, to save this in to the collection all you need to do is run `db.mytest.save(doc)`, where you would replace 'mytest' with your collection name.
 
-The `.find()` and `.findOne()` will show you documents that are in the collection, `.findOne` will only show you one document at a time though you are able to pass in criteria in to the find like I did with the `.findOne({fname:"Dave"})`
+The `.find()` and `.findOne()` will show you documents that are in the collection, `.findOne` will only show you one document at a time though you are able to pass in criteria in to the find like I did with the `.findOne({fname:"Dave"})`
 
-This is a very quick overview of using the client, you can find much better info on [MongoDB.org's Tutorial](http://www.mongodb.org/display/DOCS/Tutorial) and [MongoDB.org's Overview](http://www.mongodb.org/display/DOCS/Overview+-+The+MongoDB+Interactive+Shell)
+This is a very quick overview of using the client, you can find much better info on [MongoDB.org's Tutorial](http://www.mongodb.org/display/DOCS/Tutorial) and [MongoDB.org's Overview](http://www.mongodb.org/display/DOCS/Overview+-+The+MongoDB+Interactive+Shell)
 
 If you have any questions or comments please post, also any suggestions on improving this are welcome.

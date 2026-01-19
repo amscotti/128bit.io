@@ -1,9 +1,8 @@
----
-title: Respect for PHP 🐘
-date: 2023-05-27T17:32:45.000Z
-draft: false
-tags: [PHP, Development]
----
+Title: Respect for PHP 🐘
+Date: 2023-05-27 17:32
+Slug: respect-for-php
+Tags: PHP, Development
+Summary: Reflection on PHP's historical and ongoing relevance. Discusses LAMP stack era, PHP's simplicity for web development, Apache HTTP Server contributions to the web, Wikipedia/Facebook/Etsy origins, modern ecosystem with Composer/Laravel, and diverse applications like cPanel, WordPress, Drupal, and ad-blocking Pi-hole.
 
 While [PHP](https://www.php.net/) isn't my favorite language by any means, it's one that I've used throughout my career at various points. This fact was recently brought to my attention during a conversation with a colleague about my past experiences. I wouldn't label myself a dedicated PHP developer, but my history with the language stretches back to my college days, when I even completed my senior project using PHP.
 
@@ -32,12 +31,12 @@ These projects may not be as renowned as WordPress, but they are actively develo
 
 ## Evolution and Advancements
 
-{{< youtube "x9bSUo6TGgY" >}}
+{% youtube x9bSUo6TGgY %}
 [The evolution of PHP](https://www.youtube.com/watch?v=x9bSUo6TGgY)
 
 When I first started using PHP, many applications were unstructured, often consisting of PHP pages for views that would process data, call the database, and display the results in a table. Today, PHP offers comprehensive support for Object-Oriented Programming, type hinting, testing frameworks, linters, and static analysis tools to ensure high-quality code. The ecosystem has matured significantly, with PHP now boasting a robust package management system called [Composer](https://getcomposer.org/) that simplifies the integration of libraries. Additionally, the language now features powerful frameworks like [Laravel](https://laravel.com/) that offer functionality similar to Ruby on Rails in terms of ease of use and developer experience. Looking at the Laravel home page, you can see that it's used by a good number of companies from Twitch to Disney.
 
-{{< youtube "Spwv0RbITmE" >}}
+{% youtube Spwv0RbITmE %}
 [Laravel First Impressions From A JavaScript Dev](https://www.youtube.com/watch?v=Spwv0RbITmE)
 
 Besides these improvements to language features and tooling, PHP's performance has also seen continuous enhancements. PHP had a reputation for being less organized and less performant compared to other languages like Python, JavaScript, and Ruby. However, with the introduction of modern frameworks, PHP has closed this gap and even surpassed some of these languages in certain areas. For instance, [PHP now outperforms Ruby in terms of speed](https://www.techempower.com/benchmarks/#section=data-r21&l=zijx1b-6bj&test=query).

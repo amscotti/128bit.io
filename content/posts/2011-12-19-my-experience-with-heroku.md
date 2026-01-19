@@ -1,15 +1,10 @@
----
-author: Anthony Scotti
-date: 2011-12-19T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Heroku
-- Opinion
-- Platform as a Service
-- Ruby
-title: My experience with Heroku
-url: /2011/12/19/my-experience-with-heroku/
----
+Title: My experience with Heroku
+Date: 2011-12-19 00:00
+Slug: 2011/12/19/my-experience-with-heroku
+Save_as: 2011/12/19/my-experience-with-heroku/index.html
+URL: 2011/12/19/my-experience-with-heroku/
+Tags: Heroku, Opinion, Platform as a Service, Ruby
+Summary: Review of Heroku as Platform as a Service solution for developers who want to focus on code rather than server management. Offers free web node for testing, easy scaling with commands, extensive add-ons for databases and monitoring, clean documentation, and Git workflow deployment. Personal site amscotti.com currently hosted successfully on Heroku.
 
 I haven't done too much publishing of web applications for my own stuff. At work we have an Ops team that deals with setup and deployment of our code. I have used Rackspace cloud and AWS for setting up servers before but mostly just for testing and nothing for production. As a developer I want to focus on the code and not fine tune an application server. I want to be able to write code, push it out and scale without putting much thought in to it. Oh, and I want do to do this without hiring a Ops team of my own! :P
 

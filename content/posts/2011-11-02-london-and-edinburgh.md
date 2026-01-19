@@ -1,15 +1,10 @@
----
-author: Anthony Scotti
-date: 2011-11-02T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- Edinburgh
-- iPad
-- London
-- Personal
-title: London and Edinburgh
-url: /2011/11/02/london-and-edinburgh/
----
+Title: London and Edinburgh
+Date: 2011-11-02 00:00
+Slug: 2011/11/02/london-and-edinburgh
+Save_as: 2011/11/02/london-and-edinburgh/index.html
+URL: 2011/11/02/london-and-edinburgh/
+Tags: Edinburgh, iPad, London, Personal
+Summary: Travel diary of anniversary trip with wife to London and Edinburgh. London highlights include Stonehenge, Doctor Who Experience, and Trafalgar Square. Edinburgh became a favorite destination featuring Royal Mile tours to Edinburgh Vaults and Mary King's Close, Edinburgh Castle with daily cannon firing, and Holyrood Palace with hike up Arthur's Seat. Noted iPad 2's suitability for travel.
 
 Been a bit from my last posting, good reason for this though as I was away on a trip with my wife to London and Edinburgh. The trip was to celebrate one year of marriage with my wife.
 

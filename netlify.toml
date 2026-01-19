@@ -1,17 +1,15 @@
 [build]
-  publish = "public"
-  command = "hugo --gc --minify"
+  publish = "output"
+  command = "pip install uv && uv run --locked pelican content -s publishconf.py"
 
 [context.production.environment]
-  HUGO_VERSION = "0.111.2"
-  HUGO_ENV = "production"
-  HUGO_ENABLEGITINFO = "true"
+  PYTHON_VERSION = "3.13"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.111.2"
+  PYTHON_VERSION = "3.13"
 
 [context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+  command = "pip install uv && uv run --locked pelican content -s publishconf.py"
 
 [[headers]]
   for = "/*"
@@ -19,3 +17,16 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

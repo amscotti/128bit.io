@@ -1,0 +1,11 @@
+{# Article preview for listing pages - requires 'article' variable #}
+<article class="terminal-file-preview">
+  <div class="file-content">
+    <div class="md-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></div>
+    <div class="md-date">Date: {{ article.date.strftime('%B %d, %Y') }}</div>
+    {% if article.tags %}
+    <div class="md-tags">Tags: {% for tag in article.tags %}{% if not loop.first %} {% endif %}<a href="{{ SITEURL }}/tags/{{ tag.slug }}/">[{{ tag }}]</a>{% endfor %}</div>
+    {% endif %}
+    <p class="post-summary-text">{{ article.summary }}</p>
+  </div>
+</article>

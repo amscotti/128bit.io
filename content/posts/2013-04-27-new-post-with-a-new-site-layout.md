@@ -1,10 +1,9 @@
----
-author: Anthony Scotti
-date: 2013-04-27T00:00:00Z
-email: anthony.m.scotti@gmail.com
-title: New Post with a new site layout!
-url: /2013/04/27/new-post-with-a-new-site-layout/
----
+Title: New Post with a new site layout!
+Date: 2013-04-27 00:00
+Slug: 2013/04/27/new-post-with-a-new-site-layout
+Save_as: 2013/04/27/new-post-with-a-new-site-layout/index.html
+URL: 2013/04/27/new-post-with-a-new-site-layout/
+Summary: A major site redesign announcement describing the transition from old hosting to Amazon S3 using Jekyll for static site generation. Explains move away from dynamic site to static files for simplicity, improved performance, and easier maintenance while maintaining blog functionality.
 
 Well, if you remember my old site then you know that this is a big change from what I had before. I have fully redone the blog moving it from my old hosting to Amazon S3 using static files with the help of [Jekyll](http://jekyllrb.com/).
 

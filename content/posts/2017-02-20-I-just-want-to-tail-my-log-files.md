@@ -1,14 +1,10 @@
----
-author: Anthony Scotti
-date: 2017-02-20T00:00:00Z
-email: anthony.m.scotti@gmail.com
-tags:
-- RabbitMQ
-- Logstash
-- Elasticsearch
-title: I just want to tail my log files!
-url: /2017/02/20/I-just-want-to-tail-my-log-files/
----
+Title: I just want to tail my log files!
+Date: 2017-02-20 00:00
+Slug: 2017/02/20/I-just-want-to-tail-my-log-files
+Save_as: 2017/02/20/I-just-want-to-tail-my-log-files/index.html
+URL: 2017/02/20/I-just-want-to-tail-my-log-files/
+Tags: RabbitMQ, Logstash, Elasticsearch
+Summary: Demonstrates RabbitMQ integration with Logstash for streaming log files to users in real-time, overcoming Elasticsearch query delays. Shows how to use RabbitMQ output plugin, create topic exchanges with routing keys for filtering logs by service and environment, and configure durable/persistent settings to prevent data accumulation.
 
 I've had the opportunity to use the Elastic Stack (formally known as ELK) for some time now, there's a great number of use cases that the Elastic Stack can fit, but one of the primary uses is to help aggregate logs files into one centralized location. This gives you the ability to analyze and research your log files, at work we've been able to gain a lot more insight into our services using the Elastic Stack. For myself, it has been extremely exciting to work on this platform, scale it out, and ensure that it is meeting all our needs.
 
@@ -25,7 +21,57 @@ This works nicely because Logstash has a built-in [RabbitMQ Output Plugin](https
 
 A lot of the code is just to simulate events coming from a log file, note that I am adding fields to the events. In this example, I am adding `environment` and `service`, these fields are going to be important because they are how we are going to filter the events downstream. Within the Logstash config, we are adding the fields to the key in the RabbitMQ output like so, `"logs.%{environment}.%{service}"`.
 
-{{< gist amscotti a44b8e7d1da88711879d1c57b68da7b1 "rabbitmq_config" >}}
+```conf
+input {
+    generator {
+        lines => [
+            "2017-02-12 14:50:98 DEBUG Main:12 - Test log file",
+            "2017-02-12 14:51:98 INFO Main:13 - Test log file",
+            "2017-02-12 14:52:98 WARN Main:14 - Test log file",
+            "2017-02-12 14:53:98 ERROR Main:15 - Test log file",
+            "2017-02-12 14:54:98 FATAL Main:16 - Test log file"
+        ]
+        add_field => { "service" => "a" }
+        add_field => { "environment" => "development" }
+        count => 50
+    }
+    generator {
+        lines => [
+            "2017-02-12 14:50:98 DEBUG Main:12 - Test log file",
+            "2017-02-12 14:51:98 INFO Main:13 - Test log file",
+            "2017-02-12 14:52:98 WARN Main:14 - Test log file",
+            "2017-02-12 14:53:98 ERROR Main:15 - Test log file",
+            "2017-02-12 14:54:98 FATAL Main:16 - Test log file"
+        ]
+        add_field => { "service" => "b" }
+        add_field => { "environment" => "development" }
+        count => 50
+    }
+    generator {
+        lines => [
+            "2017-02-12 14:50:98 DEBUG Main:12 - Test log file",
+            "2017-02-12 14:51:98 INFO Main:13 - Test log file",
+            "2017-02-12 14:52:98 WARN Main:14 - Test log file",
+            "2017-02-12 14:53:98 ERROR Main:15 - Test log file",
+            "2017-02-12 14:54:98 FATAL Main:16 - Test log file"
+        ]
+        add_field => { "service" => "a" }
+        add_field => { "environment" => "production" }
+        count => 50
+    }
+}
+output {
+    stdout { codec => rubydebug }
+    rabbitmq {
+        exchange => "logs"
+        host => "localhost"
+        exchange_type => "topic"
+        key => "logs.%{environment}.%{service}"
+        durable => false
+        persistent => false
+    }
+}
+```
 
 With this approach, you can make it as fine-grained as you want using any data available to Logstash to come up with a routing key for RabbitMQ. The key will really be based on your needs for the various services that you're running. If you're running multiple copies of the same services you may need to include the hostname or some other unique identifier to allow a way to filter log files per host. If you're gathering multiple log files from the same system, you may want to include the log file name as part of the key. You should really take some time to consider the end user experience and how they're going to filter down to get the information they need.
 
@@ -38,7 +84,46 @@ Consuming the stream is as simple as writing an application that will connect to
 
 Here is an example of the program I quickly came up with to test this out, it is written in the Ruby language but picking something that your team is more familiar with could be more ideal. This should be a convenient tool they can use on demand. Overall you want the overhead of your teammates to be able to consume logs in this way to be as low as possible.
 
-{{< gist amscotti a44b8e7d1da88711879d1c57b68da7b1 "read.rb" >}}
+```ruby
+#!/usr/bin/env ruby
+
+require 'bunny'
+require 'json'
+require 'optparse'
+
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: read.rb [options]"
+  opts.on('-e', '--environment NAME', 'Environment name') { |v| options[:environment] = v }
+  opts.on('-s', '--service HOST', 'Service name') { |v| options[:service] = v }
+end.parse!
+
+conn = Bunny.new
+conn.start
+
+ch  = conn.create_channel
+x   = ch.topic("logs")
+q   = ch.queue("", :exclusive => true)
+
+environment = options[:environment] ? options[:environment] : '*'
+service = options[:service] ? options[:service] : '*'
+routing_key = "logs.#{environment}.#{service}"
+
+q.bind(x, :routing_key => routing_key)
+
+
+puts "Looking for logs matching '#{routing_key}', To exit press CTRL+C"
+
+begin
+  q.subscribe(:block => true) do |delivery_info, properties, body|
+    puts "[#{delivery_info.routing_key}] #{JSON.parse(body)["message"]}"
+  end
+rescue Interrupt => _
+  ch.close
+  conn.close
+end
+```
 
 One interesting idea that I’ve been thinking about doing for a hackathon is building a simple web application that would connect to RabbitMQ and using WebSockets, would stream the desired log to the web browser. This would give people a quick and easy way to view logs without opening up a command prompt.
 
