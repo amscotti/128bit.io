@@ -6,7 +6,7 @@ URL: 2010/08/30/stopping-ssh-brute-force-attacks-on-linux/
 Tags: DenyHosts, Fedora, Howto, iptables, Linux, SSH
 Summary: A guide to protecting SSH servers on Linux from brute force attacks. Covers disabling root login, changing SSH ports, using iptables rate limiting rules to temporarily block aggressive IPs, and installing DenyHosts for permanent blocking with optional synchronization to a community blocklist.
 
-From my other posting "[Stopping SSH Brute Force attacks with PF on FreeBSD](/2010/06/13/stopping-ssh-brute-force-attacks-with-pf-on-freebsd/)" I've been getting a good number of hits from people searching on how to stop SSH Brute Force attacks but on Linux and not FreeBSD, so I kind of feel the need to make a posting on this for the linux people. I also just setup a Fedora 13 server on Rackspace's Cloud and I wanted to ensure I could stop SSH Brute Force attacks.
+From my other posting "[Stopping SSH Brute Force attacks with PF on FreeBSD](/2010/06/13/stopping-ssh-brute-force-attacks-with-pf-on-freebsd/)" I've been getting a good number of hits from people searching on how to stop SSH brute force attacks on Linux and not FreeBSD, so I kind of feel the need to make a posting on this for the Linux people. I also just set up a Fedora 13 server on Rackspace's Cloud and I wanted to ensure I could stop SSH brute force attacks.
 
 ## Quick over view from my other posting
 
@@ -16,18 +16,18 @@ A lot of SSH Brute Forcers are only looking at port 22 for SSH, you can change t
 
 ## iptables - Linux Firewall
 
-iptables is the linux firewall that comes pre-installed on a lot of distros. Within Fedora it comes pre-installed and is able to run  from first boot. Looking around on the web I couldn't find anything on the same level as what I had for PF but I did find something that would help slow down SSH Brute Force attacks.
+iptables is the Linux firewall that comes pre-installed on a lot of distros. Within Fedora it comes pre-installed and is able to run from first boot. Looking around on the web I couldn't find anything on the same level as what I had for PF, but I did find something that would help slow down SSH brute force attacks.
 
 The file that keeps all the rules for iptables can be found in /etc/sysconfig/iptables on Fedora, add the lines below to the file.
 ```
 -I INPUT  -p tcp -m tcp --dport 22 -m state --state NEW -m recent --set --name SSH--rsource
 -I INPUT -p tcp -m tcp --dport 22 -m state --state NEW -m recent --update --seconds 180 --hitcount 4 --name SSH--rsource -j DROP
 ```
-The first rule will start a table that will log IPs which starts a connection to ssh port. The next rule will count the number of tries from the same IP, if that count passes 4 with in 180  seconds then the server will not accept any more connections from that IP for 180 seconds.
+The first rule will start a table that will log IPs that start a connection to the SSH port. The next rule will count the number of tries from the same IP; if that count passes 4 within 180 seconds then the server will not accept any more connections from that IP for 180 seconds.
 
 You are going to need to restart iptables, this can be done on Fedora by running `service iptables restart`.
 
-The idea with this rule is that the SSH Brute Forcer is just a script that is running until it see that it's being blocked and move on to the next IP.
+The idea with this rule is that the SSH brute forcer is just a script that is running until it sees that it's being blocked and moves on to the next IP.
 
 ## DenyHosts
 

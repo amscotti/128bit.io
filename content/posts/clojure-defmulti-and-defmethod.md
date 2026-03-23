@@ -2,7 +2,7 @@ Title: Clojure Defmulti and Defmethod
 Date: 2021-07-26 20:53
 Slug: clojure-defmulti-and-defmethod
 Tags: Clojure, Development
-Summary: Demonstrates Clojure's polymorphism tools for handling different implementations. Shows defmulti creating dispatch functions based on dispatch value, and defmethod for creating class-specific implementations that override default behavior, with example using character game stats displaying different attacks based on character type.
+Summary: A walkthrough of Clojure's defmulti and defmethod, showing how multimethods model polymorphism through dispatch functions and targeted implementations.
 
 ![Clojure Logo]({static}/images/logo/clojure_logo.png)
 

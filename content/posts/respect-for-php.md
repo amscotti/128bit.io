@@ -2,7 +2,7 @@ Title: Respect for PHP 🐘
 Date: 2023-05-27 17:32
 Slug: respect-for-php
 Tags: PHP, Development
-Summary: Reflection on PHP's historical and ongoing relevance. Discusses LAMP stack era, PHP's simplicity for web development, Apache HTTP Server contributions to the web, Wikipedia/Facebook/Etsy origins, modern ecosystem with Composer/Laravel, and diverse applications like cPanel, WordPress, Drupal, and ad-blocking Pi-hole.
+Summary: A reflection on PHP's path from LAMP-era ubiquity to a modern ecosystem shaped by Composer, Laravel, and continued real-world relevance.
 
 While [PHP](https://www.php.net/) isn't my favorite language by any means, it's one that I've used throughout my career at various points. This fact was recently brought to my attention during a conversation with a colleague about my past experiences. I wouldn't label myself a dedicated PHP developer, but my history with the language stretches back to my college days, when I even completed my senior project using PHP.
 

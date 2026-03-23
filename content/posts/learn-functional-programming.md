@@ -2,7 +2,7 @@ Title: Learn Functional Programming
 Date: 2020-01-05 13:32
 Slug: learn-functional-programming
 Tags: Clojure, FSharp, Elixir, Elm, Development
-Summary: A critique of "top programming languages to learn" articles. Argues that learning languages for career advancement benefits differ from personal learning, and that learning new concepts rather than just new syntax provides greater long-term value. Recommends learning functional programming concepts over new language syntax, with Clojure, F#, Elixir, and Elm as specific examples of languages worth exploring.
+Summary: A case for learning functional programming concepts before chasing the next trendy language, with Clojure, F#, Elixir, and Elm as strong places to start.
 
 This time of year, I always find it interesting the number of articles telling you the top languages you should learn. Yes, there’s a steady stream of these types of articles throughout the year but right at the end when a new year is about to start is when I’ve seen them the most. Titles typically include something along the lines of “Top Five languages to learn in 2020”, “Languages to improve your developer life”, “Programming Languages that you need to know in 2020”. I do always take a look at these articles because I’m interested to see what people are suggesting and along with keeping up to date with current trends in the industry, but I do have some issues with a good number of these articles, not all of them but a lot of them.
  
