@@ -10,6 +10,11 @@
 
 {% block content %}
 <div class="terminal-posts">
+  <div class="listing-header">
+    <div class="listing-kicker">grep results</div>
+    <div class="listing-title"><span class="syntax">#</span> {{ tag }}</div>
+    <div class="listing-meta">- {{ articles|count }} post{% if articles|count != 1 %}s{% endif %} matched</div>
+  </div>
   <div class="terminal-output">
     {% for article in articles %}
       {% include "includes/article-preview.html" %}

@@ -27,7 +27,7 @@ zpoolName = "storage"
 zfsList = commands.getoutput("zfs list -o name | grep %s/" % zpoolName)
 
 for zfsFileSystems in zfsList.split("\n"):
-        print "Snapshoting-> %s" % (zfsFileSystems)
+        print "Snapshotting-> %s" % (zfsFileSystems)
         commands.getoutput("zfs snapshot %s@%s" % (zfsFileSystems, timestamp))
 ```
 

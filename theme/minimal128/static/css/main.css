@@ -21,7 +21,13 @@
   
   --font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
   
-  --max-width: 800px;
+  --max-width: 960px;
+  --content-width: clamp(20rem, 76vw, 74ch);
+  --listing-date-width: 6.25rem;
+  --tag-count-width: 5.5rem;
+  --whoami-copy-size: 0.95rem;
+  --meta-font-size: 0.95rem;
+  --terminal-ui-size: 0.9rem;
   --padding-sm: 1rem;
   --padding-md: 1.5rem;
   --padding-lg: 2rem;
@@ -40,8 +46,8 @@ html {
 
 body {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: clamp(1rem, 0.97rem + 0.18vw, 1.08rem);
+  line-height: 1.6;
   color: var(--text-primary);
   background-color: var(--bg-primary);
   -webkit-font-smoothing: antialiased;
@@ -65,10 +71,12 @@ body {
 
 .terminal-prompt {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: var(--terminal-ui-size);
   margin-bottom: var(--spacing-md);
   display: flex;
   align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
 }
 
 .prompt-link {
@@ -76,6 +84,7 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
+  min-width: 0;
 }
 
 .prompt-link:hover {
@@ -83,12 +92,13 @@ body {
 }
 
 .prompt-text {
-  margin-right: 0.5rem;
+  margin-right: 0.15rem;
 }
 
 .command-text {
   color: var(--text-primary);
-  margin-right: 0.5rem;
+  margin-right: 0.35rem;
+  min-width: 0;
 }
 
 .cursor {
@@ -110,26 +120,6 @@ body {
   * {
     transition-duration: 0.01ms !important;
   }
-}
-
-/* Navigation */
-.nav {
-  display: flex;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
-  padding-top: var(--spacing-md);
-  border-top: 1px solid var(--border-color);
-}
-
-.nav-link {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: var(--text-accent);
 }
 
 /* Main Content */
@@ -199,6 +189,11 @@ a:focus-visible {
 }
 
 /* Home Page - Whoami Section */
+.home {
+  display: grid;
+  gap: var(--spacing-xl);
+}
+
 .whoami {
   margin-bottom: var(--spacing-xl);
 }
@@ -212,7 +207,7 @@ a:focus-visible {
   align-items: flex-start;
   gap: var(--spacing-lg);
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -268,10 +263,14 @@ a:focus-visible {
 .whoami-info {
   flex: 1;
   min-width: 0;
+  max-width: 36rem;
 }
 
 .whoami-name {
   color: var(--terminal-accent);
+  font-size: clamp(1.25rem, 1.1rem + 0.45vw, 1.55rem);
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
 }
 
 .whoami-separator {
@@ -280,9 +279,11 @@ a:focus-visible {
 }
 
 .whoami-bio {
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-  line-height: 1.5;
+  color: var(--text-primary);
+  font-size: var(--whoami-copy-size);
+  line-height: 1.8;
+  text-wrap: pretty;
+  opacity: 0.92;
 }
 
 .whoami-bio p {
@@ -291,7 +292,7 @@ a:focus-visible {
 
 .whoami-social {
   margin-top: var(--spacing-sm);
-  font-size: 0.85rem;
+  font-size: var(--whoami-copy-size);
 }
 
 .social-bracket {
@@ -304,17 +305,11 @@ a:focus-visible {
   opacity: 0.8;
 }
 
-.posts h2 {
-  color: var(--terminal-accent);
-  font-size: 1.2rem;
-  margin-bottom: var(--spacing-lg);
-}
-
 /* Terminal file listing */
 .terminal-command {
   margin-bottom: var(--spacing-sm);
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: var(--terminal-ui-size);
 }
 
 .terminal-command .prompt {
@@ -336,6 +331,11 @@ a:focus-visible {
   line-height: 1.4;
 }
 
+.home-posts .terminal-output {
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
 .file-listing {
   margin-bottom: var(--spacing-md);
 }
@@ -354,11 +354,12 @@ a:focus-visible {
   white-space: nowrap;
   font-family: var(--font-mono);
   gap: var(--spacing-md);
+  min-width: 0;
 }
 
 .file-line .date {
   color: var(--text-secondary);
-  width: 100px;
+  width: var(--listing-date-width);
   flex-shrink: 0;
 }
 
@@ -366,6 +367,7 @@ a:focus-visible {
   color: var(--terminal-accent);
   text-decoration: none;
   flex: 1;
+  min-width: 0;
 }
 
 .file-line .filename:hover {
@@ -381,30 +383,11 @@ a:focus-visible {
 .more-files-link {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: var(--terminal-ui-size);
 }
 
 .more-files-link:hover {
   color: var(--terminal-accent);
-}
-
-.terminal-prompt-next {
-  margin-top: var(--spacing-md);
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-}
-
-.terminal-prompt-next .prompt {
-  color: var(--terminal-accent);
-}
-
-.terminal-prompt-next .command-link {
-  color: var(--terminal-accent);
-  text-decoration: none;
-}
-
-.terminal-prompt-next .command-link:hover {
-  opacity: 0.8;
 }
 
 /* Terminal File Previews (for posts listing page) */
@@ -421,6 +404,49 @@ a:focus-visible {
 .terminal-file-preview:last-child {
   margin-bottom: var(--spacing-lg);
   border-bottom: none;
+}
+
+.listing-header {
+  max-width: var(--content-width);
+  margin-bottom: var(--spacing-xl);
+}
+
+.listing-kicker {
+  color: var(--terminal-accent);
+  font-size: var(--terminal-ui-size);
+  margin-bottom: var(--spacing-xs);
+}
+
+.listing-title {
+  color: var(--text-primary);
+  font-size: clamp(1.6rem, 1.4rem + 0.75vw, 1.95rem);
+  line-height: 1.25;
+  margin-bottom: var(--spacing-xs);
+  text-wrap: balance;
+}
+
+.listing-meta {
+  color: var(--text-secondary);
+  font-size: var(--meta-font-size);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+.tag-file-listing .file-line {
+  break-inside: avoid-column;
+  margin-bottom: 0.35rem;
+  padding-right: var(--spacing-sm);
+}
+
+.tag-file-listing .date {
+  width: var(--tag-count-width);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.tag-file-listing .filename {
+  line-height: 1.45;
 }
 
 .file-header {
@@ -445,10 +471,13 @@ a:focus-visible {
 
 .post-summary-text {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: var(--terminal-ui-size);
   line-height: 1.6;
   margin-top: var(--spacing-sm);
   margin-bottom: 0;
+  max-width: var(--content-width);
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
 }
 
 /* Terminal Post Display */
@@ -459,6 +488,7 @@ a:focus-visible {
 }
 
 .markdown-header {
+  max-width: var(--content-width);
   margin-bottom: var(--spacing-xl);
   padding-bottom: var(--spacing-md);
 }
@@ -471,12 +501,27 @@ a:focus-visible {
   font-family: var(--font-mono);
 }
 
+.markdown-header .md-title {
+  font-size: clamp(1.55rem, 1.38rem + 0.7vw, 1.88rem);
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.terminal-file-preview .md-title {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  text-wrap: balance;
+}
+
 
 .md-date {
   color: var(--text-primary);
-  font-size: 0.95rem;
+  font-size: var(--meta-font-size);
   margin-bottom: var(--spacing-xs);
   font-family: var(--font-mono);
+  max-width: var(--content-width);
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
 }
 
 .md-reading-time {
@@ -486,9 +531,13 @@ a:focus-visible {
 
 .md-tags {
   color: var(--text-primary);
-  font-size: 0.95rem;
+  font-size: var(--meta-font-size);
   font-family: var(--font-mono);
   margin-bottom: var(--spacing-lg);
+  line-height: 1.7;
+  max-width: var(--content-width);
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
 }
 
 .syntax {
@@ -516,12 +565,14 @@ a:focus-visible {
 .markdown-content h5,
 .markdown-content h6 {
   margin-top: var(--spacing-xl);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
   position: relative;
   color: var(--text-primary);
   font-family: var(--font-mono);
   font-weight: normal;
-  font-size: 1rem;
+  line-height: 1.3;
+  text-wrap: balance;
+  max-width: var(--content-width);
 }
 
 .markdown-content h1:before { content: "# "; color: var(--terminal-accent); font-weight: normal; }
@@ -532,9 +583,31 @@ a:focus-visible {
 .markdown-content h6:before { content: "###### "; color: var(--terminal-accent); font-weight: normal; }
 
 /* More breathing room for major section headings */
+.markdown-content h1 {
+  font-size: clamp(1.55rem, 1.35rem + 0.85vw, 1.95rem);
+  margin-top: 3rem;
+}
+
 .markdown-content h2 {
-  margin-top: 3.5rem;
-  padding-top: 1rem;
+  font-size: clamp(1.18rem, 1.08rem + 0.45vw, 1.42rem);
+  margin-top: 3.25rem;
+  padding-top: 0.35rem;
+}
+
+.markdown-content h3 {
+  font-size: clamp(1.08rem, 1rem + 0.28vw, 1.22rem);
+  margin-top: 2.25rem;
+}
+
+.markdown-content h4 {
+  font-size: clamp(1rem, 0.96rem + 0.18vw, 1.08rem);
+  margin-top: 1.9rem;
+}
+
+.markdown-content h5,
+.markdown-content h6 {
+  font-size: 1rem;
+  margin-top: 1.65rem;
 }
 
 .markdown-content h1:first-child,
@@ -544,9 +617,14 @@ a:focus-visible {
 }
 
 .markdown-content p {
-  max-width: 42em;
+  max-width: var(--content-width);
   margin-bottom: 1.5rem;
   color: var(--text-primary);
+  text-wrap: pretty;
+}
+
+.markdown-content a {
+  overflow-wrap: anywhere;
 }
 
 .terminal-nav {
@@ -558,12 +636,14 @@ a:focus-visible {
 .nav-separator {
   color: var(--terminal-accent);
   margin-bottom: var(--spacing-sm);
-  font-size: 0.9rem;
+  font-size: var(--terminal-ui-size);
 }
 
 .nav-item {
   margin-bottom: var(--spacing-xs);
-  font-size: 0.95rem;
+  font-size: var(--meta-font-size);
+  max-width: var(--content-width);
+  overflow-wrap: anywhere;
 }
 
 .nav-syntax {
@@ -583,11 +663,12 @@ a:focus-visible {
 /* Code Blocks */
 code {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: var(--terminal-ui-size);
   background: var(--bg-secondary);
   color: var(--terminal-accent);
   padding: 0.2rem 0.4rem;
   border: 1px solid var(--border-color);
+  overflow-wrap: anywhere;
 }
 
 pre {
@@ -597,6 +678,8 @@ pre {
   overflow-x: auto;
   margin: var(--spacing-lg) 0;
   line-height: 1.4;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) var(--bg-secondary);
 }
 
 pre code {
@@ -612,6 +695,8 @@ blockquote {
   background: var(--bg-secondary);
   margin: var(--spacing-lg) 0;
   padding: var(--spacing-md);
+  max-width: var(--content-width);
+  overflow-wrap: anywhere;
 }
 
 blockquote p:last-child {
@@ -631,19 +716,41 @@ li {
 /* Terminal-style list bullets */
 .markdown-content ul {
   list-style: none;
-  margin-left: var(--spacing-md);
+  max-width: var(--content-width);
+  margin: 0 0 var(--spacing-lg);
+  padding-left: 0;
+}
+
+.markdown-content ol {
+  max-width: var(--content-width);
+  margin: 0 0 var(--spacing-lg);
+  padding-left: 1.5rem;
 }
 
 .markdown-content ul li::before {
   content: "- ";
   color: var(--terminal-accent);
   font-weight: bold;
-  margin-right: 0.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .markdown-content ul li {
-  padding-left: 0;
-  margin-bottom: var(--spacing-xs);
+  position: relative;
+  padding-left: 1.35rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.markdown-content ol li {
+  padding-left: 0.2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.markdown-content table:not(.highlighttable) {
+  display: block;
+  max-width: var(--content-width);
+  overflow-x: auto;
 }
 
 /* Images and Figures */
@@ -654,6 +761,23 @@ img {
 
 .markdown-content img {
   border: 1px solid var(--border-color);
+}
+
+.markdown-content .videobox {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: var(--spacing-sm);
+}
+
+.markdown-content iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
 }
 
 figure {
@@ -706,32 +830,6 @@ tr:last-child td {
   border-bottom: none;
 }
 
-/* Terminal Pagination */
-.terminal-pagination {
-  margin-top: var(--spacing-xl);
-  font-family: var(--font-mono);
-}
-
-.pagination-controls {
-  display: flex;
-  align-items: center;
-  font-size: 0.95rem;
-}
-
-.pagination-link {
-  color: var(--terminal-accent);
-  text-decoration: none;
-}
-
-.pagination-link:hover {
-  opacity: 0.8;
-}
-
-.pagination-divider {
-  color: var(--text-secondary);
-  margin: 0 var(--spacing-sm);
-}
-
 /* Footer */
 .footer {
   margin-top: var(--spacing-xl);
@@ -752,19 +850,6 @@ tr:last-child td {
 
 .footer-content a {
   color: var(--terminal-accent);
-}
-
-.footer-links {
-  margin-bottom: var(--spacing-sm);
-}
-
-.footer-separator {
-  color: var(--text-secondary);
-  margin: 0 0.5rem;
-}
-
-.footer-tech {
-  font-family: var(--font-mono);
 }
 
 /* Error Page (404) */
@@ -822,22 +907,39 @@ tr:last-child td {
   .container {
     padding: var(--padding-sm);
   }
-  
-  .post-header .post-title {
-    font-size: 1.6rem;
+
+  .home {
+    gap: var(--spacing-lg);
+  }
+
+  .whoami-output {
+    gap: var(--spacing-md);
   }
   
   h1 { font-size: 1.6rem; }
   h2 { font-size: 1.3rem; }
-  
-  .nav {
-    flex-direction: column;
-    gap: var(--spacing-sm);
+
+  .markdown-content h1 {
+    font-size: 1.45rem;
   }
 
-  pre {
+  .markdown-content h2 {
+    font-size: 1.16rem;
+    margin-top: 2.6rem;
+  }
+
+  .markdown-content h3 {
+    font-size: 1.08rem;
+    margin-top: 2rem;
+  }
+
+  .markdown-content h4 {
+    font-size: 1rem;
+  }
+  
+  .markdown-content pre {
     padding: var(--spacing-sm);
-    margin: var(--spacing-md) -var(--spacing-xs);
+    margin: var(--spacing-md) calc(-1 * var(--spacing-xs));
   }
   
   table {
@@ -851,20 +953,42 @@ tr:last-child td {
   /* Terminal listing responsive */
   .file-line {
     font-size: 0.8rem;
-    overflow-x: auto;
+    white-space: normal;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  .file-line .date {
+    width: 5.75rem;
+  }
+
+  .file-line .filename {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.45;
+  }
+
+  .tag-file-listing .date {
+    width: 5rem;
+    text-align: left;
   }
   
   .terminal-command {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  .listing-header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .listing-title {
+    font-size: 1.45rem;
   }
   
   .terminal-output {
-    font-size: 0.8rem;
+    font-size: 0.86rem;
   }
   
-  .terminal-prompt-next {
-    font-size: 0.85rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -872,8 +996,17 @@ tr:last-child td {
     font-size: 0.8rem;
   }
 
+  .prompt-link {
+    flex-shrink: 0;
+  }
+
   .command-text {
-    display: none;
+    display: inline-block;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: 0.92;
   }
 
   .whoami-output {
@@ -889,11 +1022,52 @@ tr:last-child td {
   .whoami-info {
     text-align: center;
   }
+
+  .whoami-bio {
+    line-height: 1.75;
+  }
+
+  .whoami-social {
+    justify-content: center;
+  }
+
+  .file-line {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .file-line .date {
+    width: auto;
+  }
+
+  .file-line .filename {
+    padding-left: 1.1rem;
+  }
+
+  .tag-file-listing .date,
+  .tag-file-listing .filename {
+    padding-left: 0;
+  }
+
+  .highlighttable td.linenos {
+    width: 2.75em;
+  }
+
+  .highlighttable .linenodiv pre,
+  .highlighttable td.code pre {
+    padding: var(--spacing-sm);
+    font-size: 0.82rem;
+  }
 }
 
 /* Pygments table-based line numbers styling */
 .highlighttable {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
   table-layout: fixed;    /* Prevent table from expanding beyond container */
   border-collapse: collapse;
   background: var(--bg-secondary);
@@ -950,7 +1124,7 @@ tr:last-child td {
   overflow-x: auto;
 }
 
-pre { line-height: 125%; }
+.highlight pre { line-height: 125%; }
 td.linenos .normal { color: #6e7681; background-color: #0d1117; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: #6e7681; background-color: #0d1117; padding-left: 5px; padding-right: 5px; }
 td.linenos .special { color: #e6edf3; background-color: #6e7681; padding-left: 5px; padding-right: 5px; }

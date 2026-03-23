@@ -2,7 +2,7 @@ Title: ClojureScript: Functional Programming for the Web
 Date: 2021-10-22 14:01
 Slug: clojurescript-functional-programming-for-the-web
 Tags: Clojure, Vermont
-Summary: A review of "Learning ClojureScript" book read during Vermont trip. Discusses ClojureScript's functional approach for frontend development compared to legacy AngularJS experience, noting how functional programming reduces complexity, improves readability, and enforces immutable data structures, with positive impact on frontend code quality.
+Summary: A review of Learning ClojureScript and a reflection on why functional ideas can make frontend code simpler, safer, and easier to reason about.
 
 As I sit next to a gas store in Vermont, I once again have a hard copy book with me to read on vacation. This time it's "[Learning ClojureScript](https://www.learn-clojurescript.com/)" by [Andrew Meredith](https://twitter.com/a4w_m6h), and just like [Clojure For the Brave and True](/post/for-the-brave-and-true/) it's another free book that can easily be downloaded and read from any fancy gizmos. Unlike my trip to Italy, I have no fear of misplacing or having a piece of technology stolen because we are staying in one place for this trip. So I'll simply say I enjoy the feel of a hard copy book that I find better to read than a PDF or something on an e-reader. Being able to quickly flip back a page to re-read something or look ahead to see what is coming is something I don't think an e-reader will replace in the same way.
 

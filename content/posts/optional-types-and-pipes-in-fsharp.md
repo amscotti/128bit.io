@@ -2,7 +2,7 @@ Title: Optional Types and Pipes in F#
 Date: 2020-09-10 17:24
 Slug: optional-types-and-pipes-in-fsharp
 Tags: FSharp, Dotnet, Development
-Summary: Code challenge demonstrating F# features including pipe-forward operator and discriminated unions. Shows returning None or Some option when finding first unique character, and using DiscriminatedUnions to implement class-specific behavior with overrides, highlighting optional types as better pattern for handling values that may or may not be present.
+Summary: A coding challenge used to explore F# options, pipes, and discriminated unions, with a focus on readable transformations and safer handling of missing values.
 
 For this first topic of showing off parts of F# I want to use a code challenge I have used for interviewing candidates at a couple different companies. This challenge is simple to solve but is left open ended to allow the candidate to discuss and debate the decisions they have made. The main point of the challenge isn’t the coding, but it does provide us with an example to show off optional types and pipe operator in F#.
 

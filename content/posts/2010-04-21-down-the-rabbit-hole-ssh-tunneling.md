@@ -69,13 +69,13 @@ Example for port forwarding tunnel,
 SERVER="<SERVER IP/NAME>"
 USER="<YOU USER NAME>"
 INNER_IP="<IP OF THE SYSTEM YOU WANT TO CONNECT TO>"
-PORT="<PORT YOU  WANT TO USE>"
+PORT="<PORT YOU WANT TO USE>"
 #print variable on a screen
 echo Connecting to $SERVER and opening $PORT to $INNER_IP
 ssh $USER@$SERVER -CNL $PORT:$INNER_IP:$PORT
 ```
 
-Copy this to a file and add in the needed info (anything with in the <> needs to be replace). Save and `chmod +x <FILENAME>` to make it executable. To run, `./<FILENAME>`
+Copy this to a file and add in the needed info (anything within the <> needs to be replaced). Save and `chmod +x <FILENAME>` to make it executable. To run, `./<FILENAME>`
 If you have a SSH key all set you should be good to go, else it will ask you for a password.
 
 ## PuTTY:

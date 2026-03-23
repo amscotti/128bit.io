@@ -10,17 +10,9 @@ Atlassian just took their [Bitbucket Pipelines out of Beta](http://blogs.atlassi
 
 From a quick look, it reminds me a lot of [Codeship](https://codeship.com/), which is a great service I have used to publish this blog along with using it at my previous job. For a nice test, I wanted to see if I could replace Codeship with Bitbucket Pipelines for my blog.
 
-
-![Import Code](https://d2mxuefqeaa7sj.cloudfront.net/s_06A9797600B2D8A99E9F70E543B989C1AD71FC664E4241A51220BD273F2B798E_1478376083167_image.png)
-
-
 The first thing for me to do was to get my blog repository imported into Bitbucket. Atlassian makes this easy by having an [import option on their website](https://confluence.atlassian.com/bitbucket/import-or-convert-code-from-an-existing-tool-795937450.html). I did find the layout in Bitbucket a bit odd at first, you have teams, projects, and then repositories. One more level than you find on Github. After thinking about this layout, it did start to make some sense to me as I scroll past tons of repositories in Github’s layout.
 
 After importing was all set, it was time to turn on pipelines. You will then be asked to make a  `bitbucket-pipelines.yml` file in your repository, this will hold details for your build and deployment. For me, making this file part of the repository gave me a good feeling, I really like the idea of having the details of your build saved with the code.
-
-
-![Environment Variables](https://d2mxuefqeaa7sj.cloudfront.net/s_06A9797600B2D8A99E9F70E543B989C1AD71FC664E4241A51220BD273F2B798E_1478376238217_image.png)
-
 
 Environment variables are very easy to setup, BitBucket gives you a nice interface to provide variables that will be pushed into your container at build time. If you are working with many people on a project but don’t want them to be able to see keys for production or other services BitBucket will let you add the environment variables as “secured”. This will ensure no one is able to see them after being added. This is one feature that you will not find in Codeship.
 

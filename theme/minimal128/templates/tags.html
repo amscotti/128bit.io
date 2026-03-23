@@ -10,8 +10,13 @@
 
 {% block content %}
 <div class="terminal-posts">
+  <div class="listing-header">
+    <div class="listing-kicker">taxonomy</div>
+    <div class="listing-title"><span class="syntax">#</span> tags/</div>
+    <div class="listing-meta">- {{ tags|count }} tags indexed</div>
+  </div>
   <div class="terminal-output">
-    <div class="file-listing">
+    <div class="file-listing tag-file-listing">
       {% for tag, articles in tags|sort(attribute='0.name') %}
         <div class="file-line">
           <span class="date">{{ articles|count }} post{% if articles|count != 1 %}s{% endif %}</span>

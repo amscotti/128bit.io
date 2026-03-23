@@ -2,6 +2,7 @@ Title: Ahead-Of-Time Compilation With .Net Core
 Date: 2020-10-25 20:56
 Slug: ahead-of-time-compilation-with-net-core
 Tags: FSharp, CSharp, Dotnet, Development
+Summary: A look at ahead-of-time compilation on .NET Core, why single executables are appealing, and how the approach compares to traditional runtime-based platforms.
 
 I'm still on my journey with exploring F# but I want to look at something with the .Net Core platform itself, so this will apply to both C# and F#. Ahead-Of-Time (AOT) compilation isn't a new concept. Languages like C and C++ need to be compiled before (or ahead of) execution time. The JVM and CLR took a different approach, creating "virtual machines" or runtimes that could run your code, giving us the promise of "[write once, run anywhere](https://en.wikipedia.org/wiki/Write_once,_run_anywhere)" or anywhere that has a virtual machine at least. This idea was good as the runtime could help manage memory and provide optimizations as the code runs. Other languages took this same approach, like JavaScript, Python, Ruby, and Erlang. 
 
