@@ -3,6 +3,11 @@ name: OpenCode Review
 on:
   pull_request:
     types: [opened, synchronize]
+  workflow_dispatch:
+
+concurrency:
+  group: opencode-review-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
 
 jobs:
   opencode-review:
@@ -33,6 +38,7 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           opencode run \
+            --dangerously-skip-permissions \
             --model openrouter/deepseek/deepseek-v4-pro \
             "Review PR #${PR_NUMBER} on this repository.
 
