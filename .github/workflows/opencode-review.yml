@@ -33,7 +33,7 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           opencode run \
-            --model openrouter/anthropic/claude-sonnet-4 \
+            --model openrouter/deepseek/deepseek-v4-pro \
             "Review PR #${PR_NUMBER} on this repository.
 
             Using the gh CLI:
