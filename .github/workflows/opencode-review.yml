@@ -28,7 +28,7 @@ jobs:
 
       - name: Review PR
         env:
-          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          ZAI_CODING_API_KEY: ${{ secrets.ZAI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
