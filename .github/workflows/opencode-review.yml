@@ -28,12 +28,12 @@ jobs:
 
       - name: Review PR
         env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           opencode run \
-            --model openrouter/anthropic/claude-sonnet-4 \
+            --model zai-coding-plan/glm-5.2 \
             "Review PR #${PR_NUMBER} on this repository.
 
             Using the gh CLI:
