@@ -3,10 +3,9 @@ name: OpenCode Review
 on:
   pull_request:
     types: [opened, synchronize]
-  workflow_dispatch:
 
 concurrency:
-  group: opencode-review-${{ github.event.pull_request.number || github.run_id }}
+  group: opencode-review-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
@@ -15,7 +14,6 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-      issues: read
 
     steps:
       - name: Checkout repository
