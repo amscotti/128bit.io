@@ -1,0 +1,52 @@
+name: Content Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - 'content/posts/**'
+
+concurrency:
+  group: content-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  content-review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install OpenCode
+        run: npm install -g opencode-ai@latest
+
+      - name: Review Content
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          opencode run \
+            --dangerously-skip-permissions \
+            --model openrouter/deepseek/deepseek-v4-pro \
+            "Review the blog post content in PR #${PR_NUMBER}.
+
+            Using the gh CLI:
+            1. Run 'gh pr diff ${PR_NUMBER}' to see the content changes
+            2. Review for: spelling errors, grammar mistakes, factual inconsistencies, awkward phrasing, broken links, missing or malformed frontmatter
+            3. Do NOT review code or workflow files — only review the blog post content
+            4. Post your review using 'gh pr comment ${PR_NUMBER} --body \"...\"'
+
+            Be thorough but constructive. Flag issues with specific line references."

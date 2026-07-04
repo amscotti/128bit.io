@@ -3,6 +3,8 @@ name: OpenCode Review
 on:
   pull_request:
     types: [opened, synchronize]
+    paths-ignore:
+      - 'content/posts/**'
 
 concurrency:
   group: opencode-review-${{ github.event.pull_request.number }}
@@ -38,7 +40,7 @@ jobs:
         run: |
           opencode run \
             --dangerously-skip-permissions \
-            --model openrouter/deepseek/deepseek-v4-pro \
+            --model openrouter/moonshotai/kimi-k2.7-code \
             "Review PR #${PR_NUMBER} on this repository.
 
             Using the gh CLI:
