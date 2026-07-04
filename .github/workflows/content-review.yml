@@ -3,8 +3,6 @@ name: Content Review
 on:
   pull_request:
     types: [opened, synchronize]
-    paths:
-      - 'content/posts/**'
 
 concurrency:
   group: content-review-${{ github.event.pull_request.number }}
@@ -41,12 +39,13 @@ jobs:
           opencode run \
             --dangerously-skip-permissions \
             --model openrouter/deepseek/deepseek-v4-pro \
-            "Review the blog post content in PR #${PR_NUMBER}.
+            "Review PR #${PR_NUMBER} on this repository.
 
             Using the gh CLI:
-            1. Run 'gh pr diff ${PR_NUMBER}' to see the content changes
-            2. Review for: spelling errors, grammar mistakes, factual inconsistencies, awkward phrasing, broken links, missing or malformed frontmatter
-            3. Do NOT review code or workflow files — only review the blog post content
-            4. Post your review using 'gh pr comment ${PR_NUMBER} --body \"...\"'
+            1. Run 'gh pr diff ${PR_NUMBER}' to see the changes
+            2. If the PR contains blog posts (files under content/posts/), review them for: spelling errors, grammar mistakes, factual inconsistencies, awkward phrasing, broken links, missing or malformed frontmatter
+            3. If the PR does NOT contain any blog posts, reply with 'No blog content changes in this PR - nothing to review.' and nothing else
+            4. Do NOT review code or workflow files - only review blog post content
+            5. Post your review using 'gh pr comment ${PR_NUMBER} --body \"...\"'
 
             Be thorough but constructive. Flag issues with specific line references."
