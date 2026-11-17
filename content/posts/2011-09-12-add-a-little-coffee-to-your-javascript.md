@@ -28,7 +28,7 @@ console.log(range(999).filter(function(n) {
 }))
 ```
 
-I feel a lot better about this code. I made a function that I can re-use at any time and I use built-in function calls. I have updated the gist with the new code, [http://bit.ly/iNH5Pm](http://bit.ly/iNH5Pm).
+I feel a lot better about this code. I made a function that I can re-use at any time and I use built-in function calls. I have updated the gist with the new code.
 
 What really got me thinking about this was some talks at NFJS Boston 2011, (which I hope to do a other posting about soon). Functional programming seems like something that a lot of people are talking about and a topic I plan on following more. After listening to some talks from [Venkat Subramaniam](http://twitter.com/venkat_s) on Javascript and Scala, and listening to a talk on [CoffeeScript](http://en.wikipedia.org/wiki/CoffeeScript) it's got me thinking more about how to use Javascript to solve problems.
 
