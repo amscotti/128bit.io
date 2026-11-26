@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block title %}Archive: {{ period|join('/') }} :: {{ SITENAME }}{% endblock %}
+{% block description %}Posts published in {{ period|join('/') }} on {{ SITENAME }}.{% endblock %}
+{% block og_title %}Archive: {{ period|join('/') }} :: {{ SITENAME }}{% endblock %}
+{% block og_description %}Posts published in {{ period|join('/') }} on {{ SITENAME }}.{% endblock %}
 
 {% block header %}
 {% set header_path = "~/posts" %}
@@ -10,11 +13,11 @@
 
 {% block content %}
 <div class="terminal-posts">
-  <div class="listing-header">
+  <header class="listing-header">
     <div class="listing-kicker">archive slice</div>
-    <div class="listing-title"><span class="syntax">#</span> {{ period|join('/') }}</div>
+    <h1 class="listing-title"><span class="syntax" aria-hidden="true">#</span> {{ period|join('/') }}</h1>
     <div class="listing-meta">- {{ articles|count }} post{% if articles|count != 1 %}s{% endif %} in view</div>
-  </div>
+  </header>
   <div class="terminal-output">
     {% for article in articles %}
       {% include "includes/article-preview.html" %}

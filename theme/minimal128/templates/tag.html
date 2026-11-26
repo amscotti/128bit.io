@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 
 {% block title %}{{ tag }} :: {{ SITENAME }}{% endblock %}
+{% block description %}Posts tagged {{ tag }} on {{ SITENAME }} ({{ articles|count }} post{% if articles|count != 1 %}s{% endif %}).{% endblock %}
+{% block og_title %}{{ tag }} :: {{ SITENAME }}{% endblock %}
+{% block og_description %}Posts tagged {{ tag }} on {{ SITENAME }} ({{ articles|count }} post{% if articles|count != 1 %}s{% endif %}).{% endblock %}
+{% block canonical %}/tags/{{ tag.slug }}/{% endblock %}
+{% block og_url %}{{ SITEURL }}/tags/{{ tag.slug }}/{% endblock %}
+
+{% block robots %}
+{% if articles|length < 2 %}
+<meta name="robots" content="noindex, follow">
+{% endif %}
+{% endblock %}
 
 {% block header %}
 {% set header_path = "~/posts" %}
@@ -10,11 +21,11 @@
 
 {% block content %}
 <div class="terminal-posts">
-  <div class="listing-header">
+  <header class="listing-header">
     <div class="listing-kicker">grep results</div>
-    <div class="listing-title"><span class="syntax">#</span> {{ tag }}</div>
+    <h1 class="listing-title"><span class="syntax" aria-hidden="true">#</span> {{ tag }}</h1>
     <div class="listing-meta">- {{ articles|count }} post{% if articles|count != 1 %}s{% endif %} matched</div>
-  </div>
+  </header>
   <div class="terminal-output">
     {% for article in articles %}
       {% include "includes/article-preview.html" %}
