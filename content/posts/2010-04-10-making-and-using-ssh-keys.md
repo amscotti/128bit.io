@@ -20,7 +20,7 @@ Using keys add a other layer of security to SSH. You able to have keys needed to
 
 Open up the command line and make sure you are in your home folder,
 
-```
+```console
 $ cd ~
 $ pwd
 /home/ascotti
@@ -28,7 +28,7 @@ $ pwd
 
 Now that we are in our home folder we will make sure we have a `.ssh` folder and then generate the keys. On some systems this folder may already be made for you,
 
-```
+```console
 $ mkdir ~/.ssh
 $ chmod 700 ~/.ssh
 $ ssh-keygen
@@ -42,7 +42,7 @@ You know should have 2 files within `~/.ssh`, `id_rsa` and `id_rsa.pub`. The `id
 
 Now we need to get the public key into the `authorized_keys` on the server we wish to connect to. We want to append to the file as to not overwrite any other keys that may be already set up. This can be done with a nice one line command!
 
-```
+```console
 $ cat ~/.ssh/id_rsa.pub | ssh username@server "cat >> ~/.ssh/authorized_keys"
 ```
 What is happening here is you are printing out the file with cat having the output go over SSH to the server which will run cat itself and append to the authorized_keys2 file. You will need to enter your password and after you will be disconnected from the server. Give it a quick test by trying to SSH into the server and see if it all works. If you have a passphrase it will ask you for one each time you login.

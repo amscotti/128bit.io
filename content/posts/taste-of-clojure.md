@@ -17,10 +17,7 @@ For a language to compare Clojure to I'm going to pick JavaScript as it's easy f
 ## TL;DR
 So, as I was starting to write this posting, Uncle Bob made a pretty good summary of the Lisp syntax compared to Java on [Twitter](https://twitter.com/unclebobmartin/status/1215642524817080322),
 
-<blockquote class="twitter-tweet">
-<a href="https://twitter.com/unclebobmartin/status/1215642524817080322">Tweet by @unclebobmartin</a>
-</blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> "Lisp syntax compared to Java" — [@unclebobmartin on Twitter](https://twitter.com/unclebobmartin/status/1215642524817080322)
 
 I think this makes a good TL;DR section, as this is a good guiding point when thinking about Clojure.
 
@@ -151,11 +148,7 @@ Overall not too much difference, but let's just point out something, this is usi
 ## Conclusion
 This posting could go on much longer providing a lot more details around the interesting syntax found in Clojure, but I just want to provide a taste to get people interested in the language and the concepts. I do hope to continue to write more about Clojure as I learn it myself but I want to end this post with another tweet from Uncle Bob that fits very well with my current thinking,
 
-<blockquote class="twitter-tweet">
-<a href="https://twitter.com/unclebobmartin/status/1214906676840669184">Tweet by @unclebobmartin</a>
-</blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-[Twitter Link](https://twitter.com/unclebobmartin/status/1214906676840669184)
+> Tweet by [@unclebobmartin on Twitter](https://twitter.com/unclebobmartin/status/1214906676840669184)
 
 ## References
 * [Understanding Homoiconicity, the Power Behind Clojure Macros](https://spin.atomicobject.com/2013/07/23/homoiconicity-clojure-macros/)

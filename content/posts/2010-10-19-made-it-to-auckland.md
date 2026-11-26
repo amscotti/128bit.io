@@ -11,10 +11,10 @@ Well Sarah and I made it to Auckland, longest flight ever from LAX to Auckland i
 After getting to Auckland we had a long wait to get through customs, a cool thing as we were waiting though was Auckland is having some rowing races and we got to see a good number of teams from around the world. Also behind us in line we're was sure was a rugby team. Getting through customs seem to take some time but there were no issues, just a wait. We made our way out we were able to find taxis. We found a driver that move from the states to New Zealand, she lived in Honalulu and moved 8 years ago. It was nice chatting with her, she should go into selling New Zealand to outsiders as she made it sound really great to live here.
 
 
-[![Auckland International](/images/photos/New_Zealand/DSC00002-300x225.jpg)](/images/photos/New_Zealand/DSC00002.jpg)
+[![Auckland International](/images/photos/New_Zealand/DSC00002-300x225.jpg)](/images/photos/New_Zealand/DSC00002.webp)
 
 
 Getting to the hotel we could check in but needed to wait for the room to be cleaned as it was a bit before their check-in time. As we waited for the room to be cleaned, we walked around to a nice park, Albert Park, outside The University of Auckland. We hung out there and just enjoyed the nice weather. The hotel is very nice and somewhat formal, which does not fit my character at all. I kind of giggled inside as this place is really fancy; they got our bags from the car, opened doors for us, and sent us a gift because we are here on our honeymoon. We got a nice bottle of champagne sent to the room, which Sarah and I promptly drank! (Well, mostly me!). After getting into the room we showered and hung out for a bit until supper time! The hotel has its own restaurant inside which we chose to eat at that night because we were still adjusting to the time difference. The food was very good. I had an organic penne, and Sarah had a beef something that was very hard to pronounce (and spell).
 
 
-[![Albert Park, outside The University of Auckland](/images/photos/New_Zealand/DSC00031-300x225.jpg)](/images/photos/New_Zealand/DSC00031.jpg) [![Champagne](/images/photos/New_Zealand/DSC00057-300x225.jpg)](/images/photos/New_Zealand/DSC00057.jpg)
+[![Albert Park, outside The University of Auckland](/images/photos/New_Zealand/DSC00031-300x225.jpg)](/images/photos/New_Zealand/DSC00031.webp) [![Champagne](/images/photos/New_Zealand/DSC00057-300x225.jpg)](/images/photos/New_Zealand/DSC00057.webp)

@@ -3,7 +3,7 @@ Date: 2012-06-02 00:00
 Slug: 2012/06/02/small-updates
 Save_as: 2012/06/02/small-updates/index.html
 URL: 2012/06/02/small-updates/
-Tags: Heroku, nodeJS, Personal, Ruby
+Tags: Heroku, NodeJS, Personal, Ruby
 Summary: A personal status update mentioning working on Heroku application, continued interest in Node.js projects, and ongoing Ruby work including MongoDB database activities. Notes that posts are coming after period of focusing on learning new technologies for job transition.
 
 Nothing too big but I did some small updates to two of my projects; amscotti.com and Nodejs map example.

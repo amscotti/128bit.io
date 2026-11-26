@@ -3,6 +3,7 @@ Date: 2010-03-30 00:00
 Slug: 2010/03/30/hello-world
 Save_as: 2010/03/30/hello-world/index.html
 URL: 2010/03/30/hello-world/
+Tags: Personal, Linux
 Summary: A quick opening post to check theme formatting and ensure everything is working correctly. This blog will focus on Linux/Unix topics, tech news, and some personal updates with the goal of being a useful source of information.
 
 Just a quick opening post to check formatting of the theme and to ensure everything is working alright!

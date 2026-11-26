@@ -11,7 +11,7 @@ I'm a big fan of CouchDB. I enjoy how they go about doing things and how you are
 I wanted to take another look at MongoDB and eventually do some playing around with it in Ruby for another posting.
 ## Installing
 You can get MongoDB from their download page at [http://www.mongodb.org/downloads](http://www.mongodb.org/downloads), for MacOS, I installed it the same way for these types of apps.
-```
+```console
 $ wget http://fastdl.mongodb.org/osx/mongodb-osx-x86_64-2.0.2.tgz
 $ tar -xzf mongodb-osx-x86_64-2.0.2.tgz
 $ sudo mv mongodb-osx-x86_64-2.0.2 /usr/share/
@@ -20,13 +20,13 @@ $ sudo ln -s mongodb-osx-x86_64-2.0.2/ mongodb
 $ sudo mkdir -p /data/db
 ```
 Don't forget the last part, /data/db is the path where your databases are saved. After moving around the files be sure to add lines below to your .profile in your home folder.
-```
+```bash
 MONGODB_HOME=/usr/share/mongodb; export MONGODB_HOME
 PATH=$MONGODB_HOME/bin:$PATH; export PATH
 ```
 
 Now lets test it out. First we need to start the server and then run the clients for it.
-```
+```console
 $ sudo mongod
 mongod --help for help and startup options
 Tue Jan 17 13:20:47 [initandlisten] MongoDB starting : pid=3072 port=27017 dbpath=/data/db/ 64-bit host=Lycan.local
@@ -36,7 +36,7 @@ Tue Jan 17 13:20:47 [initandlisten] build info: Darwin erh2.10gen.cc 9.6.0 Darwi
 ...
 ```
 and now in a new shell start the client,
-```
+```console
 $ mongo
 MongoDB shell version: 2.0.2
 connecting to: test
@@ -46,7 +46,7 @@ At this point you are all set to start playing around with the database. There a
 
 ## Some playing around
 Now that we have everything all set, lets play around in the client. This is a Javascript base client and documents are JSON data, so if you have worked with JSON before you should be familiar. Sadly there is no web interface like the one that comes with CouchDB, but you can get a 3rd party one.
-```
+```text
 MongoDB shell version: 2.0.2
 connecting to: test
 > use playingaround

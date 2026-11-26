@@ -15,13 +15,13 @@ The files they push out to S3 are JSON files that have been gzip'ed and are in f
 Download all the files you want to push to MongoDB, you can leave the files in the folder they are in. No need to move them around but there also isn't harm in it. There are many tools you can do this with, myself I use Cyberduck and just drag and drop the folder on my desktop. Keep in mind that the files for the current date and time are still being written out and could give you errors when you try to copy them. Best to not copy them.
 
 Now we need to get the files into a format that MongoDB's importer can read. Lucky the importer can read JSON along with other formats so we don't need to do too much work. I find this can be done with one command. Ensure that you're in the root folder for all the files you want to import into MongoDB and run this,
-```
+```bash
 find . -type f -name "*json.gz" | xargs gzcat >> output_file.json
 ```
 You should now have a file of all the logs in JSON format. Depending on your system you may be able to use zcat instead of gzcat.
 
 The next part is the import into MongoDB, again this can be done with one command.
-```
+```bash
 mongoimport -d loggly -c amscotti output_file.json --jsonArray
 ```
 The -d is the database you want to use and the -c is the collection you want the data to be imported in to. Due to the format of the file you need the `--jsonArray`. I don't have many logs, I have about 8816 lines in the file and it took less then a second to import into the database.

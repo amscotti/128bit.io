@@ -19,7 +19,7 @@ A lot of SSH Brute Forcers are only looking at port 22 for SSH, you can change t
 iptables is the Linux firewall that comes pre-installed on a lot of distros. Within Fedora it comes pre-installed and is able to run from first boot. Looking around on the web I couldn't find anything on the same level as what I had for PF, but I did find something that would help slow down SSH brute force attacks.
 
 The file that keeps all the rules for iptables can be found in /etc/sysconfig/iptables on Fedora, add the lines below to the file.
-```
+```text
 -I INPUT  -p tcp -m tcp --dport 22 -m state --state NEW -m recent --set --name SSH--rsource
 -I INPUT -p tcp -m tcp --dport 22 -m state --state NEW -m recent --update --seconds 180 --hitcount 4 --name SSH--rsource -j DROP
 ```

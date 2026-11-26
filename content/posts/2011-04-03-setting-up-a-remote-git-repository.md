@@ -12,7 +12,7 @@ Git doesn't really have a preference if the repository is hosted on some server 
 
 Let's make a new local repository to give us something to play around with,
 
-```
+```console
 $ mkdir test_repository
 $ cd test_repository/
 $ git init
@@ -29,7 +29,7 @@ Now we have a local repository that we can test with, now let's make the remote 
 
 After SSHing into the remote server, run this:
 
-```
+```console
 $ git init --bare ~/git/test_repository.git
 Initialized empty Git repository in /home/ascotti/git/test_repository.git/
 ```
@@ -42,7 +42,7 @@ Now that the remote repository is set up we need to push our local repository in
 
 You are also able to add a port number within the command if you are running SSH on a different port, like so `git push ssh://dodo:2288/~/git...`. The `*:*` will push all the branches you have in your local repository to the remote repository. To make the push easier you can add the server to your list of remote repositories.
 
-```
+```console
 $ git remote add dodo ssh://dodo/~/git/test_repository.git
 $ git push dodo
 Everything up-to-date

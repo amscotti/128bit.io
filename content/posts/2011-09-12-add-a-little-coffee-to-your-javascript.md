@@ -3,14 +3,14 @@ Date: 2011-09-12 00:00
 Slug: 2011/09/12/add-a-little-coffee-to-your-javascript
 Save_as: 2011/09/12/add-a-little-coffee-to-your-javascript/index.html
 URL: 2011/09/12/add-a-little-coffee-to-your-javascript/
-Tags: CoffeeScript, Howto, Javascript
+Tags: CoffeeScript, Howto, JavaScript
 Summary: Introducing CoffeeScript as a cleaner pre-compiled JavaScript alternative inspired by functional programming talks at No Fluff Just Stuff. Shows how CoffeeScript's concise syntax transforms Project Euler 001 solution into elegant functional code with range comprehension and arrow functions, compiling to clean JavaScript output.
 
 So for my posting for [Project Euler 001](/2011/09/05/project-euler-001/), the Javascript code kind of upset me. It's not nice to look at and doesn't really solve the problem in a functional way. With Javascript being a functional programming language it didn't sit well with me.
 
 Comparing the Javascript code to the Groovy and Ruby code there is one thing missing and it is the 'Range' type call. If I could have a call like that I could use some other calls like filter and reduce to get the same outcome. Well, really this is a function that I need to add myself.
 
-```
+```javascript
 range = function(n) {
   _results = [];
   for (_i = 0; _i <= n; _i++){ _results.push(_i); }
@@ -20,7 +20,7 @@ range = function(n) {
 
 This function should output an array, which will have calls for filter and reduce.
 
-```
+```javascript
 console.log(range(999).filter(function(n) {
     return (n % 3 == 0 || n % 5 == 0)
 }).reduce(function(a, b) {
@@ -38,13 +38,13 @@ From my understanding, the project was first made for self use by 'Jeremy Ashken
 
 What's this code look like in CoffeeScript?
 
-```
+```coffeescript
 console.log ([0...1000].filter (n) -> n%3 == 0 || n%5 == 0).reduce (a,b) -> a+b
 ```
 
 The \[0...1000\] part gets turned into a function like the one above. Here is the full Javascript output:
 
-```
+```javascript
 var _i, _results;
 console.log(((function() {
   _results = [];
