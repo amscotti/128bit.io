@@ -46,7 +46,7 @@ Located in `theme/minimal128/`:
 ### Deployment
 - **Netlify**: Configured via `netlify.toml`, uses UV for dependency management
 - **Docker**: Apache httpd with custom config in `httpd-custom.conf`
-- **Python Version**: 3.13
+- **Python Version**: 3.14
 
 ## Key Configuration
 
@@ -71,6 +71,7 @@ Summary: Brief description for listings and SEO.
 ## Dependencies
 
 Managed via UV (`pyproject.toml`):
-- `pelican[markdown]>=4.11.0`
-- `pygments>=2.17.0`
-- `pyyaml>=6.0`
+- `pelican[markdown]>=4.12.0`
+- `pelican-neighbors`, `pelican-related-posts`, `pelican-sitemap`
+- `pygments>=2.19.0`, `pymdown-extensions`, `pillow`, `beautifulsoup4`
+- Dev tools: `ruff`, `djlint`
