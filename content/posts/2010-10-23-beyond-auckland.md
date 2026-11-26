@@ -13,8 +13,8 @@ The Waitomo caves is a must see if you come to NZ. It starts off with a walk ins
 The next stop was Rotorua hot springs, it is simply amazing. The geysers at Rotorua hot springs puts old faithful in Yellowstone to shame in my opinion. You really get a good feeling that this place is heavily active by sitting down on some shelves seats they have, they are fully heated by the ground. Rotorua was also a place that some of the Maori lived, We where able to see the Maori welcoming ceremony and lean more about there culture and art. Over all the tour was great and worth the time to go to some wonderful places.
 
 
-[![Waitomo caves](/images/photos/New_Zealand/DSC00175-300x225.jpg)](/images/photos/New_Zealand/DSC00175.jpg)
+[![Waitomo caves](/images/photos/New_Zealand/DSC00175-300x225.jpg)](/images/photos/New_Zealand/DSC00175.webp)
 
-[![Country Side](/images/photos/New_Zealand/DSC00236-300x225.jpg)](/images/photos/New_Zealand/DSC00236.jpg)
+[![Country Side](/images/photos/New_Zealand/DSC00236-300x225.jpg)](/images/photos/New_Zealand/DSC00236.webp)
 
-[![Rotorua hot springs](/images/photos/New_Zealand/DSC00353-300x225.jpg)](/images/photos/New_Zealand/DSC00353.jpg)
+[![Rotorua hot springs](/images/photos/New_Zealand/DSC00353-300x225.jpg)](/images/photos/New_Zealand/DSC00353.webp)

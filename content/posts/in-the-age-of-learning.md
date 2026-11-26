@@ -25,7 +25,7 @@ There's one finite resource every single person has in this world: time. This, i
 
 Often, despite an internal impulse telling us we must read every word of an article or piece of content, this simply isn't necessary. In many cases, a concise and accurate summary can suffice, allowing us to move quickly to more important or relevant material. I've found large language models, equipped with their excellent understanding of text and context, incredibly effective at summarizing and identifying key points in content. While I've personally built simple tools to achieve precisely that, well-known interfaces like ChatGPT and Claude are equally powerful in this regard.
 
-![Summarization of a YouTube transcript video in Claude Desktop]({static}/images/in-the-age-of-learning/summarization.png)
+![Summarization of a YouTube transcript video in Claude Desktop]({static}/images/in-the-age-of-learning/summarization.webp)
 
 Using AI-generated summaries, I can easily assess if it's worthwhile to dive deeper into the entire piece immediately or just file away the key points for future reference. Additionally, these models allow us to directly ask follow-up or clarification questions, helping to quickly determine if certain topics are covered and guiding us on whether a deeper reading is necessary. This single approach has saved me countless hours and allowed for quicker awareness of important concepts, current events, and leading research, helping me allocate my valuable time much more effectively.
 
@@ -41,7 +41,7 @@ In practice, I've established a compelling workflow for exploring new subjects. 
 
 If I find I need deeper content or more extensive research afterward, I will then reach for Gemini or ChatGPT to deliver detailed insights. This process helps me maintain a steady focus without becoming sidetracked by curiosity while I'm already learning something else. To me, allowing AI models to handle supplemental research quietly in the background while staying actively focused on my primary learning objective is invaluable.
 
-![Summarization of a video in Gemini Studio]({static}/images/in-the-age-of-learning/summarization_video.png)
+![Summarization of a video in Gemini Studio]({static}/images/in-the-age-of-learning/summarization_video.webp)
 
 Along these lines, when learning from videos, I'll often task an AI model ([Gemini Studio](https://aistudio.google.com/welcome) works great here) with taking structured notes. This provides me with concise reference points for revisiting material later, without having to rewatch entire videos.
 
@@ -52,7 +52,7 @@ Many of the same AI tools mentioned earlier can also help us achieve this. Perso
 
 A specific tool that I find myself using repeatedly for exactly this purpose is Google's [NotebookLM](https://notebooklm.google/), a truly undervalued and underrecognized tool. NotebookLM allows you to consolidate research, documents, and even YouTube videos, creating a unified and interactive learning environment.
 
-![Summarization of a video in Gemini Studio]({static}/images/in-the-age-of-learning/notebooklm.png)
+![Google NotebookLM workspace consolidating research sources and audio overview]({static}/images/in-the-age-of-learning/notebooklm.webp)
 
 However, the feature within NotebookLM that truly amazed me at first, and quickly became indispensable, is its ability to generate a podcast from your collected materials. Initially, this sounded a bit gimmicky, but in practice, this feature provides both variety and convenience. Listening to an AI-generated podcast as I simultaneously add questions, take notes, and dig further into topics makes the learning experience richer and genuinely enjoyable. Plus, audio allows multitasking: cooking, exercising, or walking all become opportunities for effortless but meaningful learning. As unusual as it sounds, having NotebookLM transforms dense material into podcasts has totally transformed my learning habits.
 

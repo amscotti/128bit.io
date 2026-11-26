@@ -41,14 +41,14 @@ console.log("Loading Server at http://localhost:" + (process.env.PORT || 8000));
 ```
 
 To setup the dependencies in your package.json file add in this,
-```
+```json
    "http-proxy": "0.8.x",
    "connect": "2.3.x"
 ```
 Then run `npm install` to install them.
 
 If you want to take this one step farther, you can also add this to your package.json
-```
+```json
  "scripts": {
     "start": "node server.js"
   }

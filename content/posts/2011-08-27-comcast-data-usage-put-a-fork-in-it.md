@@ -52,7 +52,7 @@ puts usage_text.strip
 ```
 
 Run it from the command line like so
-```
+```console
 $ ./capmon.rb <username> <password>
 ```
 and it should output something like this,

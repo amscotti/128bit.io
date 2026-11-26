@@ -3,7 +3,7 @@ Date: 2011-06-15 00:00
 Slug: 2011/06/15/things-im-starting-to-look-in-to
 Save_as: 2011/06/15/things-im-starting-to-look-in-to/index.html
 URL: 2011/06/15/things-im-starting-to-look-in-to/
-Tags: Continuous Integration, CouchDB, Crucible, FishEye, JenkinsCI, MongoDB, nodeJS, noSQL, Personal
+Tags: Continuous Integration, CouchDB, Crucible, FishEye, JenkinsCI, MongoDB, NodeJS, noSQL, Personal
 Summary: A personal update on technologies being explored for self and work, including NodeJS for scalable real-time web applications, NoSQL databases like MongoDB and CouchDB for web-specific data challenges, and Continuous Integration with Jenkins CI plus code review tools FishEye and Crucible from Atlassian for quality control.
 
 Haven't blogged in some time so I wanted to give a quick update on the things I'm looking at for myself and work. Right now my group is coming to the end of a big project at work so a lot of my time has been going into that, but I've still been looking at some new things that I hope to later write postings about.

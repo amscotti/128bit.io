@@ -1,13 +1,14 @@
 Title: Steps for moving a project over from SVN to Git
 Date: 2011-11-14 00:00
-Slug: 2011/11/14/steps-for-moving-a-project-over-from-svn-to-git/index.html
+Slug: steps-for-moving-a-project-over-from-svn-to-git
+Save_as: 2011/11/14/steps-for-moving-a-project-over-from-svn-to-git/index.html
 URL: 2011/11/14/steps-for-moving-a-project-over-from-svn-to-git/
 Tags: Git, SVN, Tip
 Summary: A guide to migrating SVN repositories to Git while preserving complete commit history. Uses git svn init and git svn fetch to import with all history, then git svn can be used to continue pushing back to SVN if needed, allowing gradual transition while maintaining compatibility.
 
 Now that we are fully using Git at work one of my tasks has been to move some of our old projects over to using Git. There are some different ways you can go about doing this, you can simply do a SVN export of the project and make a new git repository from it. I don't prefer this method because you lose the commit history. The way below is a way to maintain all the history from the SVN repository.
 
-```
+```console
 $ mkdir projectFolder && cd projectFolder
 $ git svn init https://svn.server.com/your/project/path
 $ git svn fetch

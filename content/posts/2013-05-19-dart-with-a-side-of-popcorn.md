@@ -12,7 +12,7 @@ So personally, I'm not interested in using Dart for building web applications, I
 
 Popcorn.js is a JavaScript library that is used for working with media, it will allow you to embed video and setup time-based interactions. There are [many good demos](http://popcornjs.org/demos) on the Popcorn.js site and it is worth taking a look.
 
-![Dart and Popcorn](/images/dart-with-a-side-of-popcorn/dart_and_popcorn.png)
+![Dart and Popcorn](/images/dart-with-a-side-of-popcorn/dart_and_popcorn.webp)
 
 Code can be found on GitHub, [here](https://github.com/amscotti/dart_popcorn_demo).
 

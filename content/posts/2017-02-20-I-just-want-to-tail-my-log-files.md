@@ -21,7 +21,7 @@ This works nicely because Logstash has a built-in [RabbitMQ Output Plugin](https
 
 A lot of the code is just to simulate events coming from a log file, note that I am adding fields to the events. In this example, I am adding `environment` and `service`, these fields are going to be important because they are how we are going to filter the events downstream. Within the Logstash config, we are adding the fields to the key in the RabbitMQ output like so, `"logs.%{environment}.%{service}"`.
 
-```conf
+```text
 input {
     generator {
         lines => [

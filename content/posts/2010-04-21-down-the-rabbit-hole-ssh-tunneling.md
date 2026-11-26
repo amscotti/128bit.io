@@ -20,7 +20,7 @@ An example that I use tunneling for is its adds security. Lets say you are at a 
 
 The first type of tunnel is called dynamic port, as you can kind of guess from the name it lets you work with dynamic ports. I use this for Web browsing and IM clients, you tell the application to use a port on your localhost and it will open up any needed port on the remote computer as needed for the application. This is the type of tunnel you want to use if you are on a public network and want to browse the web without fear of people eavesdropping on you.
 
-```
+```console
 $ ssh -CND 1080 user@server
 ```
 
@@ -35,7 +35,7 @@ With in most web browsers and IM clients you are able to uses this tunnel as a S
 
 This type of tunnel is useful if you need to get to another system on the network (or outside the network). I use this type of tunnel for applications like RDP/VNC and other applications that need specialized ports to work. This lets you get to computers without the need for opening ports on your firewall/router.
 
-```
+```console
 $ ssh user@server -CNL PORT:INNER_IP:PORT
 ```
 
@@ -49,7 +49,7 @@ With this tunnel, just point the applications to localhost and the port you used
 
 Reverse tunnel lets you setup a tunnel that the system on the other end can use. So if the client system is behind a firewall and will not let incoming SSH connections come in, you can setup a reverse tunnel where the system at the other end can SSH back into the system. I really don't use this type of tunnel much. I haven't found a good use for this type of tunnel because the tunnel needs to be setup before hand and then you must go to the other system to do what you need to do. Though a good example I have for this type of tunnel is, if your work computer is behind a firewall, setting up a reverse tunnel to your system at home will let you access your work computer. More likely than not, companies have better ways to let you work from home or have a system already open to the outside so you can access your work. This is still useful to know though if the need ever comes up.
 
-```
+```console
 $ ssh user@server -CNR 1080:localhost:22
 ```
 

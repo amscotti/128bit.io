@@ -16,13 +16,13 @@ I’m using macOS Sierra right now, it seems that most operating systems still c
 I would highly recommend using [Homebrew](https://brew.sh/) to install pyenv and any other tools you would need for your development system. Definitely something to look into that could save you a fair amount of time installing and updating software.
 
 To install with Homebrew,
-```
+```console
 $ brew update
 $ brew install pyenv
 ```
 then
 
-```
+```console
 $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
 $ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
 $ echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
@@ -36,7 +36,7 @@ So, let’s get Python 3.6.2 installed, which is the latest release at the time 
 To use the newly installed Python you need to set it as your global version, like so.
 
 
-```
+```console
 $ python --version
 Python 2.7.10
 $ pyenv global 3.6.2
@@ -66,7 +66,7 @@ Here is a great video talking about virtual environments from my local Python Us
 Alternatively, if you're looking for something a bit more powerful than the built in venv module, you can use something like [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) which is a plugin to pyenv tool. After installing, you an use pyenv virtualenv like so,
 
 
-```
+```console
 $ pyenv virtualenv 3.6.2 django_project
 $ pyenv virtualenvs
   3.6.2/envs/django_project (created from /Users/ascotti/.pyenv/versions/3.6.2)

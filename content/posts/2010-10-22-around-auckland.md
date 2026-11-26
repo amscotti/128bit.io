@@ -11,6 +11,6 @@ So after settling in, Sarah and I had a nice relaxing day around the city. We or
 One of the things we checked out was the Sky Tower, which from the name you can guess is a big tower into the sky! We got a nice view of the city and some nice photos of a lady jumping off the tower (this is something you pay to do...). They also had glass floors around the edges, very fun to freak yourself out by stepping on them. There is a nice little sign that tells you everything is going to be ok if you step on the glass. For dinner Sarah and I had Thai; it was alright, nothing over the top. I find the place that I go to in Ipswich better!
 
 
-[![Sky Tower](/images/photos/New_Zealand/DSC00075-300x225.jpg)](/images/photos/New_Zealand/DSC00075.jpg)
-[![Glass floor sign](/images/photos/New_Zealand/DSC00085-300x225.jpg)](/images/photos/New_Zealand/DSC00085.jpg)
-[![Glass floors](/images/photos/New_Zealand/DSC00090-300x225.jpg)](/images/photos/New_Zealand/DSC00090.jpg)
+[![Sky Tower](/images/photos/New_Zealand/DSC00075-300x225.jpg)](/images/photos/New_Zealand/DSC00075.webp)
+[![Glass floor sign](/images/photos/New_Zealand/DSC00085-300x225.jpg)](/images/photos/New_Zealand/DSC00085.webp)
+[![Glass floors](/images/photos/New_Zealand/DSC00090-300x225.jpg)](/images/photos/New_Zealand/DSC00090.webp)

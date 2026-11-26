@@ -8,11 +8,11 @@ I've never been great at keeping up with blogging, but I believe it's important,
 
 One big item that has been taking up a lot of my time, but I'm very happy about, is buying a home. Despite the crazy market, my wife and I were able to find a beautiful old home at a price that we were happy with. It has been an adventure updating various areas of the house to make it our own and discovering its secrets. Of course, I've also been modernizing the house with IoT devices, including [EcoBee thermostats](https://www.ecobee.com/en-us/), [Philips Hue lights](https://www.philips-hue.com/en-us), [Kasa Wifi switches](https://www.kasasmart.com/us/products/smart-switches/kasa-smart-wi-fi-light-switch-hs200) and [smart plugs](https://www.kasasmart.com/us/products/smart-plugs), Google Nest floodlights and doorbells, and devices to monitor our water and electrical usage. I have also worked on improving the connectivity of the house by installing a [Dream Machine SE](https://store.ui.com/collections/unifi-network-unifi-consoles/products/dream-machine-se) from Ubiquiti and Wifi 6 access points while running [Cat 6A cables](https://www.amazon.com/gp/product/B073WMTQ3R/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) throughout the house. For the first time ever, I'm able to achieve the maximum download speed from my internet service provider on my desktop and while I understand that there's no practical use for having extreme download speeds, it's still a fun achievement.
 
-![Photo of our home]({static}/images/new-home-and-puppy/home_2023.png)
+![Photo of our home]({static}/images/new-home-and-puppy/home_2023.webp)
 
 Aside from having fun with the house, we recently welcomed a rescue puppy into our home who has been filling our time with lots of fun playing chase and training. She's incredibly adorable and has a wonderful personality.
 
-![Photo of Eva looking cute]({static}/images/new-home-and-puppy/eva_2023.png)
+![Photo of Eva looking cute]({static}/images/new-home-and-puppy/eva_2023.webp)
 
 Despite having limited time, I'm constantly looking into new things to learn and explore. Here is a glimpse of some of the things that are currently exciting to me:
 

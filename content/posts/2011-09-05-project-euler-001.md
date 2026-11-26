@@ -3,7 +3,7 @@ Date: 2011-09-05 00:00
 Slug: 2011/09/05/project-euler-001
 Save_as: 2011/09/05/project-euler-001/index.html
 URL: 2011/09/05/project-euler-001/
-Tags: Functional, Groovy, Howto, Javascript, Personal, Python, Ruby, Clojure
+Tags: Functional, Groovy, Howto, JavaScript, Personal, Python, Ruby, Clojure
 Summary: Solving Project Euler problem 001 in multiple programming languages to maintain skills. The problem asks for sum of all multiples of 3 or 5 below 1000. Includes solutions in JavaScript (both original and ES6), Ruby, Groovy, and Python, with plans to add Clojure solutions for cross-language functional programming practice.
 
 Made this posting sometime ago but I've been forgetting to actually post it. When I was looking up some information on Scala I found a great video tutorial on youtube made by [MadocDoyu](http://www.youtube.com/user/MadocDoyu), [which can be found here](http://www.youtube.com/watch?v=wvD6JauveLA). In part of the video he introduces the Project Euler, this project seems really interesting. I plan on solving problems time to time using many of the languages I have looked at. I'm hoping this will keep my skills in these languages up to date.
@@ -74,7 +74,7 @@ If you want to see how to solve this with Scala check out [MadocDoyu's videos](h
 
 Based on the reply from md2perpe on Github there is a more mathematical way to solve this problem.
 
-```
+```text
 Using the formula 1 + 2 + 3 + ... + n = n*(n+1)/2 instead of a code loop.
 
 Sum of all numbers <1000 divisible by 3:
