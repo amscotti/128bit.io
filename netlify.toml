@@ -4,6 +4,7 @@
 
 [build.environment]
   PYTHON_VERSION = "3.14"
+  NODE_VERSION = "24"
 
 [[headers]]
   for = "/*"

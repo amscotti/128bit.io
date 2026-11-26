@@ -25,6 +25,11 @@ jobs:
           enable-cache: true
           python-version-file: ".python-version"
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
       - name: Install dependencies
         run: uv sync --locked
 
@@ -34,14 +39,20 @@ jobs:
       - name: Lint Jinja templates with djlint
         run: uv run djlint --lint theme/minimal128/templates/
 
+      - name: Check theme JavaScript syntax
+        run: node --check theme/minimal128/static/js/terminal.js
+
       - name: Build production site
         env:
           CONTEXT: production
         run: uv run pelican content -s publishconf.py
 
+      - name: Build search index
+        run: npx --yes pagefind --site output
+
       - name: Sanity check build outputs
         run: |
-          for f in output/index.html output/index.xml output/sitemap.xml output/llms.txt output/og/default.png output/404.html; do
+          for f in output/index.html output/index.xml output/sitemap.xml output/llms.txt output/og/default.png output/404.html output/pagefind/pagefind.js; do
             test -s "$f" || { echo "Missing or empty build artifact: $f"; exit 1; }
           done
           if grep -rn "{% youtube" output/posts/; then

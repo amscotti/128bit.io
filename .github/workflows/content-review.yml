@@ -26,10 +26,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Install OpenCode
-        run: npm install -g opencode-ai@latest
+        run: npm install -g @opencode/cli@latest
 
       - name: Review Content
         env:
@@ -38,7 +38,9 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           opencode run \
-            --dangerously-skip-permissions \
+            --standalone \
+            --archived \
+            --auto \
             --model openrouter/deepseek/deepseek-v4-pro \
             "Review PR #${PR_NUMBER} on this repository.
 
