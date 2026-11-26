@@ -5,17 +5,17 @@ This file provides context for Gemini when working with the **128bit.io** codeba
 ## Project Overview
 
 **128bit.io** is a personal technical blog built with the **Pelican** static site generator.
-It features a custom theme ("minimal128") with a terminal-inspired aesthetic and is written in Python (v3.13).
+It features a custom theme ("minimal128") with a terminal-inspired aesthetic and is written in Python (v3.14).
 The site is deployed to Netlify and can also be containerized using Docker.
 
 ## Environment & Dependencies
 
-*   **Language:** Python 3.13+
+*   **Language:** Python 3.14+
 *   **Dependency Manager:** `uv` (replaces pip/poetry/etc.)
 *   **Configuration Files:**
     *   `pyproject.toml`: Dependency definitions.
     *   `uv.lock`: Locked dependency versions.
-    *   `.python-version`: Specifies Python version (3.13).
+    *   `.python-version`: Specifies Python version (3.14).
 
 ## Building and Running
 
@@ -25,7 +25,7 @@ To run the development server with auto-reload and live listening:
 ```bash
 uv run pelican --autoreload --listen
 ```
-*   Server will typically be available at `http://128.0.0.1:8000`.
+*   Server will typically be available at `http://127.0.0.1:8000`.
 
 To perform a one-off build for development:
 ```bash
