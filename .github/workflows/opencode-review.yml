@@ -43,7 +43,7 @@ jobs:
             --standalone \
             --archived \
             --auto \
-            --model openrouter/moonshotai/kimi-k2.7-code \
+            --model openrouter/deepseek/deepseek-v4.1-flash-1017 \
             "Review PR #${PR_NUMBER} on this repository.
 
             Using the gh CLI:
