@@ -1,5 +1,9 @@
 <footer class="footer">
   <div class="footer-content">
-    <p>&copy; 2026 {{ AUTHOR }}</p>
+    <p>© {{ CURRENT_YEAR|default(2026) }} {{ AUTHOR }}</p>
+    <nav class="footer-links" aria-label="Site resources">
+      <a href="{{ SITEURL }}/index.xml" class="footer-link">[rss]</a>
+      <a href="{{ SITEURL }}/llms.txt" class="footer-link">[llms.txt]</a>
+    </nav>
   </div>
 </footer>

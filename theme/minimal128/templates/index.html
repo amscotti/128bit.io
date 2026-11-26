@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block title %}{{ SITENAME }}{% endblock %}
+{% block canonical %}/{% endblock %}
+{% block og_url %}{{ SITEURL }}/{% endblock %}
 
 {% block prefetch %}
 {% if articles %}
@@ -8,44 +10,75 @@
 {% endif %}
 {% endblock %}
 
+{% block jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": {{ SITENAME|tojson }},
+      "url": {{ (SITEURL ~ '/')|tojson }},
+      "description": {{ (BIO|striptags if BIO else SITENAME)|tojson }}
+    },
+    {
+      "@type": "Person",
+      "name": {{ AUTHOR|tojson }},
+      "url": {{ (SITEURL ~ '/')|tojson }}{% if SOCIAL %},
+      "sameAs": [{% for _name, link in SOCIAL %}{{ link|tojson }}{% if not loop.last %}, {% endif %}{% endfor %}]{% endif %}
+    }
+  ]
+}
+</script>
+{% endblock %}
+
 {% block content %}
 <div class="home">
   {% if BIO %}
-  <section class="whoami">
-    <div class="terminal-command">
-      <span class="prompt">[amscotti@128bit.io ~]# </span><span class="command">whoami</span>
+  <section class="whoami" aria-labelledby="whoami-heading">
+    <div class="terminal-command" aria-hidden="true">
+      <span class="prompt">[amscotti@{{ SITENAME }} ~]# </span><span class="command">whoami</span>
     </div>
     <div class="whoami-output">
+      {% if AVATAR %}
       <div class="whoami-avatar-wrapper">
         <div class="whoami-avatar-border">
-          {% if AVATAR %}
-          <img src="{{ SITEURL }}{{ AVATAR }}" alt="{{ AUTHOR }}" class="whoami-avatar">
-          {% endif %}
+          <img
+            src="{{ SITEURL }}{{ AVATAR }}"
+            alt="{{ AUTHOR }}"
+            class="whoami-avatar"
+            width="140"
+            height="140"
+            decoding="async"
+          >
         </div>
       </div>
+      {% endif %}
       <div class="whoami-info">
-        <div class="whoami-name">{{ AUTHOR }}</div>
-        <div class="whoami-separator">-------------------------</div>
+        <h1 id="whoami-heading" class="whoami-name">{{ AUTHOR }}</h1>
+        <hr class="whoami-separator" aria-hidden="true">
         <div class="whoami-bio">{{ BIO }}</div>
         {% include "includes/social-links.html" %}
       </div>
     </div>
   </section>
+  {% else %}
+  <h1 class="sr-only">{{ SITENAME }}</h1>
   {% endif %}
 
-  <section class="posts home-posts">
-    <div class="terminal-command">
-      <span class="prompt">[amscotti@128bit.io ~]# </span><span class="command">ls -la posts/</span>
-    </div>
+  <section class="posts home-posts" aria-labelledby="recent-posts-heading">
+    <h2 id="recent-posts-heading" class="terminal-command">
+      <span class="prompt" aria-hidden="true">[amscotti@{{ SITENAME }} ~]# </span><span class="command">ls -la posts/</span>
+    </h2>
     <div class="terminal-output">
-      <div class="file-listing">
+      <ul class="file-listing">
         {% for article in articles[:20] %}
-          <div class="file-line">
-            <span class="date">{{ article.date.strftime('%b %d %Y') }}</span>
-            <a href="{{ SITEURL }}/{{ article.url }}" class="filename">{{ article.slug.split('/')[-1] }}.md</a>
-          </div>
+        <li class="file-line">
+          <time class="date" datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%b %d %Y') }}</time>
+          <a href="{{ SITEURL }}/{{ article.url }}" class="filename">{{ article.slug.split('/')[-1] }}.md</a>
+        </li>
         {% endfor %}
-      </div>
+      </ul>
       {% if articles|length > 20 %}
       <div class="more-files">
         <a href="{{ SITEURL }}/posts/" class="more-files-link">... ({{ articles|length - 20 }} more files)</a>

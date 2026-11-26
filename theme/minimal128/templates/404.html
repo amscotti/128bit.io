@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 
 {% block title %}404 :: {{ SITENAME }}{% endblock %}
+{% block description %}Page not found on {{ SITENAME }}.{% endblock %}
+{% block og_title %}404 :: {{ SITENAME }}{% endblock %}
+{% block og_description %}Page not found on {{ SITENAME }}.{% endblock %}
+{% block canonical %}/404.html{% endblock %}
+{% block og_url %}{{ SITEURL }}/404.html{% endblock %}
 
-{% block description %}Page not found{% endblock %}
+{% block robots %}
+<meta name="robots" content="noindex">
+{% endblock %}
 
 {% block prefetch %}
 <link rel="prefetch" href="{{ SITEURL }}/">
@@ -16,10 +23,11 @@
 
 {% block content %}
 <div class="error-page">
+  <h1 class="listing-title"><span class="syntax" aria-hidden="true">#</span> 404 — File Not Found</h1>
   <div class="terminal-output">
     <pre class="error-output">cat: requested_page.md: No such file or directory
 
-<span class="ascii-art">    ██╗  ██╗ ██████╗ ██╗  ██╗
+<span class="ascii-art" aria-hidden="true">    ██╗  ██╗ ██████╗ ██╗  ██╗
     ██║  ██║██╔═████╗██║  ██║
     ███████║██║██╔██║███████║
     ╚════██║████╔╝██║╚════██║
@@ -30,7 +38,7 @@
 </pre>
   </div>
   <div class="terminal-command">
-    <span class="prompt">[amscotti@128bit.io ~]# </span><a href="{{ SITEURL }}/" class="command-link">cd ~</a><span class="cursor">_</span>
+    <span class="prompt" aria-hidden="true">[amscotti@{{ SITENAME }} ~]# </span><a href="{{ SITEURL }}/" class="command-link">cd ~</a><span class="cursor" aria-hidden="true">_</span>
   </div>
 </div>
 {% endblock %}
