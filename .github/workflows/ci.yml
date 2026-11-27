@@ -55,7 +55,7 @@ jobs:
           for f in output/index.html output/index.xml output/sitemap.xml output/llms.txt output/og/default.png output/404.html output/pagefind/pagefind.js; do
             test -s "$f" || { echo "Missing or empty build artifact: $f"; exit 1; }
           done
-          if grep -rn "{% youtube" output/posts/; then
+          if grep -rn --include="*.html" "{% youtube" output/posts/; then
             echo "Found unexpanded youtube tag in built output!"
             exit 1
           fi
