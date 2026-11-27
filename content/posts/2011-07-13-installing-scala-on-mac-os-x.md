@@ -14,32 +14,32 @@ Head to the Scala home page at [http://www.scala-lang.org](http://www.scala-lang
 
 If you just want to download it from the command line,
 
-```
+```console
 $ curl -O http://www.scala-lang.org/downloads/distrib/files/scala-2.9.0.1.tgz
 ```
 
 If you want to ensure the file is downloaded correctly checkout the MD5 file.
-```
+```console
 $ curl http://www.scala-lang.org/downloads/distrib/files/scala-2.9.0.1.tgz.md5
 10d01410fd75019fa21a88964462a077
 $ md5 scala-2.9.0.1.tgz MD5 (scala-2.9.0.1.tgz) = 10d01410fd75019fa21a88964462a077
 ```
 
 Now that we have the file we need to untar it, move it /usr/share and make the link to Scala for it.
-```
+```console
 $ tar -xzf scala-2.9.0.1.tgz
 $ sudo mv scala-2.9.0.1 /usr/share/
 $ sudo ln -s scala-2.9.0.1/ scala
 ```
 
 Last step is to update your .profile file within your home folder. Just add this to the top:
-```
+```bash
 SCALA_HOME=/usr/share/scala; export SCALA_HOME
 PATH=$SCALA_HOME/bin:$PATH; export PATH
 ```
 
 Close all Terminals and reopen one. To test to see if everything is setup right, run this:
-```
+```console
 $ scala
 
 Welcome to Scala version 2.9.0.1 (Java HotSpot(TM) 64-Bit Server VM, Java 1.6.0_24).
@@ -50,7 +50,7 @@ scala>
 ```
 
 After all this you should be all set to start working with Scala. If the time comes and you want to upgrade, all you need to do is download, unzip and move to /usr/share folder and update the symbolic link like so:
-```
+```console
 $ cd /usr/share/
 $ sudo rm scala
 $ sudo ln -s scala-2.9.0.1/ scala

@@ -10,7 +10,7 @@ Time to time you may find the need to encrypt a file before sending it to someon
 
 Here's the command to encrypt a file,
 
-```
+```console
 $ openssl enc -aes-256-cbc -a -salt -in mytestfile.txt -out myencryptedtestfile.txt
 ```
 
@@ -18,17 +18,17 @@ It will ask you for a password and then encrypt the file.
 
 To decrypt,
 
-```
+```console
 $ openssl enc -d -aes-256-cbc -a -in myencryptedtestfile.txt -out unencryptedmytestfile.txt
 ```
 
 You can also pipe in data in and out of OpenSSL by removing the -in or -out (or both) like so,
 
-```
+```console
 $ cat mytestfile.txt | openssl enc -aes-256-cbc -a -salt -out myencryptedtestfile.txt
 ```
 
-```
+```console
 $ cat myencryptedtestfile.txt | openssl enc -d -aes-256-cbc -a -out unencryptedmytestfile.txt
 ```
 You are also able to use different encryption algorithms with OpenSSL as long as you encrypt and decrypt using the same algorithms.

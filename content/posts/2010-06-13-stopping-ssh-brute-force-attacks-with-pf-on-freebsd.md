@@ -14,14 +14,14 @@ Now you could just set your SSH server to run on a different port or have your f
 
 [PF or Packet Filter](http://openbsd.org/faq/pf/) comes from the OpenBSD group and was ported over to FreeBSD. It's a great firewall tool with many advanced features to it. PF comes pre-installed and just needs a quick edit to your /etc/rc.conf. Just add the lines below.
 
-```
+```bash
 pf_enable="YES"
 pf_rules="/etc/pf.conf"
 pflog_enable="YES"
 ```
 
 Now we need to add some rules to the /etc/pf.conf file that will deal with the SSH brute force attacks.
-```
+```text
 table <bruteforce> persist
 block quick from <bruteforce>
 

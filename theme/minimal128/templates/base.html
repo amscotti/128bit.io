@@ -5,41 +5,74 @@
 
   <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
   <meta name="description" content="{% block description %}{{ BIO|striptags|truncate(160) if BIO else SITENAME }}{% endblock %}">
+  {% block robots %}{% endblock %}
 
   {% block meta %}
   <!-- Open Graph -->
   <meta property="og:title" content="{% block og_title %}{{ SITENAME }}{% endblock %}">
   <meta property="og:description" content="{% block og_description %}{{ BIO|striptags|truncate(200) if BIO else SITENAME }}{% endblock %}">
-  <meta property="og:url" content="{{ SITEURL }}/{{ output_file }}">
+  <meta property="og:url" content="{% block og_url %}{{ SITEURL }}/{{ output_file|replace('index.html', '') if output_file else '' }}{% endblock %}">
   <meta property="og:site_name" content="{{ SITENAME }}">
   <meta property="og:locale" content="{{ DEFAULT_LANG }}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+  <meta property="og:image" content="{% block og_image %}{{ SITEURL }}{{ DEFAULT_OG_IMAGE|default('/og/default.png') }}{% endblock %}">
 
   <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  {% if X_HANDLE %}
   <meta name="twitter:site" content="{{ X_HANDLE }}">
   <meta name="twitter:creator" content="{{ X_HANDLE }}">
-  <meta name="twitter:title" content="{{ SITENAME }}">
+  {% endif %}
+  <meta name="twitter:title" content="{{ self.og_title() }}">
+  <meta name="twitter:description" content="{{ self.og_description() }}">
+  <meta name="twitter:image" content="{{ self.og_image() }}">
 
   <!-- Additional SEO -->
   <meta name="author" content="{{ AUTHOR }}">
   {% endblock %}
 
-  <link rel="canonical" href="{{ SITEURL }}{% block canonical %}{% endblock %}">
+  <link rel="canonical" href="{{ SITEURL }}{% block canonical %}/{{ output_file|replace('index.html', '') if output_file else '' }}{% endblock %}">
   {% block prefetch %}{% endblock %}
   {% block styles %}{% endblock %}
+  {% block jsonld %}{% endblock %}
+  <script src="{{ SITEURL }}/{{ MAIN_JS_URL|default('theme/js/terminal.js') }}" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <div class="container">
     {% block header %}
     {% include "includes/header.html" %}
     {% endblock %}
 
-    <main class="main">
+    <main id="main-content" class="main terminal-content" tabindex="-1">
       {% block content %}{% endblock %}
     </main>
 
     {% include "includes/footer.html" %}
   </div>
+
+  <dialog id="search-dialog" class="search-dialog" aria-label="Search posts">
+    <div class="search-dialog-inner">
+      <div class="search-dialog-header">
+        <span class="search-prompt" aria-hidden="true">[amscotti@{{ SITENAME }} ~/posts]# grep -i</span>
+        <button type="button" class="search-close-btn" data-search-close aria-label="Close search">[esc]</button>
+      </div>
+      <div class="search-input-wrap">
+        <label class="sr-only" for="search-input">Search posts</label>
+        <input
+          id="search-input"
+          class="search-input"
+          type="search"
+          name="q"
+          placeholder="type query to search posts..."
+          autocomplete="off"
+          spellcheck="false"
+        >
+      </div>
+      <div id="search-status" class="search-status" role="status" aria-live="polite"></div>
+      <ul id="search-results" class="search-results"></ul>
+    </div>
+  </dialog>
 </body>
 </html>

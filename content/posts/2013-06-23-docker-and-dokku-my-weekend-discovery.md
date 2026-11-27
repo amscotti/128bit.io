@@ -33,7 +33,7 @@ Dokku is really where it started for me this weekend, it was shared with me as a
 I really can't say anything that isn't in the video by Jeff Lindsay beside saying, yes… it's that easy to set up.
 
 <div class="video-embed">
-<iframe src="https://player.vimeo.com/video/68631325" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/68631325" title="Dokku: Your own mini-Heroku in under 5 minutes by Jeff Lindsay" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 [Dokku: Your own mini-Heroku in under 5 minutes](http://vimeo.com/68631325) from [Jeff Lindsay](http://vimeo.com/progrium) on [Vimeo](http://vimeo.com).

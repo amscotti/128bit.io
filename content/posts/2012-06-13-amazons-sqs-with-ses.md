@@ -3,7 +3,7 @@ Date: 2012-06-13 00:00
 Slug: 2012/06/13/amazons-sqs-with-ses
 Save_as: 2012/06/13/amazons-sqs-with-ses/index.html
 URL: 2012/06/13/amazons-sqs-with-ses/
-Tags: Amazon, Howto, nodeJS, Ruby, SES, SQS
+Tags: Amazon, Howto, NodeJS, Ruby, SES, SQS
 Summary: Demonstrates combining Amazon SQS queues with SES email service for background email processing. Shows architecture where web applications queue email jobs, worker processes consume from SQS and send via SES, with code examples in Node.js and Ruby handling queue messages and email sending.
 
 Keeping with learning more about Amazon Web Services, I wanted to build on the examples I did for SQS along with using Amazon Simple Email Service. The [Simple Email Service](http://aws.amazon.com/ses/) is, as you could guess, for sending emails. It gives you sending features of a large [Email Services Provider](http://en.wikipedia.org/wiki/E-mail_service_provider) but with a low entry point. Just like lot of the other Amazon services, you pay for what you use without any contracts. Simple Email Service is something that you do need to request full access to the service before you can just use it, until you do this you are sandboxed and can only send to email addresses that you have verified. I see Simple Email Service used more for transactional based emails (like user registrations or passwords resets) then marketing type emails but there is no limitations on how you use the service. You do get access to Deliveries, Bounces, Complaints and Rejected statistical data. You can use this data to solve compliance issues.

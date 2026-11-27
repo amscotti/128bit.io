@@ -2,10 +2,35 @@
 name = "128bit-io"
 version = "1.0.0"
 description = "128bit.io blog built with Pelican"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 dependencies = [
-    "pelican-liquid-tags>=1.0.4",
-    "pelican[markdown]>=4.11.0",
-    "pygments>=2.17.0",
-    "pyyaml>=6.0",
+    "beautifulsoup4>=4.14.0",
+    "pelican[markdown]>=4.12.0",
+    "pelican-neighbors>=1.2.0",
+    "pelican-related-posts>=1.0.0",
+    "pelican-sitemap>=1.2.0",
+    "pillow>=11.0.0",
+    "pygments>=2.19.0",
+    "pymdown-extensions>=10.14.0",
 ]
+
+[dependency-groups]
+dev = [
+    "djlint>=1.36.0",
+    "ruff>=0.11.0",
+]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"publishconf.py" = ["E402", "F403", "F405"]
+
+[tool.djlint]
+profile = "jinja"
+indent = 2
+ignore = "H006,H021,H023,H030,J018"

@@ -1,13 +1,23 @@
 {# Terminal header component #}
 {# Variables: header_path (default: ~), header_command (the command to show) #}
 <header class="header">
-  <div class="terminal-prompt">
-    <a href="{{ SITEURL }}/" class="prompt-link">
-      <span class="prompt-text">[amscotti@128bit.io {{ header_path|default('~') }}]#</span>
-    </a>
-    {% if header_command %}
-    <span class="command-text"> {{ header_command }}</span>
-    {% endif %}
-    <span class="cursor">_</span>
+  <div class="header-bar">
+    <div class="terminal-prompt">
+      <a href="{{ SITEURL }}/" class="prompt-link" aria-label="{{ SITENAME }} home">
+        <span class="prompt-text" aria-hidden="true">[amscotti@{{ SITENAME }} {{ header_path|default('~') }}]#</span>
+      </a>
+      {% if header_command %}
+      <span class="command-text">{{ header_command }}</span>
+      {% endif %}
+      <span class="cursor" aria-hidden="true">_</span>
+    </div>
+
+    <nav class="header-nav" aria-label="Primary">
+      <a href="{{ SITEURL }}/posts/" class="nav-link">posts/</a>
+      <a href="{{ SITEURL }}/tags/" class="nav-link">tags/</a>
+      <a href="{{ SITEURL }}/index.xml" class="nav-link">rss</a>
+      <button type="button" class="nav-action" data-search-open aria-label="Search posts">[search]</button>
+      <button type="button" class="nav-action" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false">[theme]</button>
+    </nav>
   </div>
 </header>

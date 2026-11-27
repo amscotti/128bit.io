@@ -12,7 +12,7 @@ Now there is no issue at all if you don't have any keys previously made on your 
 
 The layout of the file is like so:
 
-```
+```text
 Host server1.128bitstudios.com
   User tony
   Hostname server1.128bitstudios.com

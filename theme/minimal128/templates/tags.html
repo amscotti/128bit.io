@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}Tags :: {{ SITENAME }}{% endblock %}
+{% block description %}Browse all {{ tags|count }} topic tags indexed on {{ SITENAME }}.{% endblock %}
+{% block og_title %}Tags :: {{ SITENAME }}{% endblock %}
+{% block og_description %}Browse all {{ tags|count }} topic tags indexed on {{ SITENAME }}.{% endblock %}
+{% block canonical %}/tags/{% endblock %}
+{% block og_url %}{{ SITEURL }}/tags/{% endblock %}
 
 {% block header %}
 {% set header_path = "~/posts" %}
@@ -10,20 +15,20 @@
 
 {% block content %}
 <div class="terminal-posts">
-  <div class="listing-header">
+  <header class="listing-header">
     <div class="listing-kicker">taxonomy</div>
-    <div class="listing-title"><span class="syntax">#</span> tags/</div>
+    <h1 class="listing-title"><span class="syntax" aria-hidden="true">#</span> tags/</h1>
     <div class="listing-meta">- {{ tags|count }} tags indexed</div>
-  </div>
+  </header>
   <div class="terminal-output">
-    <div class="file-listing tag-file-listing">
+    <ul class="file-listing tag-file-listing">
       {% for tag, articles in tags|sort(attribute='0.name') %}
-        <div class="file-line">
-          <span class="date">{{ articles|count }} post{% if articles|count != 1 %}s{% endif %}</span>
-          <a href="{{ SITEURL }}/tags/{{ tag.slug }}/" class="filename">{{ tag }}</a>
-        </div>
+      <li class="file-line">
+        <span class="date">{{ articles|count }} post{% if articles|count != 1 %}s{% endif %}</span>
+        <a href="{{ SITEURL }}/tags/{{ tag.slug }}/" class="filename">{{ tag }}</a>
+      </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
 {% endblock %}

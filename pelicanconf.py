@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """Pelican configuration for 128bit.io"""
+
+from datetime import datetime
 
 AUTHOR = 'Anthony Scotti'
 SITENAME = '128bit.io'
@@ -9,9 +10,11 @@ SITEURL = ''
 PATH = 'content'
 TIMEZONE = 'America/New_York'
 DEFAULT_LANG = 'en'
+IGNORE_FILES = ['.#*', '.DS_Store']
 
-# Feed generation
-FEED_ALL_ATOM = 'index.xml'
+# Feed generation (disabled in local dev; enabled in publishconf.py)
+FEED_ALL_ATOM = None
+FEED_MAX_ITEMS = 20
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
@@ -51,40 +54,81 @@ PAGINATION_PATTERNS = (
 
 # Direct templates for homepage
 DIRECT_TEMPLATES = ['index', 'archives', 'tags']
-PAGINATED_TEMPLATES = {'index': None, 'archives': 10}
+PAGINATED_TEMPLATES = {'archives': 10}
 
 # Template pages (404, etc.)
 TEMPLATE_PAGES = {
     '404.html': '404.html',
 }
 
-# Plugins - liquid_tags auto-discovered, but must enable specific tags
-LIQUID_TAGS = ["youtube"]
+# Plugins - namespace plugins + local plugins under plugins/
+PLUGIN_PATHS = ['plugins']
+PLUGINS = [
+    'pelican.plugins.neighbors',
+    'pelican.plugins.related_posts',
+    'pelican.plugins.sitemap',
+    'youtube_embed',
+    'media_and_og',
+    'toc_extract',
+    'llms_txt',
+    'asset_hash',
+]
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.8,
+        'indexes': 0.5,
+        'pages': 0.5,
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'weekly',
+        'pages': 'monthly',
+    },
+    'exclude': ['404.html', 'page/'],
+}
+RELATED_POSTS_MAX = 3
 
 # Theme
 THEME = 'theme/minimal128'
 
-# Syntax highlighting
-PYGMENTS_STYLE = 'github-dark'
-
 # Markdown settings
 MARKDOWN = {
     'extension_configs': {
-        'markdown.extensions.codehilite': {
+        'pymdownx.highlight': {
+            'use_pygments': True,
             'css_class': 'highlight',
-            'linenums': True,
-            'guess_lang': False,
+            'linenums': False,
+            'pygments_lang_class': True,
         },
-        'markdown.extensions.fenced_code': {},
+        'pymdownx.superfences': {},
+        'pymdownx.tilde': {},
+        'pymdownx.tasklist': {
+            'custom_checkbox': False,
+        },
+        'markdown.extensions.footnotes': {},
+        'markdown.extensions.admonition': {},
         'markdown.extensions.tables': {},
-        'markdown.extensions.toc': {},
+        'markdown.extensions.toc': {
+            'permalink': '#',
+            'permalink_class': 'heading-anchor',
+            'permalink_title': 'Link to this section',
+        },
         'markdown.extensions.meta': {},
     },
     'output_format': 'html5',
 }
 
 # Site parameters (accessible in templates)
-BIO = "I'm a software engineer with a passion for learning new technologies, techniques, and building reliable systems. This is my personal blog where I explore various topics ranging from functional programming languages to a few thoughts on AI and reflections on technology."
+CURRENT_YEAR = datetime.now().year
+DEFAULT_OG_IMAGE = '/og/default.png'
+BIO = (
+    "I'm a software engineer with a passion for learning new technologies, "
+    "techniques, and building reliable systems. This is my personal blog where "
+    "I explore various topics ranging from functional programming languages to "
+    "a few thoughts on AI and reflections on technology."
+)
 AVATAR = '/images/amscotti.webp'
 SOCIAL = (
     ('GitHub', 'https://github.com/amscotti'),
@@ -101,6 +145,8 @@ EXTRA_PATH_METADATA = {
     'extra/apple-touch-icon.png': {'path': 'apple-touch-icon.png'},
     'extra/android-chrome-192x192.png': {'path': 'android-chrome-192x192.png'},
     'extra/safari-pinned-tab.svg': {'path': 'safari-pinned-tab.svg'},
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/feed.xsl': {'path': 'feed.xsl'},
 }
 
 # Don't copy source files

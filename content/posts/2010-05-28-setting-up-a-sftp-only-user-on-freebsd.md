@@ -10,19 +10,19 @@ Sometimes it's nice to be able to share files with other people. There are many 
 
 Make a new group for the sftp only users to be added to.
 
-```
+```console
 # pw groupadd sftponly
 ```
 
 Edit the sshd_config file.
 
-```
+```console
 # vi /etc/ssh/sshd_config
 ```
 
 and add
 
-```
+```text
 Match Group sftponly
 ChrootDirectory /usr/home/%u
 X11Forwarding no
@@ -34,7 +34,7 @@ Please note that the chroot folder needs to be owned by root for the user/group 
 
 Add a new user to the system and set the login group to sftponly.
 
-```
+```console
 # adduser
 ```
 

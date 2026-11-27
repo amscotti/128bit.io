@@ -24,7 +24,7 @@ listofemails.eachLine { it ->
 
 The output looks like this,
 
-```
+```text
 gdsfgdfsg@romantyczka.pl has been reported 52 times on stopforumspam.com
 patrickzjunior@gmail.com has been reported 18 times on stopforumspam.com
 16@scottsdaleazwindshieldrepair.com has been reported 17 times on stopforumspam.com

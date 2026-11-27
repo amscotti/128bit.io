@@ -3,7 +3,7 @@ Date: 2012-06-03 00:00
 Slug: 2012/06/03/sqs-amazons-simple-queue-service-with-node-js-and-ruby
 Save_as: 2012/06/03/sqs-amazons-simple-queue-service-with-node-js-and-ruby/index.html
 URL: 2012/06/03/sqs-amazons-simple-queue-service-with-node-js-and-ruby/
-Tags: AWS, Howto, nodeJS, Queues, Ruby, SQS
+Tags: AWS, Howto, NodeJS, Queues, Ruby, SQS
 Summary: Code examples demonstrating Amazon SQS queue operations in both Node.js and Ruby. Shows how to create queues, send messages, and receive messages using AWS SDKs in both languages, comparing API patterns and highlighting event-driven use cases for decoupling application components.
 
 I've been really taking interest in the Amazon Web Services and trying to learn how to use them best I can. I really do find the Amazon Web Services a great set of tools that let you work with very scaleable services, but one thing you need to keep in mind is they are very "sticky". What I mean by sticky is once you fully integrate your applications into using them you are most likely not going to be switching any time soon. This really isn't that big of an issue as long as you are happy with them.

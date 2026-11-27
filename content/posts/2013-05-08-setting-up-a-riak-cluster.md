@@ -49,7 +49,7 @@ After installing Riak on all the nodes, you need to update the /etc/riak/vm.args
 Next you're going to want to update the /etc/riak/app.config file,
 
 Add this to the top of the file, this will limit the range of ports for the Erlang interpreter.
-```
+```erlang
 { kernel, [
             {inet_dist_listen_min, 6000},
             {inet_dist_listen_max, 7999}
@@ -58,11 +58,11 @@ Add this to the top of the file, this will limit the range of ports for the Erla
 
 The next lines will tell Riak what network interface and port to run on. Change this to the IP of your system.
 
-```
+```text
 {pb_ip, "127.0.0.1" },` to `{pb_ip, "IP of the system" },
 ```
 
-```
+```text
 {http, [{ "127.0.01", 8098 }]},` to `{http, [ {"IP of the system", 8098 } ]},
 ```
 
@@ -78,19 +78,19 @@ At this point you should have a cluster up and running, let's give it a test!
 
 Let's put some data into the Riak database and see if we can get it back. We can use curl from the command line, find the Public DNS for one of the nodes and run this command.
 
-```
+```bash
 curl -X PUT http://Public DNS:8098/riak/test/doc -H "Content-Type: application/json" -d '{"foo":"bar"}'
 ```
 
 This will put the data into the Riak database, now let's see if we can get it back by running another curl command,
 
-```
+```bash
 curl http://Public DNS:8098/riak/test/doc
 ```
 
 You should see, {"foo":"bar"}, so far so good; now lets try and ask another node in the cluster for the same thing. Using another node's Public DNS run the same curl command like so,
 
-```
+```bash
 curl http://Public DNS:8098/riak/test/doc
 ```
 
